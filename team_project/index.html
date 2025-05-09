@@ -1,38 +1,41 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <!--   Added extra boilerplate pieces -Harley   -->
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Page title and stylesheet link -->
     <title>Planthaus - Home</title>
     <link rel="stylesheet" href="css/index.css">
 </head>
-    
 <body>
+    <!-- Main page heading -->
     <h1>Planthaus</h1>
     <h2>Welcome to our online plant shop!</h2>
 
+    <!-- User input section -->
     <p>What’s your favorite plant?</p>
     <input type="text" id="userInput" placeholder="Type a plant name...">
     <button onclick="processInput()">Submit</button>
     <p id="output"></p>
 
+    <!-- About section -->
     <section>
         <h3>About the Project</h3>
         <p>Planthaus has a sleek, modern, boutique feel — a trendy, minimalist, and creative approach.</p>
+
         <h3>Purpose</h3>
         <p>The website will offer mock products, purchases, a front page carousel, plant care page, profile, cart, and more.</p>
+
         <h3>How it works</h3>
         <p>We will start with barebones features, adding more with JS and other functions. Example: Product pages + cart (no add/remove yet).</p>
     </section>
 
+    <!-- Navigation links to other pages -->
     <nav>
-    <!-- Fixed link from index.html to indext.html -Harley -->
-        <a href="indext.html">Home</a> |  
+        <a href="index.html">Home</a> |
         <a href="changes.html">Change Log</a> |
         <a href="validation.html">Validation Tracker</a>
     </nav>
 
+    <!-- Link to JavaScript file -->
     <script src="js/inputHandler.js"></script>
 </body>
 </html>
