@@ -1,17 +1,33 @@
- <!DOCTYPE html>
-<html lang="en">
+<!DOCTYPE html>
+<html>
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content=team project">
-  <title>Dev109</title> 
- 
+    <title>Planthaus - Home</title>
+    <link rel="stylesheet" href="css/index.css">
 </head>
-
 <body>
+    <h1>Planthaus</h1>
+    <h2>Welcome to our online plant shop!</h2>
 
- 
+    <p>What’s your favorite plant?</p>
+    <input type="text" id="userInput" placeholder="Type a plant name...">
+    <button onclick="processInput()">Submit</button>
+    <p id="output"></p>
 
+    <section>
+        <h3>About the Project</h3>
+        <p>Planthaus has a sleek, modern, boutique feel — a trendy, minimalist, and creative approach.</p>
+        <h3>Purpose</h3>
+        <p>The website will offer mock products, purchases, a front page carousel, plant care page, profile, cart, and more.</p>
+        <h3>How it works</h3>
+        <p>We will start with barebones features, adding more with JS and other functions. Example: Product pages + cart (no add/remove yet).</p>
+    </section>
+
+    <nav>
+        <a href="index.html">Home</a> |
+        <a href="changes.html">Change Log</a> |
+        <a href="validation.html">Validation Tracker</a>
+    </nav>
+
+    <script src="js/inputHandler.js"></script>
 </body>
 </html>
-
