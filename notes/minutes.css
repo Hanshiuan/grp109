@@ -1,1 +1,41 @@
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f0f8ff;
+  text-align: center;
+  padding: 20px;
+  color: #333;
+}
+
+h1 {
+  color: #4682b4;
+  margin-bottom: 30px;
+}
+
+.iteration {
+  background: #fff;
+  padding: 20px;
+  margin: 0 auto 40px;
+  width: 70%;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+}
+.summary {
+  text-align: left; 
+  list-style-position: inside; 
+}
+
+h2 {
+  color: #000;
+  margin-bottom: 10px;
+}
+
+footer nav a {
+  margin: 0 10px;
+  text-decoration: none;
+  color: #4682b4;
+}
+
+footer nav a:hover {
+  text-decoration: underline;
+}
 
