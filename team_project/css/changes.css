@@ -38,3 +38,15 @@ nav a {
 nav a:hover {
     text-decoration: underline;
 }
+
+/* Urbanist font */
+/* weight: Use a value from 100 to 900 */
+/* Harley member changes */
+
+#harley-member-change {
+    font-family: "Urbanist", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 500;
+    font-style: normal;
+    color: rgb(4, 78, 11);
+  }
