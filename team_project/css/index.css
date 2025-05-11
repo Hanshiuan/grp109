@@ -1,3 +1,13 @@
+/* Urbanist font */
+/* weight:Use a value from 100 to 900 */
+
+.logo {
+  font-family: "Urbanist", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 500;
+  font-style: normal;
+}
+
 /* Set base styles for the entire page */
 body {
     font-family: Arial, sans-serif;
