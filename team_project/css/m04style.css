@@ -1,0 +1,102 @@
+.detailsContainer {
+    display: flex;
+    justify-content: center;
+}
+
+.detailsContainer :nth-child(1) {
+    padding-right: 30px;
+}
+
+.detailsContainer :nth-child(3) {
+    padding-left: 30px;
+}
+
+.details {
+    max-width: 30%;
+}
+
+.projectMembers {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+#harley {
+    color: rgb(248, 161, 175);
+}
+
+#erandy {
+    color: rgb(195, 24, 24);
+}
+
+#hanshiuan {
+    color: #C19A6B;
+}
+
+#mumtaas {
+    color: #93A878;
+    
+}
+
+#planthausHeader {
+    color: rgb(3, 99, 3);
+    justify-items: center;
+    font-family: "Urbanist", sans-serif;
+    font-weight: 500;
+    font-style: normal;
+
+}
+
+/* harleyIndex.html styling */
+ul {
+    list-style: none;
+    display: flex;
+}
+
+li {
+    padding: 1.5em;
+    justify-items: center;
+    font-family: "Urbanist", sans-serif;
+    font-weight: 500;
+    font-style: normal;
+    
+}
+
+ul a {
+    text-decoration: none;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+
+/* itemSet-image styling */
+
+.itemSet-image {
+    height: 15rem;
+    padding: .33rem;
+}
+
+.itemImage {
+    background-color: red;
+    height: 15.5rem;
+    width: 11rem;
+}
+
+.itemSet-title {
+    justify-content: space-between;
+}
+
+#repottingSupplies {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+#itemSet {
+    line-height: 1px;
+}
