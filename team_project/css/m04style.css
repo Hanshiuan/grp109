@@ -108,9 +108,32 @@ nav {
 
 p {
     line-height: 1px;
+    font-family: 'Urbanist';
 }
 
 h1 {
     font-family: 'Urbanist';
     font-weight: 600;
+}
+
+.itemSet {
+        padding: 0px 25px 0px 25px;
+
+}
+
+.itemImageBackground {
+    background-color: rgb(255, 255, 255);
+    height: 18rem;
+    width: 14rem;
+        display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.itemImageBackground img{
+    height: auto; 
+    width: auto; 
+    max-width: 95%; 
+    max-height: 95%;
+
 }
