@@ -1,0 +1,63 @@
+/* Harley's style sheet */
+
+#planthausHeader {
+    color: rgb(3, 99, 3);
+    font-family: "Urbanist", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+    display: flex;
+    justify-content: center;
+    font-size: 2.5em;
+    padding-top: .9em;
+
+}
+
+/* harleyIndex.html styling */
+
+ul {
+    list-style: none;
+    display: flex;
+    
+}
+
+li {
+    padding: 1.5em;
+    justify-items: center;
+    font-family: "Urbanist", sans-serif;
+    font-weight: 500;
+    font-style: normal;
+
+    
+}
+
+/* Removes padding from left of nav */
+ul {
+    padding-left: 0;
+}
+
+li a {
+    text-decoration: none;
+    color: rgb(2, 59, 2);
+        min-width: 44px;
+    min-height: 44px;
+    
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    font-size: 1.2em;
+    
+}
+
+p {
+    line-height: 1px;
+    font-family: 'Urbanist';
+}
+
+h1 {
+    font-family: 'Urbanist';
+    font-weight: 600;
+        margin: 10px;
+}
