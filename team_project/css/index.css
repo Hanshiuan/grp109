@@ -152,8 +152,8 @@ h1 {
 
 .plantSet, .itemSet {
     border: 1px solid transparent;
-        border: 2px solid rgb(207, 207, 207);
-
+    border: 2px solid rgb(207, 207, 207);
+    box-shadow: 2px 2px 2px rgb(224, 224, 224);
     border-radius: 5px;
 }
 
