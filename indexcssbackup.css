@@ -1,0 +1,48 @@
+
+
+/* Set base styles for the entire page */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f9f9f9;
+    text-align: center;
+    padding: 20px;
+}
+
+/* Style for main heading */
+h1 {
+    color: #2e8b57;
+}
+
+/* Styles for subheadings */
+h2, h3 {
+    color: #555;
+}
+
+/* Style for input fields and buttons */
+input, button {
+    padding: 10px;
+    margin: 10px;
+    font-size: 16px;
+}
+
+/* Navigation link styles */
+nav a {
+    margin: 0 10px;
+    text-decoration: none;
+    color: #2e8b57;
+}
+
+/* Navigation link hover effect */
+nav a:hover {
+    text-decoration: underline;
+}
+
+/* Section container styling */
+section {
+    background: #fff;
+    padding: 15px;
+    margin: 20px auto;
+    width: 60%;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    border-radius: 8px;
+}
