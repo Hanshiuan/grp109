@@ -76,7 +76,7 @@ ul {
     padding-left: 0;
 }
 
-li a, li {
+li a, li, footer a {
     text-decoration: none;
     color: rgb(2, 59, 2);
             min-width: 44px;
@@ -93,22 +93,22 @@ nav {
 
 /* itemSet-image styling */
 
-.itemSet-image {
+.itemSet-image, .plantSet-image {
     height: 15rem;
     padding: .33rem;
 }
 
-.itemImage {
+.itemImage, .plantImage {
     background-color: red;
     height: 15.5rem;
     width: 11rem;
 }
 
-.itemSet-title {
+.itemSet-title, .plantSet-title {
     justify-content: space-between;
 }
 
-#repottingSupplies {
+#repottingSupplies, #houseplantSection {
     display: flex;
     align-items: center;
     justify-content: space-evenly;
@@ -122,29 +122,45 @@ p {
 h1 {
     font-family: 'Urbanist';
     font-weight: 600;
-        margin: 10px;
+    margin: 10px;
 }
 
-.itemSet {
+.itemSet, .plantSet {
         padding: 0px 25px 0px 25px;
 
 }
 
-.itemImageBackground {
+.itemImageBackground, .plantImageBackground {
     background-color: rgb(255, 255, 255);
     height: 18rem;
     width: 14rem;
-        display: flex;
+    display: flex;
     align-items: center;
     justify-content: center;
 }
 
-.itemImageBackground img{
+.itemImageBackground img, .plantImageBackground img{
     height: auto; 
     width: auto; 
     max-width: 95%; 
     max-height: 95%;
 
+}
+
+
+/* Card styling for item & plant set */
+
+.plantSet, .itemSet {
+    border: 1px solid transparent;
+        border: 2px solid rgb(207, 207, 207);
+
+    border-radius: 5px;
+}
+
+.plantSet:hover, .itemSet:hover {
+    border: 2px solid darkgreen;
+    box-shadow: 4px 4px 4px rgb(224, 224, 224);
+    border-radius: 5px;
 }
 
 
@@ -202,4 +218,13 @@ h1 {
 /* Hover effect */
 .dropdown-content a:hover {
     background-color: #f1f1f1;
+}
+
+/* Footer styling */
+
+footer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10em 0 3em 0;
 }
