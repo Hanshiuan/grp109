@@ -1,0 +1,31 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Serif+Display&display=swap');
+
+body {
+  background-color: #3d5a40; /* deep sage */
+  font-family: 'DM Serif Display', serif;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.envelope {
+  background-color: #5e4251; /* plum */
+  padding: 40px 30px;
+  max-width: 700px;
+  border-radius: 16px;
+  box-shadow: 0 12px 35px rgba(0, 0, 0, 0.15);
+  border: 2px solid #f8aacb;
+  color: #f4e8dd; /* soft beige/ivory for better contrast */
+  line-height: 1.9;
+  text-align: center;
+}
+
+.envelope h1 {
+  font-size: 2.8rem;
+  margin-bottom: 20px;
+  color: #f4e8dd; /* match text for consistency and readability */
+}
+ 
