@@ -1,170 +1,6 @@
-body {
-    margin: 0;
-}
+/* |||||||||||  index.html styling  ||||||||||| */
 
-.detailsContainer {
-    display: flex;
-    justify-content: center;
-}
-
-.detailsContainer :nth-child(1) {
-    padding-right: 30px;
-}
-
-.detailsContainer :nth-child(3) {
-    padding-left: 30px;
-}
-
-.details {
-    max-width: 30%;
-}
-
-.projectMembers {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-}
-
-#harley {
-    color: rgb(248, 161, 175);
-}
-
-#erandy {
-    color: rgb(195, 24, 24);
-}
-
-#hanshiuan {
-    color: #C19A6B;
-}
-
-#mumtaas {
-    color: #93A878;
-    
-}
-
-#planthausHeader {
-    color: rgb(3, 99, 3);
-    font-family: "Urbanist", sans-serif;
-    font-weight: 700;
-    font-style: normal;
-    display: flex;
-    justify-content: center;
-    font-size: 2.5em;
-    padding-top: .9em;
-
-}
-
-/* harleyIndex.html styling */
-
-ul {
-    list-style: none;
-    display: flex;
-}
-
-li {
-    padding: 1.5em;
-    justify-items: center;
-    font-family: "Urbanist", sans-serif;
-    font-weight: 500;
-    font-style: normal;
-    
-}
-
-/* Removes padding from left of nav */
-ul {
-    padding-left: 0;
-}
-
-li a, li, footer a {
-    text-decoration: none;
-    color: rgb(2, 59, 2);
-            min-width: 44px;
-    min-height: 44px;
-}
-
-nav {
-    display: flex;
-    align-items: center;
-    justify-content: space-evenly;
-    font-size: 1.2em;
-}
-
-
-/* itemSet-image styling */
-
-.itemSet-image, .plantSet-image {
-    height: 15rem;
-    padding: .33rem;
-}
-
-.itemImage, .plantImage {
-    background-color: red;
-    height: 15.5rem;
-    width: 11rem;
-}
-
-.itemSet-title, .plantSet-title {
-    justify-content: space-between;
-}
-
-#repottingSupplies, #houseplantSection {
-    display: flex;
-    align-items: center;
-    justify-content: space-evenly;
-}
-
-p {
-    line-height: 1px;
-    font-family: 'Urbanist';
-}
-
-h1 {
-    font-family: 'Urbanist';
-    font-weight: 600;
-    margin: 10px;
-}
-
-.itemSet, .plantSet {
-        padding: 0px 25px 0px 25px;
-
-}
-
-.itemImageBackground, .plantImageBackground {
-    background-color: rgb(255, 255, 255);
-    height: 18rem;
-    width: 14rem;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.itemImageBackground img, .plantImageBackground img{
-    height: auto; 
-    width: auto; 
-    max-width: 95%; 
-    max-height: 95%;
-
-}
-
-
-/* Card styling for item & plant set */
-
-.plantSet, .itemSet {
-    border: 1px solid transparent;
-    border: 2px solid rgb(207, 207, 207);
-    box-shadow: 2px 2px 2px rgb(224, 224, 224);
-    border-radius: 5px;
-}
-
-.plantSet:hover, .itemSet:hover {
-    border: 2px solid darkgreen;
-    box-shadow: 4px 4px 4px rgb(224, 224, 224);
-    border-radius: 5px;
-}
-
-
-/* Announcement header */
+/* || Announcement header style || */
 
 #announcement {
     background-color: green;
@@ -178,6 +14,39 @@ h1 {
     justify-content: center;  
     align-items: center;  
 }
+
+/* || Utilities || */
+body {
+    margin: 0;
+}
+
+/* || Top of page nav styling || */
+
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    font-size: 1.2em;
+}
+
+
+li {
+    padding: 1.5em;
+    justify-items: center;
+    font-family: "Urbanist", sans-serif;
+    font-weight: 500;
+    font-style: normal;
+    
+}
+
+ul {
+    padding-left: 0; /* Removes padding from left of nav */
+    list-style: none;
+    display: flex;
+}
+
+
+/* |||||| Dropdown containter styling |||||| */
 
 /* Dropdown container */
 .dropdown {
@@ -219,6 +88,83 @@ h1 {
 .dropdown-content a:hover {
     background-color: #f1f1f1;
 }
+
+
+/* || Links style || */
+
+li a, li, footer a {
+    text-decoration: none;
+    color: rgb(2, 59, 2);
+    min-width: 44px;
+    min-height: 44px;
+}
+
+/* ||||||| itemSet & plantSet styling ||||||| */
+
+/* Headers/section style */
+
+#repottingSupplies, #houseplantSection {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+h1 {
+    font-family: 'Urbanist';
+    font-weight: 600;
+    margin: 10px;
+}
+
+/* Image styling */
+
+.itemSet-image, .plantSet-image {
+    height: 15rem;
+    padding: .33rem;
+}
+
+.itemImageBackground, .plantImageBackground {
+    background-color: rgb(255, 255, 255);
+    height: 18rem;
+    width: 14rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.itemImageBackground img, .plantImageBackground img{
+    height: auto; 
+    width: auto; 
+    max-width: 95%; 
+    max-height: 95%;
+}
+
+/* Card styling for item & plant set */
+
+.plantSet, .itemSet {
+    border: 1px solid transparent;
+    border: 2px solid rgb(207, 207, 207);
+    box-shadow: 2px 2px 2px rgb(224, 224, 224);
+    border-radius: 5px;
+    padding: 0px 25px 0px 25px;
+
+}
+
+.plantSet:hover, .itemSet:hover {
+    border: 2px solid darkgreen;
+    box-shadow: 4px 4px 4px rgb(224, 224, 224);
+    border-radius: 5px;
+}
+
+.itemSet-title, .plantSet-title {
+    justify-content: space-between;
+}
+
+p {
+    line-height: 1.1em;
+    font-family: 'Urbanist';
+}
+
+
 
 /* Footer styling */
 
@@ -273,3 +219,58 @@ h2, h3 {
     color: #555;
 }
 
+
+/* |||||||||||  projectDetails.html Styling  ||||||||||| */
+
+.detailsContainer {
+    display: flex;
+    justify-content: center;
+}
+
+.detailsContainer :nth-child(1) {
+    padding-right: 30px;
+}
+
+.detailsContainer :nth-child(3) {
+    padding-left: 30px;
+}
+
+.details {
+    max-width: 30%;
+}
+
+.projectMembers {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+#harley {
+    color: rgb(248, 161, 175);
+}
+
+#erandy {
+    color: rgb(195, 24, 24);
+}
+
+#hanshiuan {
+    color: #C19A6B;
+}
+
+#mumtaas {
+    color: #93A878;
+    
+}
+
+#planthausHeader {
+    color: rgb(3, 99, 3);
+    font-family: "Urbanist", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+    display: flex;
+    justify-content: center;
+    font-size: 2.5em;
+    padding-top: .9em;
+
+}
