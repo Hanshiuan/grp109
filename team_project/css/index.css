@@ -157,6 +157,7 @@ h1 {
 
 .itemSet-title, .plantSet-title {
     justify-content: space-between;
+    font-weight: 600;
 }
 
 p {
