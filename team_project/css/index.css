@@ -15,6 +15,27 @@
     align-items: center;  
 }
 
+/* Not functional yet! */
+
+#closeButton {
+    position: absolute;
+    right: 0;
+    padding-right: 1em;
+}
+
+/* || Cart || */
+
+.cart {
+    display: flex;
+    align-items: center;
+    justify-content: right;
+    padding-right: 1.5em;
+}
+
+.cart p {
+    padding-right: 0.5em;
+}
+
 /* || Utilities || */
 body {
     margin: 0;
