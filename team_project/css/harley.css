@@ -1,8 +1,8 @@
-@import url('https://fonts.googleapis.com/css2?family=DM+Serif+Display&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=DM+Serif+Display&display=swap");
 
 body {
-  background-color: #3d5a40; /* deep sage */
-  font-family: 'DM Serif Display', serif;
+  background-color: #495e4b;
+  font-family: "DM Serif Display", serif;
   margin: 0;
   padding: 0;
   display: flex;
@@ -12,13 +12,13 @@ body {
 }
 
 .envelope {
-  background-color: #5e4251; /* plum */
+  background-color: #e3b5c3;
   padding: 40px 30px;
   max-width: 700px;
   border-radius: 16px;
   box-shadow: 0 12px 35px rgba(0, 0, 0, 0.15);
-  border: 2px solid #f8aacb;
-  color: #f4e8dd; /* soft beige/ivory for better contrast */
+  border: 2px solid #95545f;
+  color: #000000;
   line-height: 1.9;
   text-align: center;
 }
@@ -26,6 +26,5 @@ body {
 .envelope h1 {
   font-size: 2.8rem;
   margin-bottom: 20px;
-  color: #f4e8dd; /* match text for consistency and readability */
+  color: #000000; /* match text for consistency and readability */
 }
- 
