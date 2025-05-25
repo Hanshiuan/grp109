@@ -1,42 +1,42 @@
 /* Style for the change log page background and layout */
 body {
-    font-family: Arial, sans-serif;
-    background-color: #f0f8ff;
-    text-align: center;
-    padding: 20px;
+  font-family: Arial, sans-serif;
+  background-color: #f0f8ff;
+  text-align: center;
+  padding: 20px;
 }
 
 /* Main heading on change log page */
 h1 {
-    color: #4682b4;
+  color: #4682b4;
 }
 
 /* Section for each week’s changes */
 .iteration {
-    background: #fff;
-    padding: 15px;
-    margin: 20px auto;
-    width: 70%;
-    box-shadow: 0 0 10px rgba(0,0,0,0.1);
-    border-radius: 8px;
+  background: #fff;
+  padding: 15px;
+  margin: 20px auto;
+  width: 70%;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
 }
 
 /* Member-specific change items */
 .member-change {
-    margin: 10px 0;
-    color: #333;
+  margin: 10px 0;
+  color: #333;
 }
 
 /* Navigation links */
 nav a {
-    margin: 0 10px;
-    text-decoration: none;
-    color: #4682b4;
+  margin: 0 10px;
+  text-decoration: none;
+  color: #4682b4;
 }
 
 /* Navigation hover effect */
 nav a:hover {
-    text-decoration: underline;
+  text-decoration: underline;
 }
 
 /* Urbanist font */
@@ -44,8 +44,8 @@ nav a:hover {
 /* Harley member changes */
 
 .harley-member-change {
-    font-family: "Urbanist", sans-serif;
-    font-weight: 500;
-    font-style: normal;
-    color: rgb(4, 78, 11);
-  }
+  font-family: "Urbanist", sans-serif;
+  font-weight: 500;
+  font-style: normal;
+  color: rgb(4, 78, 11);
+}
