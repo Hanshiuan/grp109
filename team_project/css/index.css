@@ -51,7 +51,8 @@ nav {
 }
 
 /* Accessibility 44px  */
-nav a {
+nav a,
+nav div {
   display: flex;
   font-size: 1.2em;
   min-height: 44px;
