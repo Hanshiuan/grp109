@@ -3,296 +3,304 @@
 /* || Announcement header style || */
 
 #announcement {
-    background-color: green;
-    max-width: 100%;
-    height: 2em;
-    color: white;
-    font-family: 'Urbanist';
-    font-weight: 500;
-    font-size: 1.1rem;
-    display: flex;
-    justify-content: center;  
-    align-items: center;  
+  background-color: #0e4d00;
+  max-width: 100%;
+  height: 2em;
+  color: white;
+  font-family: "Urbanist";
+  font-weight: 500;
+  font-size: 1.1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 /* Not functional yet! */
 
 #closeButton {
-    position: absolute;
-    right: 0;
-    padding-right: 1em;
+  position: absolute;
+  right: 0;
+  padding-right: 1em;
 }
 
 /* || Cart || */
 
 .cart {
-    display: flex;
-    align-items: center;
-    justify-content: right;
-    padding-right: 1.5em;
+  display: flex;
+  align-items: center;
+  justify-content: right;
+  padding-right: 1.5em;
 }
 
 .cart p {
-    padding-right: 0.5em;
+  padding-right: 0.5em;
 }
 
 /* || Utilities || */
 body {
-    margin: 0;
+  margin: 0;
 }
 
 /* || Top of page nav styling || */
 
 nav {
-    display: flex;
-    align-items: center;
-    justify-content: space-evenly;
-    font-size: 1.2em;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  font-size: 1.2em;
 }
 
+/* Accessibility 44px  */
+nav a {
+  display: flex;
+  font-size: 1.2em;
+  min-height: 44px;
+  min-width: 44px;
+}
 
 li {
-    padding: 1.5em;
-    justify-items: center;
-    font-family: "Urbanist", sans-serif;
-    font-weight: 500;
-    font-style: normal;
-    
+  padding: 1.5em;
+  justify-items: center;
+  font-family: "Urbanist", sans-serif;
+  font-weight: 500;
+  font-style: normal;
 }
 
 ul {
-    padding-left: 0; /* Removes padding from left of nav */
-    list-style: none;
-    display: flex;
+  padding-left: 0; /* Removes padding from left of nav */
+  list-style: none;
+  display: flex;
 }
-
 
 /* |||||| Dropdown containter styling |||||| */
 
 /* Dropdown container */
 .dropdown {
-    position: relative;
-    display: inline-block;
+  position: relative;
+  display: inline-block;
 }
 
 /* Dropdown content */
 .dropdown-content {
-    display: none;
-    position: absolute;
-    background-color: white;
-    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
-    z-index: 1;
-    margin-top: 5px;
+  display: none;
+  position: absolute;
+  background-color: white;
+  box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+  margin-top: 5px;
 }
 
 /* Links inside the dropdown */
 .dropdown-content a {
-    color: rgb(2, 59, 2);
-    padding: 12px 16px;
-    text-decoration: none;
-    display: block;
-    white-space: nowrap;
+  color: rgb(2, 59, 2);
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  white-space: nowrap;
 }
 
 /* About us style */
 
 .dropdown {
-    color: rgb(2, 59, 2);
+  color: rgb(2, 59, 2);
 }
 
 /* Show the dropdown menu on hover */
 .dropdown:hover .dropdown-content {
-    display: block;
+  display: block;
 }
 
 /* Hover effect */
 .dropdown-content a:hover {
-    background-color: #f1f1f1;
+  background-color: #f1f1f1;
 }
-
 
 /* || Links style || */
 
-li a, li, footer a {
-    text-decoration: none;
-    color: rgb(2, 59, 2);
-    min-width: 44px;
-    min-height: 44px;
+li a,
+li,
+footer a {
+  text-decoration: none;
+  color: rgb(2, 59, 2);
+  min-width: 44px;
+  min-height: 44px;
 }
 
 /* ||||||| itemSet & plantSet styling ||||||| */
 
 /* Headers/section style */
 
-#repottingSupplies, #houseplantSection {
-    display: flex;
-    align-items: center;
-    justify-content: space-evenly;
+#repottingSupplies,
+#houseplantSection {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
 }
 
 h1 {
-    font-family: 'Urbanist';
-    font-weight: 600;
-    margin: 10px;
+  font-family: "Urbanist";
+  font-weight: 600;
+  margin: 10px;
 }
 
 /* Image styling */
 
-.itemSet-image, .plantSet-image {
-    height: 15rem;
-    padding: .33rem;
+.itemSet-image,
+.plantSet-image {
+  height: 15rem;
+  padding: 0.33rem;
 }
 
-.itemImageBackground, .plantImageBackground {
-    background-color: rgb(255, 255, 255);
-    height: 18rem;
-    width: 14rem;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+.itemImageBackground,
+.plantImageBackground {
+  background-color: rgb(255, 255, 255);
+  height: 18rem;
+  width: 14rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
-.itemImageBackground img, .plantImageBackground img{
-    height: auto; 
-    width: auto; 
-    max-width: 95%; 
-    max-height: 95%;
+.itemImageBackground img,
+.plantImageBackground img {
+  height: auto;
+  width: auto;
+  max-width: 95%;
+  max-height: 95%;
 }
 
 /* Card styling for item & plant set */
 
-.plantSet, .itemSet {
-    border: 1px solid transparent;
-    border: 2px solid rgb(207, 207, 207);
-    box-shadow: 2px 2px 2px rgb(224, 224, 224);
-    border-radius: 5px;
-    padding: 0px 25px 0px 25px;
-
+.plantSet,
+.itemSet {
+  border: 1px solid transparent;
+  border: 2px solid rgb(207, 207, 207);
+  box-shadow: 2px 2px 2px rgb(224, 224, 224);
+  border-radius: 5px;
+  padding: 0px 25px 0px 25px;
 }
 
-.plantSet:hover, .itemSet:hover {
-    border: 2px solid darkgreen;
-    box-shadow: 4px 4px 4px rgb(224, 224, 224);
-    border-radius: 5px;
+.plantSet:hover,
+.itemSet:hover {
+  border: 2px solid darkgreen;
+  box-shadow: 4px 4px 4px rgb(224, 224, 224);
+  border-radius: 5px;
 }
 
-.itemSet-title, .plantSet-title {
-    justify-content: space-between;
-    font-weight: 600;
+.itemSet-title,
+.plantSet-title {
+  justify-content: space-between;
+  font-weight: 600;
 }
 
 p {
-    line-height: 1.1em;
-    font-family: 'Urbanist';
+  line-height: 1.1em;
+  font-family: "Urbanist";
 }
-
-
 
 /* Footer styling */
 
 footer {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 4em 0 4em 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 4em 0 4em 0;
 }
 
 #footerNav a {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 0 1.2em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 1.2em;
 }
 
 /* Adds border to all but last link */
 #footerNav a:not(:nth-child(3)) {
-    border-right: 2px solid black;
+  border-right: 2px solid black;
 }
 
 /* JS input */
 #jsinput {
-    text-align: center;
+  text-align: center;
 }
 
 /* Style for input fields and buttons */
-input, button {
-    padding: 10px;
-    margin: 10px;
-    font-size: 16px;
+input,
+button {
+  padding: 10px;
+  margin: 10px;
+  font-size: 16px;
 }
 
 /* Footer navigation link hover effect */
 footer nav a:hover {
-    text-decoration: underline;
+  text-decoration: underline;
 }
 
 /* Section container styling */
 #aboutProject {
-    background: #fff;
-    padding: 15px;
-    margin: 20px auto;
-    width: 60%;
-    box-shadow: 0 0 10px rgba(0,0,0,0.1);
-    border-radius: 8px;
+  background: #fff;
+  padding: 15px;
+  margin: 20px auto;
+  width: 60%;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
 }
 
 /* Styles for subheadings */
-h2, h3 {
-    color: #555;
+h2 {
+  color: #555;
 }
-
 
 /* |||||||||||  projectDetails.html Styling  ||||||||||| */
 
 .detailsContainer {
-    display: flex;
-    justify-content: center;
+  display: flex;
+  justify-content: center;
 }
 
 .detailsContainer :nth-child(1) {
-    padding-right: 30px;
+  padding-right: 30px;
 }
 
 .detailsContainer :nth-child(3) {
-    padding-left: 30px;
+  padding-left: 30px;
 }
 
 .details {
-    max-width: 30%;
+  max-width: 30%;
 }
 
 .projectMembers {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 
 #harley {
-    color: rgb(248, 161, 175);
+  color: rgb(248, 161, 175);
 }
 
 #erandy {
-    color: rgb(195, 24, 24);
+  color: rgb(195, 24, 24);
 }
 
 #hanshiuan {
-    color: #C19A6B;
+  color: #c19a6b;
 }
 
 #mumtaas {
-    color: #93A878;
-    
+  color: #93a878;
 }
 
 #planthausHeader {
-    color: rgb(3, 99, 3);
-    font-family: "Urbanist", sans-serif;
-    font-weight: 700;
-    font-style: normal;
-    display: flex;
-    justify-content: center;
-    font-size: 2.5em;
-    padding-top: .9em;
-
+  color: rgb(3, 99, 3);
+  font-family: "Urbanist", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+  display: flex;
+  justify-content: center;
+  font-size: 2.5em;
+  padding-top: 0.9em;
 }
