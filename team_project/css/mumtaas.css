@@ -6,47 +6,38 @@ body {
   margin: 0;
   padding: 0;
   display: flex;
-  flex-direction: column;
+  justify-content: center;
   align-items: center;
-  justify-content: start;
-  min-height: 100vh;
-  color: #f4e8dd;
-}
-
-header {
-  padding: 20px 0;
-  text-align: center;
-}
-
-h1 {
-  font-size: 2.5em;
-  margin: 0;
-  color: #f4e8dd;
+  height: 100vh;
 }
 
 .envelope {
-  background-color: #5e4251; /* plum */
+  background-color: #fff; /* changed from #5e4251 for better contrast */
   padding: 40px 30px;
   max-width: 700px;
   border-radius: 16px;
   box-shadow: 0 12px 35px rgba(0, 0, 0, 0.15);
-  border: 2px solid #f8aacb;
-  color: #f4e8dd;
+  border: 2px solid #aaa; /* softened border contrast */
+  color: #222; /* high contrast text */
   line-height: 1.9;
   text-align: center;
-  margin: 20px;
 }
 
 .envelope h1 {
   font-size: 2.8rem;
   margin-bottom: 20px;
-  color: #f4e8dd;
+  color: #111; /* high contrast heading */
 }
 
-/* Ensure links/buttons are accessible */
-a, button {
+/* 🔍 Touch target fix: make images and links bigger */
+a img {
   min-width: 44px;
   min-height: 44px;
+}
+
+/* Optional: style the link better */
+a {
+  display: inline-block;
   padding: 10px;
-  text-decoration: none;
+  border-radius: 8px;
 }
