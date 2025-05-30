@@ -6,6 +6,18 @@
   <title>Mumtaas</title>
   <link rel="stylesheet" href="mumtaas.css" />
   <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&display=swap" rel="stylesheet" />
+  <style>
+    /* Inline fallback if CSS is missing */
+    .github-link {
+      display: inline-block;
+      min-width: 44px;
+      min-height: 44px;
+    }
+    .github-icon {
+      width: 44px;
+      height: 44px;
+    }
+  </style>
 </head>
 <body>
   <header>
@@ -21,11 +33,9 @@
     <p>I believe everyone deserves the chance to grow, to see, and to feel the joy that plants bring. That is why we fight to bring you, our beloved customers, the most beautiful and affordable plants possible, so that you can experience and enjoy what nature gifted you with, in the comfort of your home.</p>
 
     <p>
-      <!-- Added aria-label to improve link accessibility -->
-      <a href="https://github.com/" aria-label="View Mumtaas's GitHub profile">
-  <img src="images/github-icon.png" alt="" style="min-width: 44px; min-height: 44px;" />
-</a>
-
+      <a class="github-link" href="https://github.com/" aria-label="View Mumtaas's GitHub profile">
+        <img class="github-icon" src="images/github-icon.png" alt="GitHub logo" />
+      </a>
     </p>
   </main>
 </body>
