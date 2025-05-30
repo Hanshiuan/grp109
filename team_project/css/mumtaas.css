@@ -29,15 +29,26 @@ body {
   color: #111; /* high contrast heading */
 }
 
-/* 🔍 Touch target fix: make images and links bigger */
-a img {
+/* 🔍 Ensuring all touch targets meet 44x44px */
+a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
   min-width: 44px;
   min-height: 44px;
-}
-
-/* Optional: style the link better */
-a {
-  display: inline-block;
   padding: 10px;
   border-radius: 8px;
+  text-decoration: none;
+}
+
+a img {
+  width: 44px;
+  height: 44px;
+}
+
+/* Optional: Add hover/focus style for keyboard navigation */
+a:focus,
+a:hover {
+  outline: 2px solid #2f7d6d; /* subtle green outline */
+  background-color: #eef4ed;
 }
