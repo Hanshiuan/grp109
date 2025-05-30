@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=DM+Serif+Display&display=swap');
 
 body {
-  background-color: #3d5a40; /* deep sage */
+  background-color: #3d5a40;
   font-family: 'DM Serif Display', serif;
   margin: 0;
   padding: 0;
@@ -12,13 +12,13 @@ body {
 }
 
 .envelope {
-  background-color: #fff; /* changed from #5e4251 for better contrast */
+  background-color: #fff;
   padding: 40px 30px;
   max-width: 700px;
   border-radius: 16px;
   box-shadow: 0 12px 35px rgba(0, 0, 0, 0.15);
-  border: 2px solid #aaa; /* softened border contrast */
-  color: #222; /* high contrast text */
+  border: 2px solid #aaa;
+  color: #222;
   line-height: 1.9;
   text-align: center;
 }
@@ -26,11 +26,11 @@ body {
 .envelope h1 {
   font-size: 2.8rem;
   margin-bottom: 20px;
-  color: #111; /* high contrast heading */
+  color: #111;
 }
 
-/* 🔍 Ensuring all touch targets meet 44x44px */
-a {
+/* ✅ Touch target + accessible links */
+a.github-link {
   display: inline-flex;
   align-items: center;
   justify-content: center;
@@ -41,14 +41,14 @@ a {
   text-decoration: none;
 }
 
-a img {
+.github-icon {
   width: 44px;
   height: 44px;
 }
 
-/* Optional: Add hover/focus style for keyboard navigation */
+/* Optional enhancements */
 a:focus,
 a:hover {
-  outline: 2px solid #2f7d6d; /* subtle green outline */
+  outline: 2px solid #2f7d6d;
   background-color: #eef4ed;
 }
