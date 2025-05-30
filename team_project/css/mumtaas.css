@@ -1,6 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=DM+Serif+Display&display=swap');
 
-/* Global styles */
 body {
   background-color: #2c3e30;
   font-family: 'DM Serif Display', serif;
@@ -10,10 +9,9 @@ body {
   justify-content: center;
   align-items: center;
   height: 100vh;
-  color: #f5f5f5;
+  color: #ffffff;
 }
 
-/* Content container */
 .envelope {
   background-color: #ffffff;
   color: #111111;
@@ -32,19 +30,18 @@ body {
   color: #111;
 }
 
-/* Fix all touch target issues */
 a,
 button {
-  min-width: 44px;
-  min-height: 44px;
-  padding: 10px;
-}
-
-/* GitHub link specific */
-a.github-link {
   display: inline-flex;
   align-items: center;
   justify-content: center;
+  min-width: 44px;
+  min-height: 44px;
+  padding: 10px;
+  margin: 5px 0;
+}
+
+a.github-link {
   border-radius: 8px;
   text-decoration: none;
   background-color: #eef4ed;
@@ -55,14 +52,12 @@ a.github-link {
   height: 44px;
 }
 
-/* Accessible hover/focus styling */
 a:focus,
 a:hover {
   outline: 2px solid #268b5e;
   background-color: #d7eadd;
 }
 
-/* Screen reader support */
 .visually-hidden {
   position: absolute;
   width: 1px;
