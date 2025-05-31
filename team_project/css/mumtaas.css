@@ -1,5 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=DM+Serif+Display&display=swap');
 
+html {
+  font-size: 100%;
+}
+
 body {
   background-color: #2c3e30;
   font-family: 'DM Serif Display', serif;
@@ -51,7 +55,7 @@ textarea {
   cursor: pointer;
   color: #111111;
   background-color: #f5f5f5;
-  border: 2px solid #666666;
+  border: 2px solid #666;
   border-radius: 8px;
   text-decoration: none;
 }
@@ -100,6 +104,7 @@ button + button {
   border: 0;
 }
 
+/* Final accessibility override */
 *:where(:not(html, iframe)) {
   color: #333333 !important;
 }
