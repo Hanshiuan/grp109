@@ -151,3 +151,15 @@ span[aria-hidden="true"] {
   border: 1px solid #333 !important;
 }
 
+/* Specific styles to highlight accessibility fixes */
+a[href*="validation"],
+a[href*="memberMumtaas"] {
+  font-weight: 600;
+  background-color: #eef4ed;
+  color: #1a1a1a !important;
+  padding: 10px 12px !important;
+  display: inline-block;
+  min-height: 44px;
+  min-width: 44px;
+  border-radius: 6px;
+}
