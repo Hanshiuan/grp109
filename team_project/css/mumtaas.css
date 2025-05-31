@@ -14,7 +14,7 @@ body {
 
 .envelope {
   background-color: #ffffff;
-  color: #111111; /*
+  color: #111111;
   padding: 40px 30px;
   max-width: 700px;
   border-radius: 16px;
@@ -23,7 +23,6 @@ body {
   line-height: 1.9;
   text-align: center;
 }
-
 
 .envelope h1 {
   font-size: 2.8rem;
@@ -79,4 +78,3 @@ button:hover {
   white-space: nowrap;
   border: 0;
 }
-
