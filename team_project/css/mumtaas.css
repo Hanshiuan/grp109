@@ -56,6 +56,25 @@ textarea {
   text-decoration: none;
 }
 
+/* Backup: catch stray links or UI controls without enough size */
+a:not(.github-link):not(.visually-hidden),
+button:not(.visually-hidden),
+input[type="submit"],
+input[type="button"],
+input[type="checkbox"],
+input[type="radio"],
+label,
+select,
+textarea {
+  min-width: 44px;
+  min-height: 44px;
+  padding: 12px !important;
+  line-height: 1.2;
+  font-size: 1rem;
+  border-radius: 8px;
+  text-align: center;
+}
+
 a.github-link {
   background-color: #eef4ed;
   font-weight: bold;
@@ -104,4 +123,3 @@ button + button {
 *:where(:not(html, iframe)) {
   color: #1a1a1a !important;
 }
-
