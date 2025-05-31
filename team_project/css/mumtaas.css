@@ -14,12 +14,12 @@ body {
 
 .envelope {
   background-color: #ffffff;
-  color: #333333;
+  color: #1a1a1a;
   padding: 40px 30px;
   max-width: 700px;
   border-radius: 16px;
   box-shadow: 0 12px 35px rgba(0, 0, 0, 0.15);
-  border: 2px solid #aaa;
+  border: 2px solid #888;
   line-height: 1.9;
   text-align: center;
 }
@@ -49,9 +49,9 @@ textarea {
   line-height: 1.2;
   font-size: 1rem;
   cursor: pointer;
-  color: #111111;
+  color: #1a1a1a;
   background-color: #f5f5f5;
-  border: 2px solid #666;
+  border: 2px solid #555;
   border-radius: 8px;
   text-decoration: none;
 }
@@ -59,7 +59,7 @@ textarea {
 a.github-link {
   background-color: #eef4ed;
   font-weight: bold;
-  color: #111111;
+  color: #1a1a1a;
 }
 
 .github-icon,
@@ -102,5 +102,6 @@ button + button {
 
 /* Force override for stray text colors */
 *:where(:not(html, iframe)) {
-  color: #333333 !important;
+  color: #1a1a1a !important;
 }
+
