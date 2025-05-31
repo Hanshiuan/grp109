@@ -46,6 +46,14 @@ input[type="submit"] {
   cursor: pointer;
 }
 
+.envelope a img,
+.envelope svg,
+a img,
+svg {
+  min-width: 44px !important;
+  min-height: 44px !important;
+}
+
 a.github-link {
   border-radius: 8px;
   text-decoration: none;
