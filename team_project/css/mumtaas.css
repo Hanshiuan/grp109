@@ -153,7 +153,8 @@ span[aria-hidden="true"] {
 
 /* Specific styles to highlight accessibility fixes */
 a[href*="validation"],
-a[href*="memberMumtaas"] {
+a[href*="memberMumtaas"],
+a.github-link {
   font-weight: 600;
   background-color: #eef4ed;
   color: #1a1a1a !important;
