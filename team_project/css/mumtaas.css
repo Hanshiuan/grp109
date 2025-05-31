@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=DM+Serif+Display&display=swap');
 
 body {
-  background-color: #2c3e30;
+  background-color: #f0f4f8;
   font-family: 'DM Serif Display', serif;
   margin: 0;
   padding: 0;
@@ -9,17 +9,17 @@ body {
   justify-content: center;
   align-items: center;
   height: 100vh;
-  color: #ffffff;
+  color: #2d2d2d;
 }
 
 .envelope {
   background-color: #ffffff;
-  color: #1a1a1a;
+  color: #2d2d2d;
   padding: 40px 30px;
   max-width: 700px;
   border-radius: 16px;
-  box-shadow: 0 12px 35px rgba(0, 0, 0, 0.15);
-  border: 2px solid #888;
+  box-shadow: 0 12px 35px rgba(0, 0, 0, 0.1);
+  border: 2px solid #c3c3c3;
   line-height: 1.9;
   text-align: center;
 }
@@ -27,7 +27,7 @@ body {
 .envelope h1 {
   font-size: 2.8rem;
   margin-bottom: 20px;
-  color: #111;
+  color: #1a1a1a;
 }
 
 a,
@@ -49,9 +49,9 @@ textarea {
   line-height: 1.2;
   font-size: 1rem;
   cursor: pointer;
-  color: #1a1a1a;
+  color: #2d2d2d;
   background-color: #ffffff;
-  border: 2px solid #333333;
+  border: 2px solid #4b4b4b;
   border-radius: 8px;
   text-decoration: none;
 }
@@ -75,9 +75,9 @@ textarea {
 }
 
 a.github-link {
-  background-color: #eef4ed;
+  background-color: #e3f2fd;
   font-weight: bold;
-  color: #1a1a1a;
+  color: #2d2d2d;
 }
 
 .github-icon,
@@ -92,8 +92,8 @@ a:focus,
 a:hover,
 button:focus,
 button:hover {
-  outline: 2px solid #268b5e;
-  background-color: #d7eadd;
+  outline: 2px solid #2196f3;
+  background-color: #bbdefb;
   color: #000000;
 }
 
@@ -127,9 +127,9 @@ a[href*="github"]:not(.github-link)::before {
 
 /* Color contrast fixes for all stray text */
 *:where(:not(html, iframe)) {
-  color: #1a1a1a !important;
+  color: #2d2d2d !important;
   background-color: #ffffff !important;
-  border-color: #333333 !important;
+  border-color: #4b4b4b !important;
   font-size: 1rem !important;
   line-height: 1.5 !important;
 }
@@ -144,11 +144,11 @@ strong, b {
 small,
 span[aria-hidden="true"] {
   font-size: 1.1rem !important;
-  color: #1a1a1a !important;
-  background-color: #eef4ed !important;
+  color: #2d2d2d !important;
+  background-color: #e3f2fd !important;
   padding: 6px 10px !important;
   border-radius: 6px !important;
-  border: 1px solid #333 !important;
+  border: 1px solid #4b4b4b !important;
 }
 
 /* Specific styles to highlight accessibility fixes */
@@ -156,12 +156,11 @@ a[href*="validation"],
 a[href*="memberMumtaas"],
 a.github-link {
   font-weight: 600;
-  background-color: #eef4ed;
-  color: #1a1a1a !important;
+  background-color: #e3f2fd;
+  color: #2d2d2d !important;
   padding: 10px 12px !important;
   display: inline-block;
   min-height: 44px;
   min-width: 44px;
   border-radius: 6px;
 }
-
