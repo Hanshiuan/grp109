@@ -48,6 +48,10 @@ main {
   padding: 2rem;
 }
 
+.plantSet-image {
+  height:40rem;
+  padding: 0.33rem;
+}
 .product {
   display: flex;
   gap: 2rem;
