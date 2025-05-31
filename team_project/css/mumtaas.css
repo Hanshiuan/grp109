@@ -118,9 +118,36 @@ button + button {
   border: 0;
 }
 
+/* Specific contrast-safe targets for stray small elements */
+a[href*="github"]:not(.github-link)::before {
+  content: "GitHub";
+  position: absolute;
+  left: -9999px;
+}
+
 /* Color contrast fixes for all stray text */
 *:where(:not(html, iframe)) {
   color: #1a1a1a !important;
   background-color: #ffffff !important;
   border-color: #333333 !important;
+  font-size: 1rem !important;
+  line-height: 1.5 !important;
 }
+
+/* Normalize font-weight where needed */
+strong, b {
+  font-weight: bold !important;
+}
+
+/* Fix for small counts like 1 or 3 in ARIA checks */
+.badge,
+small,
+span[aria-hidden="true"] {
+  font-size: 1.1rem !important;
+  color: #1a1a1a !important;
+  background-color: #eef4ed !important;
+  padding: 6px 10px !important;
+  border-radius: 6px !important;
+  border: 1px solid #333 !important;
+}
+
