@@ -14,7 +14,7 @@ body {
 
 .envelope {
   background-color: #ffffff;
-  color: #333333 !important;
+  color: #333333;
   padding: 40px 30px;
   max-width: 700px;
   border-radius: 16px;
@@ -30,7 +30,6 @@ body {
   color: #111;
 }
 
-/* INTERACTIVE ELEMENTS (Fix AAA 2.5.5) */
 a,
 button,
 input[type="button"],
@@ -60,12 +59,7 @@ textarea {
 a.github-link {
   background-color: #eef4ed;
   font-weight: bold;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  min-width: 48px;
-  min-height: 48px;
-  border-radius: 50%;
+  color: #111111;
 }
 
 .github-icon,
@@ -106,8 +100,6 @@ button + button {
   border: 0;
 }
 
-/* Universal override to force text color */
 *:where(:not(html, iframe)) {
   color: #333333 !important;
 }
-
