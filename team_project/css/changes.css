@@ -11,6 +11,11 @@ h1 {
   color: #4682b4;
 }
 
+h3 {
+  font-size: x-large;
+  color: #4682b4;
+}
+
 /* Section for each week’s changes */
 .iteration {
   background: #fff;

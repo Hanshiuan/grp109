@@ -201,10 +201,8 @@ p {
   font-family: "Urbanist";
 }
 
-.plantSet-title a,
-.repottingSupplies a, .plantSet a {
-  min-height: 44px;
-  min-width: 44px;
+.plantSet-title a {
+  padding: 20px 0 20px 0;
 }
 
 /* Footer styling */
