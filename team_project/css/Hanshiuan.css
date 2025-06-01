@@ -1,39 +1,47 @@
-@import url('https://fonts.googleapis.com/css2?family=DM+Serif+Display&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=DM+Serif+Display&display=swap");
 
 body {
   background-color: #ffffff;
-  font-family: 'DM Serif Display', serif;
+  font-family: "DM Serif Display", serif;
   margin: 0;
   padding: 0;
   display: flex;
-  justify-content: center;
+  flex-direction: column;
   align-items: center;
-  height: 100vh;
-  color: #111111;
+  min-height: 100vh;
+  color: #1a1a1a; /* Safe for contrast */
+}
+
+header h1 {
+  font-size: 2.8rem;
+  margin: 20px;
+  color: #1a1a1a;
 }
 
 .envelope {
-  background-color: #b0c4d6; /* soft sky blue */
-  color: #111111;
+  background-color: #b3c8d6; /* Soft, cool blue */
   padding: 40px 30px;
   max-width: 700px;
   border-radius: 16px;
   box-shadow: 0 12px 35px rgba(0, 0, 0, 0.15);
-  border: 2px solid #7a99aa;
+  border: 2px solid #6a91a2;
   line-height: 1.9;
   text-align: center;
+  color: #1a1a1a;
 }
 
 .envelope h1 {
   font-size: 2.8rem;
   margin-bottom: 20px;
-  color: #111111;
+  color: #1a1a1a;
 }
 
 a,
 button,
 input[type="button"],
 input[type="submit"],
+input[type="checkbox"],
+input[type="radio"],
 label,
 select,
 textarea {
@@ -47,9 +55,9 @@ textarea {
   line-height: 1.2;
   font-size: 1rem;
   cursor: pointer;
-  color: #111111;
-  background-color: #e4ecf0;
-  border: 2px solid #111111;
+  color: #1a1a1a;
+  background-color: #dbe7ef;
+  border: 2px solid #1a1a1a;
   border-radius: 8px;
   text-decoration: none;
 }
@@ -57,11 +65,14 @@ textarea {
 a.github-link {
   background-color: #ffffff;
   font-weight: bold;
-  color: #111111;
+  color: #1a1a1a;
   border-radius: 50%;
 }
 
-.github-icon {
+.github-icon,
+a img,
+button img,
+svg {
   width: 44px;
   height: 44px;
 }
@@ -70,8 +81,8 @@ a:focus,
 a:hover,
 button:focus,
 button:hover {
-  outline: 2px solid #111111;
-  background-color: #d1dee7;
+  outline: 2px solid #1a1a1a;
+  background-color: #c6d7df;
   color: #000000;
 }
 
@@ -91,12 +102,11 @@ button + button {
   height: 1px;
   padding: 0;
   overflow: hidden;
-  clip: rect(0 0 0 0);
+  clip: rect(0, 0, 0, 0);
   white-space: nowrap;
   border: 0;
 }
 
-/* Override stray elements */
 *:where(:not(html, iframe)) {
-  color: #111111 !important;
+  color: #1a1a1a !important;
 }
