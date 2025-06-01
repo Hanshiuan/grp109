@@ -199,8 +199,8 @@ p {
   font-family: "Urbanist";
 }
 
-#repottingSupplies a,
-#plantSectionHeader a {
+.plantSet-title a,
+.repottingSupplies a {
   min-height: 44px;
   min-width: 44px;
 }
