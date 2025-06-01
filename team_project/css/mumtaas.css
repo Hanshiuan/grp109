@@ -30,7 +30,7 @@ body {
   color: #111;
 }
 
-/* Accessibility: Target Size and Interactive Elements */
+/* INTERACTIVE ELEMENTS (Fix AAA 2.5.5) */
 a,
 button,
 input[type="button"],
@@ -57,7 +57,6 @@ textarea {
   text-decoration: none;
 }
 
-/* GitHub link fix */
 a.github-link {
   background-color: #eef4ed;
   font-weight: bold;
@@ -107,7 +106,8 @@ button + button {
   border: 0;
 }
 
-/* Force override for stray text colors */
+/* Universal override to force text color */
 *:where(:not(html, iframe)) {
   color: #333333 !important;
 }
+
