@@ -1,58 +1,26 @@
-@import url("https://fonts.googleapis.com/css2?family=DM+Serif+Display&display=swap");
-
-body {
-  background-color: #495e4b;
-  font-family: "DM Serif Display", serif;
-  margin: 0;
-  padding: 0;
-  display: flex;
-  flex-direction: column;
+a, button {
+  min-width: 44px;
+  min-height: 44px;
+  padding: 12px 16px;
+  display: inline-flex;
   align-items: center;
-  min-height: 100vh;
-  color: #1a1a1a; /* Improved contrast */
+  justify-content: center;
+  font-size: 1rem;
+  border: none;
+  background: none;
+  cursor: pointer;
 }
 
 .envelope {
-  background-color: #e3b5c3;
-  padding: 40px 30px;
-  max-width: 700px;
-  border-radius: 16px;
-  box-shadow: 0 12px 35px rgba(0, 0, 0, 0.15);
-  border: 2px solid #95545f;
-  line-height: 1.9;
-  text-align: center;
-  color: #1a1a1a;
+  background-color: #d29aae; /* darker pink for 7:1 contrast */
+  color: #000000;
 }
 
 .envelope h1 {
-  font-size: 2.8rem;
-  margin-bottom: 20px;
-}
-
-nav ul {
-  list-style: none;
-  padding: 0;
-  display: flex;
-  gap: 20px;
-  flex-wrap: wrap;
-  justify-content: center;
-}
-
-nav a {
-  color: #ffffff;
-  background-color: #1a1a1a;
-  padding: 12px 16px;
-  text-decoration: none;
-  border-radius: 8px;
-  display: inline-block;
-  font-size: 1rem;
+  color: #000000;
 }
 
 nav a:hover {
-  background-color: #333333;
-}
-
-.dropdown-content a {
-  display: block;
-  padding: 10px;
+  background-color: #000000;
+  color: #ffffff;
 }
