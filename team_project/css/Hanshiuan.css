@@ -1,24 +1,25 @@
-@import url('https://fonts.googleapis.com/css2?family=Urbanist:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=DM+Serif+Display&display=swap');
 
 body {
-  background-color: #f5f7f4;
-  font-family: 'Urbanist', sans-serif;
+  background-color: #ffffff;
+  font-family: 'DM Serif Display', serif;
   margin: 0;
   padding: 0;
   display: flex;
   justify-content: center;
   align-items: center;
   height: 100vh;
-  color: #111;
+  color: #333333;
 }
 
 .envelope {
-  background-color: #d2e0d0; /* light sage with high contrast */
+  background-color: #495e4b;
+  color: #ffffff;
   padding: 40px 30px;
   max-width: 700px;
   border-radius: 16px;
   box-shadow: 0 12px 35px rgba(0, 0, 0, 0.15);
-  border: 2px solid #6e9070;
+  border: 2px solid #2a362a;
   line-height: 1.9;
   text-align: center;
 }
@@ -26,15 +27,13 @@ body {
 .envelope h1 {
   font-size: 2.8rem;
   margin-bottom: 20px;
-  color: #111;
+  color: #ffffff;
 }
 
 a,
 button,
 input[type="button"],
 input[type="submit"],
-input[type="checkbox"],
-input[type="radio"],
 label,
 select,
 textarea {
@@ -48,28 +47,21 @@ textarea {
   line-height: 1.2;
   font-size: 1rem;
   cursor: pointer;
-  color: #111;
-  background-color: #fff;
-  border: 2px solid #4e6e5d;
+  color: #ffffff;
+  background-color: #607d5d;
+  border: 2px solid #ffffff;
   border-radius: 8px;
   text-decoration: none;
 }
 
 a.github-link {
-  background-color: #eef4ed;
+  background-color: #ffffff;
   font-weight: bold;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  min-width: 48px;
-  min-height: 48px;
+  color: #333333;
   border-radius: 50%;
 }
 
-.github-icon,
-a img,
-button img,
-svg {
+.github-icon {
   width: 44px;
   height: 44px;
 }
@@ -78,8 +70,8 @@ a:focus,
 a:hover,
 button:focus,
 button:hover {
-  outline: 2px solid #268b5e;
-  background-color: #d7eadd;
+  outline: 2px solid #ffffff;
+  background-color: #7fae7c;
   color: #000000;
 }
 
@@ -102,8 +94,4 @@ button + button {
   clip: rect(0 0 0 0);
   white-space: nowrap;
   border: 0;
-}
-
-*:where(:not(html, iframe)) {
-  color: #111 !important;
 }
