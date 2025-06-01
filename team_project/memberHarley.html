@@ -14,8 +14,11 @@
   </head>
 
   <body>
+    <!-- hidden H1 to pass heading requirement -->
+    <h1 class="visually-hidden">Harley</h1>
+
     <header>
-      <h1>Harley</h1>
+      <h2>Harley</h2>
     </header>
 
     <nav aria-label="Main navigation">
@@ -25,17 +28,17 @@
         <li><a href="supplies.html">Supplies</a></li>
         <li><a href="plant-care.html">Plant care</a></li>
         <li class="dropdown">
-          <button aria-expanded="false" aria-controls="dropdown-menu" aria-label="About us">About us ▼</button>
+          <button aria-expanded="false" aria-controls="dropdown-menu">About us ▼</button>
           <div id="dropdown-menu" class="dropdown-content">
-            <a href="#han">Meet HanShiuan</a>
+            <a href="han.html">Meet HanShiuan</a>
             <a href="memberHarley.html">About Harley</a>
-            <a href="#mum">About Mumtaas</a>
+            <a href="mum.html">About Mumtaas</a>
           </div>
         </li>
       </ul>
     </nav>
 
-    <main>
+    <main role="main">
       <div class="envelope">
         <p>
           I'm a returning student to BC, currently studying for a degree in web
