@@ -199,6 +199,12 @@ p {
   font-family: "Urbanist";
 }
 
+#repottingSupplies p,
+#plantSectionHeader p {
+  min-height: 44px;
+  min-width: 44px;
+}
+
 /* Footer styling */
 
 footer {
