@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Urbanist:ital,wght@0,100..900;1,100..900&display=swap');
 
 body {
-  background-color: #495e4b; /* earthy greenish-gray */
+  background-color: #495e4b;
   font-family: 'Urbanist', sans-serif;
   margin: 0;
   padding: 0;
@@ -9,11 +9,11 @@ body {
   justify-content: center;
   align-items: center;
   height: 100vh;
-  color: #1a1a1a; /* Dark enough for safe contrast */
+  color: #1a1a1a;
 }
 
 .envelope {
-  background-color: #e6a3b8; /* soft pink with solid contrast */
+  background-color: #f4d5db; /* more contrast than soft pink */
   padding: 40px 30px;
   max-width: 700px;
   border-radius: 16px;
@@ -29,7 +29,6 @@ body {
   color: #1a1a1a;
 }
 
-/* Interactive elements */
 a,
 button,
 input[type="button"],
@@ -51,7 +50,7 @@ textarea {
   cursor: pointer;
   color: #1a1a1a;
   background-color: #f5f5f5;
-  border: 2px solid #666;
+  border: 2px solid #4e6e5d;
   border-radius: 8px;
   text-decoration: none;
 }
