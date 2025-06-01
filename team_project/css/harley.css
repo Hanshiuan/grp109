@@ -19,7 +19,7 @@ header h1 {
 }
 
 .envelope {
-  background-color: #d29aae; /* Updated for 7:1 contrast */
+  background-color: #d29aae; /* 7:1 contrast */
   padding: 40px 30px;
   max-width: 700px;
   border-radius: 16px;
@@ -56,14 +56,34 @@ button {
   justify-content: center;
 }
 
+/* Additional contrast-safe states */
 a:hover,
-button:hover {
+button:hover,
+a:focus,
+button:focus,
+a:active,
+button:active,
+a:visited {
   background-color: #000000;
   color: #ffffff;
+  outline: 2px solid #ffffff;
+  outline-offset: 2px;
+}
+
+/* Ensure dropdown content is accessible */
+.dropdown-content {
+  background-color: #1a1a1a;
+  border-radius: 8px;
+  padding: 8px 0;
 }
 
 .dropdown-content a {
   display: block;
-  padding: 10px;
+  padding: 10px 16px;
+  color: #ffffff;
+  background-color: #1a1a1a;
 }
 
+.dropdown-content a:hover {
+  background-color: #000000;
+}
