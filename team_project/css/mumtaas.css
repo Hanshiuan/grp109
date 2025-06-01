@@ -14,12 +14,12 @@ body {
 
 .envelope {
   background-color: #ffffff;
-  color: #1a1a1a;
+  color: #333333;
   padding: 40px 30px;
   max-width: 700px;
   border-radius: 16px;
   box-shadow: 0 12px 35px rgba(0, 0, 0, 0.15);
-  border: 2px solid #888;
+  border: 2px solid #aaa;
   line-height: 1.9;
   text-align: center;
 }
@@ -49,9 +49,9 @@ textarea {
   line-height: 1.2;
   font-size: 1rem;
   cursor: pointer;
-  color: #1a1a1a;
-  background-color: #ffffff;
-  border: 2px solid #333333;
+  color: #111111;
+  background-color: #f5f5f5;
+  border: 2px solid #666;
   border-radius: 8px;
   text-decoration: none;
 }
@@ -59,13 +59,7 @@ textarea {
 a.github-link {
   background-color: #eef4ed;
   font-weight: bold;
-  color: #1a1a1a;
-  display: inline-block;
-  padding: 10px 12px;
-  border-radius: 6px;
-  min-width: 44px;
-  min-height: 44px;
-  text-align: center;
+  color: #111111;
 }
 
 .github-icon,
@@ -106,49 +100,7 @@ button + button {
   border: 0;
 }
 
-/* Specific contrast-safe targets for stray small elements */
-a[href*="github"]:not(.github-link)::before {
-  content: "GitHub";
-  position: absolute;
-  left: -9999px;
-}
-
-/* Color contrast fixes for all stray text */
+/* Force override for stray text colors */
 *:where(:not(html, iframe)) {
-  color: #1a1a1a !important;
-  background-color: #ffffff !important;
-  border-color: #333333 !important;
-  font-size: 1rem !important;
-  line-height: 1.5 !important;
-}
-
-/* Normalize font-weight where needed */
-strong, b {
-  font-weight: bold !important;
-}
-
-/* Fix for small counts like 1 or 3 in ARIA checks */
-.badge,
-small,
-span[aria-hidden="true"] {
-  font-size: 1.1rem !important;
-  color: #1a1a1a !important;
-  background-color: #eef4ed !important;
-  padding: 6px 10px !important;
-  border-radius: 6px !important;
-  border: 1px solid #333 !important;
-}
-
-/* Specific styles to highlight accessibility fixes */
-a[href*="validation"],
-a[href*="memberMumtaas"],
-a.github-link {
-  font-weight: 600;
-  background-color: #eef4ed;
-  color: #1a1a1a !important;
-  padding: 10px 12px !important;
-  display: inline-block;
-  min-height: 44px;
-  min-width: 44px;
-  border-radius: 6px;
+  color: #333333 !important;
 }
