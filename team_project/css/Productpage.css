@@ -48,20 +48,16 @@ main {
   padding: 2rem;
 }
 
-.plantSet-image {
-  height:40rem;
-  padding: 0.33rem;
-}
+
 .product {
   display: flex;
   gap: 2rem;
   max-width: 900px;
 }
 
-.product-image {
-  width: 300px;
-  object-fit: cover;
-  border-radius: 10px;
+.itemSet-image {
+  height:30rem;
+  padding: 0.33rem;
 }
 
 .product-info h2 {
