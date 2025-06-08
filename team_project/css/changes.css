@@ -54,3 +54,9 @@ nav a:hover {
   font-style: normal;
   color: rgb(4, 78, 11);
 }
+
+.validation {
+  width: 80%;
+  padding: 15px;
+  margin: 20px auto;
+}
