@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Planthaus Newsletter</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <section class="newsletter">
+    <div class="newsletter-content">
+      <div class="tag">Planthaus</div>
+      <h2>bring the jungle calm to your inbox</h2>
+      <p>Plant wellness, fresh air, and natural rhythms. 🌱</p>
+      <button class="subscribe-button" onclick="showForm()">subscribe now</button>
+      <form id="newsletterForm" class="email-form" onsubmit="handleSubmit(event)">
+        <input type="email" id="email" placeholder="Your email address" required />
+        <button type="submit" class="submit-button">subscribe now</button>
+      </form>
+      <div class="thank-you" id="thankYouBox">
+        🌿 Thank you for subscribing!<br>
+        You're officially part of the calm.<br>
+        Our website launches on <strong>June 25, 2025</strong> — stay tuned!
+      </div>
+    </div>
+  </section>
+
+  <script>
+    function showForm() {
+      document.querySelector('.email-form').style.display = 'flex';
+      document.querySelector('.subscribe-button').style.display = 'none';
+    }
+
+    function handleSubmit(e) {
+      e.preventDefault();
+      document.getElementById('newsletterForm').style.display = 'none';
+      document.getElementById('thankYouBox').style.display = 'block';
+    }
+  </script>
+</body>
+</html>
