@@ -25,11 +25,11 @@ body::after {
 }
 
 body::before {
-  background-image: url("image/fern-left.png");
+  background-image: url("images/fern-left.png");
 }
 
 body::after {
-  background-image: url("image/fern-right.png");
+  background-image: url("images/fern-right.png");
   transform: rotateY(180deg);
 }
 
@@ -131,5 +131,3 @@ input[type="email"] {
   box-shadow: 0 4px 14px rgba(0, 0, 0, 0.05);
   font-family: 'Inter', sans-serif;
 }
-
-/* Confirmation text content will be injected by JavaScript */
