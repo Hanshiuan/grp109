@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Planthaus Shop</title>
+    <title>Planthaus Products</title>
     <link rel="stylesheet" href="../css/Productpage.css" />
     <style>
       body {
@@ -47,7 +47,7 @@
   </head>
   <body>
     <header>
-      <h1>🪴 Planthaus Central Shop</h1>
+      <h1>🪴 Planthaus Products</h1>
     </header>
 
     <div class="filters">
@@ -58,7 +58,7 @@
 
     <main>
       <section class="products-section" id="product-list">
-        <!-- Example Product -->
+        <!-- Houseplants -->
         <div class="product-card houseplant">
           <img src="https://images.unsplash.com/photo-1637967885705-a60e3fea266d?q=80&w=1964&auto=format" alt="Monstera">
           <h3>Monstera deliciosa</h3>
@@ -66,14 +66,69 @@
           <button onclick="addToCart('Monstera deliciosa', 24.99)">Add to Cart</button>
         </div>
 
+        <div class="product-card houseplant">
+          <img src="https://images.unsplash.com/photo-1744143495309-60dc0483c879?q=80&w=1974&auto=format" alt="Hoya">
+          <h3>Hoya lacunosa</h3>
+          <p>$12.99</p>
+          <button onclick="addToCart('Hoya lacunosa', 12.99)">Add to Cart</button>
+        </div>
+
+        <div class="product-card houseplant">
+          <img src="https://images.unsplash.com/photo-1694285617850-fad6e23756fb?q=80&w=1965&auto=format" alt="Aloe Vera">
+          <h3>Aloe vera</h3>
+          <p>$10.99</p>
+          <button onclick="addToCart('Aloe vera', 10.99)">Add to Cart</button>
+        </div>
+
+        <div class="product-card houseplant">
+          <img src="https://t3.ftcdn.net/jpg/12/44/60/04/360_F_1244600427.jpg" alt="Rosemary">
+          <h3>Rosemary</h3>
+          <p>$6.99</p>
+          <button onclick="addToCart('Rosemary', 6.99)">Add to Cart</button>
+        </div>
+
+        <div class="product-card houseplant">
+          <img src="https://images.unsplash.com/photo-1733916291695-069ae5ae4310?q=80&w=1964&auto=format" alt="Philodendron">
+          <h3>Philodendron brandiatum</h3>
+          <p>$42.99</p>
+          <button onclick="addToCart('Philodendron brandiatum', 42.99)">Add to Cart</button>
+        </div>
+
+        <!-- Supplies -->
         <div class="product-card supply">
-          <img src="https://images.unsplash.com/photo-1606761568499-f01803f69d55?q=80&auto=format" alt="Foxfarm soil">
-          <h3>Foxfarm Soil</h3>
+          <img src="../images/products/foxfarmsoil.jpg" alt="Foxfarm soil">
+          <h3>Ocean Forest potting soil</h3>
           <p>$16.99</p>
           <button onclick="addToCart('Foxfarm Soil', 16.99)">Add to Cart</button>
         </div>
 
-        <!-- More product cards would be placed here -->
+        <div class="product-card supply">
+          <img src="https://rt1home.com/cdn/shop/products/potting-tarp-856633_2048x2048.png?v=1637244629" alt="Potting tarp">
+          <h3>Potting tarp</h3>
+          <p>$22.00</p>
+          <button onclick="addToCart('Potting tarp', 22.00)">Add to Cart</button>
+        </div>
+
+        <div class="product-card supply">
+          <img src="../images/products/rootingpowder.jpg" alt="Rooting powder">
+          <h3>Rooting powder</h3>
+          <p>$6.99</p>
+          <button onclick="addToCart('Rooting powder', 6.99)">Add to Cart</button>
+        </div>
+
+        <div class="product-card supply">
+          <img src="../images/products/osmocote.jpg" alt="Osmocote">
+          <h3>Osmocote slow release fertilizer</h3>
+          <p>$8.99</p>
+          <button onclick="addToCart('Osmocote fertilizer', 8.99)">Add to Cart</button>
+        </div>
+
+        <div class="product-card supply">
+          <img src="https://coronatools.com/cdn/shop/files/8e721ee1526d72cd934b772161de1d99d18fb1a6.jpg?v=1747368389&width=580" alt="Hand trowel">
+          <h3>Comfort grip hand trowel</h3>
+          <p>$9.68</p>
+          <button onclick="addToCart('Comfort grip hand trowel', 9.68)">Add to Cart</button>
+        </div>
       </section>
 
       <section class="cart">
