@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Planthaus Shop</title>
+    <link rel="stylesheet" href="../css/Productpage.css" />
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+      }
+      header, .filters, .products-section {
+        text-align: center;
+        margin-bottom: 20px;
+      }
+      .filters button {
+        margin: 0 10px;
+        padding: 10px 15px;
+        cursor: pointer;
+      }
+      .product-card {
+        display: inline-block;
+        border: 1px solid #ddd;
+        border-radius: 5px;
+        margin: 10px;
+        padding: 10px;
+        width: 200px;
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+      }
+      .product-card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+      }
+      .product-card img {
+        width: 100%;
+        height: auto;
+      }
+      .hidden {
+        display: none;
+      }
+      .remove-btn {
+        margin-left: 10px;
+        color: red;
+        cursor: pointer;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1>🪴 Planthaus Central Shop</h1>
+    </header>
+
+    <div class="filters">
+      <button onclick="filterProducts('all')">All</button>
+      <button onclick="filterProducts('houseplant')">Houseplants</button>
+      <button onclick="filterProducts('supply')">Supplies</button>
+    </div>
+
+    <main>
+      <section class="products-section" id="product-list">
+        <!-- Example Product -->
+        <div class="product-card houseplant">
+          <img src="https://images.unsplash.com/photo-1637967885705-a60e3fea266d?q=80&w=1964&auto=format" alt="Monstera">
+          <h3>Monstera deliciosa</h3>
+          <p>$24.99</p>
+          <button onclick="addToCart('Monstera deliciosa', 24.99)">Add to Cart</button>
+        </div>
+
+        <div class="product-card supply">
+          <img src="https://images.unsplash.com/photo-1606761568499-f01803f69d55?q=80&auto=format" alt="Foxfarm soil">
+          <h3>Foxfarm Soil</h3>
+          <p>$16.99</p>
+          <button onclick="addToCart('Foxfarm Soil', 16.99)">Add to Cart</button>
+        </div>
+
+        <!-- More product cards would be placed here -->
+      </section>
+
+      <section class="cart">
+        <h2>Your Cart</h2>
+        <ul id="cart-items"></ul>
+        <strong>Total: $<span id="cart-total">0.00</span></strong>
+      </section>
+    </main>
+
+    <script>
+      const cart = [];
+
+      function addToCart(name, price) {
+        cart.push({ name, price });
+        renderCart();
+      }
+
+      function removeFromCart(index) {
+        cart.splice(index, 1);
+        renderCart();
+      }
+
+      function renderCart() {
+        const list = document.getElementById('cart-items');
+        list.innerHTML = '';
+        let total = 0;
+        cart.forEach((item, index) => {
+          total += item.price;
+          const li = document.createElement('li');
+          li.innerHTML = `${item.name} - $${item.price.toFixed(2)} <span class='remove-btn' onclick='removeFromCart(${index})'>&times;</span>`;
+          list.appendChild(li);
+        });
+        document.getElementById('cart-total').textContent = total.toFixed(2);
+      }
+
+      function filterProducts(category) {
+        const cards = document.querySelectorAll('.product-card');
+        cards.forEach(card => {
+          card.classList.remove('hidden');
+          if (category !== 'all' && !card.classList.contains(category)) {
+            card.classList.add('hidden');
+          }
+        });
+      }
+    </script>
+  </body>
+</html>
