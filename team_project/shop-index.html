@@ -8,10 +8,61 @@
     <style>
       body {
         font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
       }
-      header, .filters, .products-section {
+      header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 20px;
+        background-color: #fff;
+        border-bottom: 1px solid #ddd;
+      }
+      header h1 {
+        margin: 0;
+      }
+      .cart-icon {
+        position: relative;
+        cursor: pointer;
+      }
+      .cart-dropdown {
+        position: absolute;
+        top: 100%;
+        right: 0;
+        background-color: white;
+        border: 1px solid #ccc;
+        padding: 15px;
+        width: 250px;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+        display: none;
+        z-index: 100;
+      }
+      .cart-icon:hover .cart-dropdown {
+        display: block;
+      }
+      .cart-dropdown ul {
+        list-style: none;
+        padding: 0;
+        margin: 0 0 10px 0;
+      }
+      .cart-dropdown li {
+        margin-bottom: 5px;
+        font-size: 14px;
+      }
+      .cart-controls button {
+        margin-right: 10px;
+        padding: 8px 12px;
+        font-weight: bold;
+        border: none;
+        background-color: #2f7c2f;
+        color: white;
+        cursor: pointer;
+        border-radius: 5px;
+      }
+      .filters, .products-section {
         text-align: center;
-        margin-bottom: 20px;
+        margin: 20px 0;
       }
       .filters button {
         margin: 0 10px;
@@ -26,6 +77,7 @@
         padding: 10px;
         width: 200px;
         transition: transform 0.3s ease, box-shadow 0.3s ease;
+        vertical-align: top;
       }
       .product-card:hover {
         transform: translateY(-5px);
@@ -33,7 +85,8 @@
       }
       .product-card img {
         width: 100%;
-        height: auto;
+        height: 200px;
+        object-fit: contain;
       }
       .hidden {
         display: none;
@@ -41,6 +94,7 @@
       .remove-btn {
         margin-left: 10px;
         color: red;
+        font-size: 16px;
         cursor: pointer;
       }
     </style>
@@ -48,93 +102,31 @@
   <body>
     <header>
       <h1>🪴 Planthaus Products</h1>
+      <div class="cart-icon">
+        🛒 View Cart
+        <div class="cart-dropdown">
+          <ul id="cart-items"></ul>
+          <strong>Total: $<span id="cart-total">0.00</span></strong>
+          <div class="cart-controls">
+            <button onclick="alert('Viewing cart...')">View Cart</button>
+            <button onclick="alert('Proceeding to checkout...')">Checkout</button>
+          </div>
+        </div>
+      </div>
     </header>
 
     <div class="filters">
       <button onclick="filterProducts('all')">All</button>
       <button onclick="filterProducts('houseplant')">Houseplants</button>
       <button onclick="filterProducts('supply')">Supplies</button>
+      <button onclick="filterProducts('pottery')">Pottery</button>
+      <button onclick="filterProducts('plantcare')">Plant care</button>
+      <button onclick="filterProducts('aboutus')">About us</button>
     </div>
 
     <main>
       <section class="products-section" id="product-list">
-        <!-- Houseplants -->
-        <div class="product-card houseplant">
-          <img src="https://images.unsplash.com/photo-1637967885705-a60e3fea266d?q=80&w=1964&auto=format" alt="Monstera">
-          <h3>Monstera deliciosa</h3>
-          <p>$24.99</p>
-          <button onclick="addToCart('Monstera deliciosa', 24.99)">Add to Cart</button>
-        </div>
-
-        <div class="product-card houseplant">
-          <img src="https://images.unsplash.com/photo-1744143495309-60dc0483c879?q=80&w=1974&auto=format" alt="Hoya">
-          <h3>Hoya lacunosa</h3>
-          <p>$12.99</p>
-          <button onclick="addToCart('Hoya lacunosa', 12.99)">Add to Cart</button>
-        </div>
-
-        <div class="product-card houseplant">
-          <img src="https://images.unsplash.com/photo-1694285617850-fad6e23756fb?q=80&w=1965&auto=format" alt="Aloe Vera">
-          <h3>Aloe vera</h3>
-          <p>$10.99</p>
-          <button onclick="addToCart('Aloe vera', 10.99)">Add to Cart</button>
-        </div>
-
-        <div class="product-card houseplant">
-          <img src="https://t3.ftcdn.net/jpg/12/44/60/04/360_F_1244600427.jpg" alt="Rosemary">
-          <h3>Rosemary</h3>
-          <p>$6.99</p>
-          <button onclick="addToCart('Rosemary', 6.99)">Add to Cart</button>
-        </div>
-
-        <div class="product-card houseplant">
-          <img src="https://images.unsplash.com/photo-1733916291695-069ae5ae4310?q=80&w=1964&auto=format" alt="Philodendron">
-          <h3>Philodendron brandiatum</h3>
-          <p>$42.99</p>
-          <button onclick="addToCart('Philodendron brandiatum', 42.99)">Add to Cart</button>
-        </div>
-
-        <!-- Supplies -->
-        <div class="product-card supply">
-          <img src="../images/products/foxfarmsoil.jpg" alt="Foxfarm soil">
-          <h3>Ocean Forest potting soil</h3>
-          <p>$16.99</p>
-          <button onclick="addToCart('Foxfarm Soil', 16.99)">Add to Cart</button>
-        </div>
-
-        <div class="product-card supply">
-          <img src="https://rt1home.com/cdn/shop/products/potting-tarp-856633_2048x2048.png?v=1637244629" alt="Potting tarp">
-          <h3>Potting tarp</h3>
-          <p>$22.00</p>
-          <button onclick="addToCart('Potting tarp', 22.00)">Add to Cart</button>
-        </div>
-
-        <div class="product-card supply">
-          <img src="../images/products/rootingpowder.jpg" alt="Rooting powder">
-          <h3>Rooting powder</h3>
-          <p>$6.99</p>
-          <button onclick="addToCart('Rooting powder', 6.99)">Add to Cart</button>
-        </div>
-
-        <div class="product-card supply">
-          <img src="../images/products/osmocote.jpg" alt="Osmocote">
-          <h3>Osmocote slow release fertilizer</h3>
-          <p>$8.99</p>
-          <button onclick="addToCart('Osmocote fertilizer', 8.99)">Add to Cart</button>
-        </div>
-
-        <div class="product-card supply">
-          <img src="https://coronatools.com/cdn/shop/files/8e721ee1526d72cd934b772161de1d99d18fb1a6.jpg?v=1747368389&width=580" alt="Hand trowel">
-          <h3>Comfort grip hand trowel</h3>
-          <p>$9.68</p>
-          <button onclick="addToCart('Comfort grip hand trowel', 9.68)">Add to Cart</button>
-        </div>
-      </section>
-
-      <section class="cart">
-        <h2>Your Cart</h2>
-        <ul id="cart-items"></ul>
-        <strong>Total: $<span id="cart-total">0.00</span></strong>
+        {{PRODUCT_CARDS}}
       </section>
     </main>
 
@@ -158,7 +150,7 @@
         cart.forEach((item, index) => {
           total += item.price;
           const li = document.createElement('li');
-          li.innerHTML = `${item.name} - $${item.price.toFixed(2)} <span class='remove-btn' onclick='removeFromCart(${index})'>&times;</span>`;
+          li.innerHTML = `${item.name} - $${item.price.toFixed(2)} <span class='remove-btn' onclick='removeFromCart(${index})'>🗑️</span>`;
           list.appendChild(li);
         });
         document.getElementById('cart-total').textContent = total.toFixed(2);
