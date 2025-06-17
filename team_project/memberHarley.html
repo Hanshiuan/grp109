@@ -9,8 +9,47 @@
       href="https://fonts.googleapis.com/css2?family=Urbanist:ital,wght@0,100..900;1,100..900&display=swap"
       rel="stylesheet"
     />
+    <style>
+      /* Fixes for enhanced clickable size + contrast */
+      a.github-link {
+        display: inline-block;
+        padding: 10px; /* Enhanced tap target */
+      }
+
+      .github-icon {
+        width: 32px;
+        height: 32px;
+      }
+
+      a {
+        color: #1a1a1a; /* Dark text for contrast */
+        text-decoration: underline;
+      }
+
+      body {
+        background-color: #ffffff;
+        color: #1a1a1a; /* Very dark gray = better contrast */
+        font-family: 'Urbanist', sans-serif;
+        font-size: 1rem;
+        line-height: 1.6;
+      }
+
+      .visually-hidden {
+        position: absolute;
+        width: 1px;
+        height: 1px;
+        padding: 0;
+        margin: -1px;
+        overflow: hidden;
+        clip: rect(0, 0, 0, 0);
+        white-space: nowrap;
+        border: 0;
+      }
+    </style>
   </head>
+
   <body>
+    <!-- ARIA landmark and proper heading included -->
     <main role="main" class="envelope">
       <h1>Harley</h1>
 
@@ -38,36 +77,35 @@
 
       <p>Check out our team repository:</p>
 
+      <!-- FIX 1: Link with text alternative, enhanced size, and alt text -->
       <a
         class="github-link"
         href="https://github.com/Hanshiuan/grp109"
         target="_blank"
         rel="noopener noreferrer"
+        aria-label="Visit our team GitHub repository"
       >
         <img
           class="github-icon"
           src="https://cdn-icons-png.flaticon.com/512/25/25231.png"
-          alt="GitHub repository for our team project"
+          alt="GitHub logo"
         />
-        <span class="visually-hidden"
-          >GitHub repository for our team project</span
-        >
+        <span class="visually-hidden">Visit our team GitHub repository</span>
       </a>
 
+      <!-- FIX 2: Links now match visible + aria-label (if added) -->
       <p>
         Try editing our repo in-browser with
-        <a href="https://github.dev/">
-          <span class="visually-hidden">GitHub.dev editor</span>
-          GitHub.dev </a
-        >.
+        <a href="https://github.dev/" aria-label="Open GitHub.dev editor">
+          GitHub.dev
+        </a>.
       </p>
 
       <p>
         Or jump directly into our project workspace with
-        <a href="https://github.dev/">
-          <span class="visually-hidden">GitHub.dev IDE</span>
-          this GitHub.dev link </a
-        >.
+        <a href="https://github.dev/" aria-label="Open project workspace in GitHub.dev">
+          this GitHub.dev link
+        </a>.
       </p>
     </main>
   </body>
