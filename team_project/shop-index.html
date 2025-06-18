@@ -72,19 +72,28 @@
         padding: 10px 15px;
         cursor: pointer;
       }
+      .products-section {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 20px;
+      }
       .product-card {
-        display: inline-block;
+        flex: 0 1 200px;
+        box-sizing: border-box;
         border: 1px solid #ddd;
         border-radius: 5px;
-        margin: 10px;
         padding: 10px;
-        width: 200px;
         transition: transform 0.3s ease, box-shadow 0.3s ease;
         vertical-align: top;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        background-color: white;
       }
       .product-card:hover {
-        transform: translateY(-5px);
-        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+        transform: translateY(-5px) scale(1.03);
+        box-shadow: 0 6px 14px rgba(0, 0, 0, 0.2);
       }
       .product-card img {
         width: 100%;
@@ -99,6 +108,11 @@
         color: red;
         font-size: 16px;
         cursor: pointer;
+      }
+      .description {
+        font-size: 14px;
+        color: #444;
+        margin-top: 5px;
       }
     </style>
   </head>
@@ -129,66 +143,7 @@
 
     <main>
       <section class="products-section" id="product-list">
-        <div class="product-card houseplant">
-          <img src="../images/products/aloe.jpg" alt="Aloe vera">
-          <h4>Aloe vera</h4>
-          <p>$10.99</p>
-          <button onclick="addToCart('Aloe vera', 10.99)">Add to Cart</button>
-        </div>
-        <div class="product-card houseplant">
-          <img src="../images/products/hoya.jpg" alt="Hoya lacunosa">
-          <h4>Hoya lacunosa</h4>
-          <p>$12.99</p>
-          <button onclick="addToCart('Hoya lacunosa', 12.99)">Add to Cart</button>
-        </div>
-        <div class="product-card houseplant">
-          <img src="../images/products/monstera.jpg" alt="Monstera deliciosa">
-          <h4>Monstera deliciosa</h4>
-          <p>$24.99</p>
-          <button onclick="addToCart('Monstera deliciosa', 24.99)">Add to Cart</button>
-        </div>
-        <div class="product-card supply">
-          <img src="../images/products/osmocote.jpg" alt="Osmocote fertilizer">
-          <h4>Osmocote fertilizer</h4>
-          <p>$8.99</p>
-          <button onclick="addToCart('Osmocote fertilizer', 8.99)">Add to Cart</button>
-        </div>
-        <div class="product-card houseplant">
-          <img src="../images/products/philodendron.jpg" alt="Philodendron brandiatum">
-          <h4>Philodendron brandiatum</h4>
-          <p>$42.99</p>
-          <button onclick="addToCart('Philodendron brandiatum', 42.99)">Add to Cart</button>
-        </div>
-        <div class="product-card supply">
-          <img src="../images/products/pottingtarp.jpg" alt="Potting tarp">
-          <h4>Potting tarp</h4>
-          <p>$22.00</p>
-          <button onclick="addToCart('Potting tarp', 22.00)">Add to Cart</button>
-        </div>
-        <div class="product-card supply">
-          <img src="../images/products/rootingpowder.jpg" alt="Rooting powder">
-          <h4>Rooting powder</h4>
-          <p>$6.99</p>
-          <button onclick="addToCart('Rooting powder', 6.99)">Add to Cart</button>
-        </div>
-        <div class="product-card houseplant">
-          <img src="../images/products/rosemary.jpg" alt="Rosemary">
-          <h4>Rosemary</h4>
-          <p>$6.99</p>
-          <button onclick="addToCart('Rosemary', 6.99)">Add to Cart</button>
-        </div>
-        <div class="product-card supply">
-          <img src="../images/products/foxfarmsoil.jpg" alt="Foxfarm soil">
-          <h4>Foxfarm Soil</h4>
-          <p>$16.99</p>
-          <button onclick="addToCart('Foxfarm Soil', 16.99)">Add to Cart</button>
-        </div>
-        <div class="product-card supply">
-          <img src="../images/products/handtrowel.jpg" alt="Hand trowel">
-          <h4>Hand trowel</h4>
-          <p>$9.68</p>
-          <button onclick="addToCart('Hand trowel', 9.68)">Add to Cart</button>
-        </div>
+        {{PRODUCT_CARDS}}
       </section>
     </main>
 
