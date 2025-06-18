@@ -60,6 +60,10 @@ main {
   padding: 0.33rem;
 }
 
+.plantSet-image {
+  height:30rem;
+  padding: 0.33rem;
+}
 .product-info h2 {
   font-size: 1.5rem;
 }
