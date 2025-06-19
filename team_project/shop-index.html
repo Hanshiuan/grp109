@@ -2,36 +2,22 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=w, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>planthaus - Home</title>
-    <link
-      rel="icon"
-      href="images/houseplant-flowerpot-plant-pot-home-border-leaf-green-nature-garden-natural-line-logo-design-vector.jpg"
-    />
+    <link rel="icon" href="images/houseplant-flowerpot-plant-pot-home-border-leaf-green-nature-garden-natural-line-logo-design-vector.jpg" />
     <link rel="stylesheet" href="css/index.css" />
-    <!-- Link for Urbanist font -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Urbanist:ital,wght@0,100..900;1,100..900&display=swap"
-      rel="stylesheet"
-    />
-    <!-- Link for google icon, shopping bag -->
-    <link
-      rel="stylesheet"
-      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=shopping_bag"
-    />
+    <link href="https://fonts.googleapis.com/css2?family=Urbanist:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=shopping_bag" />
   </head>
 
   <body>
     <div id="announcement" role="banner">
-      <span
-        >Celebrate Spring with us! Free shipping on all orders over $50</span
-      >
+      <span>Celebrate Spring with us! Free shipping on all orders over $50</span>
       <span id="closeButton" aria-hidden="true">&times;</span>
     </div>
 
-    <!-- Doesn't do anything yet. Feel free to change to something else! -->
     <div class="cart">
       <p>Cart</p>
       <span class="material-symbols-outlined"> shopping_bag </span>
@@ -41,10 +27,11 @@
 
     <nav aria-label="Main Navigation">
       <ul>
-        <li><a href="">Pottery</a></li>
-        <li><a href="">Houseplants</a></li>
-        <li><a href="">Supplies</a></li>
-        <li><a href="">Plant care</a></li>
+        <li><a href="#" class="category-button" data-category="all">All</a></li>
+        <li><a href="#" class="category-button" data-category="pottery">Pottery</a></li>
+        <li><a href="#" class="category-button" data-category="houseplants">Houseplants</a></li>
+        <li><a href="#" class="category-button" data-category="supplies">Supplies</a></li>
+        <li><a href="#" class="category-button" data-category="plantcare">Plant care</a></li>
         <li class="dropdown">
           <div>About us ▼</div>
           <div class="dropdown-content">
@@ -56,347 +43,39 @@
       </ul>
     </nav>
 
-    <!-- User input section -->
-    <div id="jsinput">
-      <p>What’s your favorite plant?</p>
-      <input type="text" id="userInput" placeholder="Type a plant name..." />
-      <button onclick="processInput()">Submit</button>
-      <p id="output"></p>
-    </div>
-    
-<section>
-  <h1 class="itemSection-header">Pottery</h1>
-  <div id="potterySection">
-    <!-- add link to Sun-Kissed Terracotta product page -->
-    <div class="itemSet">
-      <div class="itemImageBackground">
-        <img
-          src="images/products/Sun-Kissed Terracotta.png"
-          alt="Sun-Kissed Terracotta"
-          class="itemSet-image"
-        />
-      </div>
-      <p class="plantSet-title">
-        <a href="product-pages/SunKissedTerracotta_productpage.html" style="text-decoration: none; color: inherit">
-          Sun-Kissed Terracotta
-        </a>
-      </p>
-      <p class="itemSet-price">$35.00</p>
-      <p class="itemSet-detail">Hand-painted terracotta with a rustic sun motif</p>
-    </div>
-
-    <!-- add link to Bloom Vine Planter product page -->
-    <div class="itemSet">
-      <div class="itemImageBackground">
-        <img
-          src="images/products/Bloom Vine Planter.png"
-          alt="Bloom Vine Planter"
-          class="itemSet-image"
-        />
-      </div>
-      <p class="plantSet-title">
-        <a href="product-pages/BloomVine_productpage.html" style="text-decoration: none; color: inherit">
-          Bloom Vine Planter
-        </a>
-      </p>
-      <p class="itemSet-price">$22.00</p>
-      <p class="itemSet-detail">Charming ceramic planter with delicate vine illustrations</p>
-    </div>
-
-    <!-- add link to Heritage Clay Vessel product page -->
-    <div class="itemSet">
-      <div class="itemImageBackground">
-        <img
-          src="images/products/Heritage Clay Vessel.png"
-          alt="Heritage Clay Vessel"
-          class="itemSet-image"
-        />
-      </div>
-      <p class="plantSet-title">
-        <a href="product-pages/HeritageClay_productpage.html" style="text-decoration: none; color: inherit">
-          Heritage Clay Vessel
-        </a>
-      </p>
-      <p class="itemSet-price">$62.00</p>
-      <p class="itemSet-detail">Tall, earthy-toned clay pot with a natural textured finish</p>
-    </div>
-
-    <!-- add link to Maasai Beaded Gourd product page -->
-    <div class="itemSet">
-      <div class="itemImageBackground">
-        <img
-          src="images/products/Maasai Beaded Gourd.png"
-          alt="Maasai Beaded Gourd"
-          class="itemSet-image"
-        />
-      </div>
-      <p class="plantSet-title">
-        <a href="product-pages/MaasaiGourd_productpage.html" style="text-decoration: none; color: inherit">
-          Maasai Beaded Gourd
-        </a>
-      </p>
-      <p class="itemSet-price">$55.00</p>
-      <p class="itemSet-detail">Authentic gourd wrapped in vibrant Maasai beadwork</p>
-    </div>
-
-    <!-- add link to Earthen Ember Planter product page -->
-    <div class="itemSet">
-      <div class="itemImageBackground">
-        <img
-          src="images/products/Earthen Ember Planter.png"
-          alt="Earthen Ember Planter"
-          class="itemSet-image"
-        />
-      </div>
-      <p class="plantSet-title">
-        <a href="product-pages/EarthenEmber_productpage.html" style="text-decoration: none; color: inherit">
-          Earthen Ember Planter
-        </a>
-      </p>
-      <p class="itemSet-price">$30.00</p>
-      <p class="itemSet-detail">Fired terracotta pot with ember-toned gradient</p>
-    </div>
-
-    <!-- add link to Harvest Hug Planter product page -->
-    <div class="itemSet">
-      <div class="itemImageBackground">
-        <img
-          src="images/products/Harvest Hug Planter.png"
-          alt="Harvest Hug Planter"
-          class="itemSet-image"
-        />
-      </div>
-      <p class="plantSet-title">
-        <a href="product-pages/HarvestHug_productpage.html" style="text-decoration: none; color: inherit">
-          Harvest Hug Planter
-        </a>
-      </p>
-      <p class="itemSet-price">$27.00</p>
-      <p class="itemSet-detail">Warm orange planter with curved handles and a snug profile</p>
-    </div>
-  </div>
-</section>
-
-    <section>
-      <h1 class="itemSection-header">Repotting supplies</h1>
-
-      <div id="repottingSupplies">
-        <div class="itemSet">
-          <div class="itemImageBackground">
-            <img
-              src="images/products/foxfarmsoil.jpg"
-              alt="Bag of Gardener's friend potting soil"
-              class="itemSet-image"
-            />
-          </div>
-          
-           <!-- add link to Ocean Forest potting soil_product page -->
-          <p class="plantSet-title">
-            <a
-              href="product-pages/foxfarmsoil_productpage.html"
-              style="text-decoration: none; color: inherit"
-              >Ocean Forest potting soil</a></p>
-          <p class="itemSet-price">$16.99</p>
-          <p class="itemSet-detail">12 quart bag</p>
-          <p class="itemSet-brand">Foxfarm</p>
-        </div>
-
-        <div class="itemSet">
-          <div class="itemImageBackground">
-            <img
-              src="https://rt1home.com/cdn/shop/products/potting-tarp-856633_2048x2048.png?v=1637244629"
-              alt="Potting tarp being used to repot"
-              class="itemSet-image"
-            />
-          </div>
-          
-          <!-- add link to Potting tarp_product page -->
-          <p class="plantSet-title">
-            <a
-              href="product-pages/Pottingtarp_productpage.html"
-              style="text-decoration: none; color: inherit"
-              >Potting tarp</a></p>
-          <p class="itemSet-price">$22.00</p>
-          <p class="itemSet-detail">19.5"L X 19.5"W</p>
-          <p class="itemSet-brand">RT1 Home</p>
-        </div>
-
-        <div class="itemSet">
-          <div class="itemImageBackground">
-            <img
-              src="https://coronatools.com/cdn/shop/files/8e721ee1526d72cd934b772161de1d99d18fb1a6.jpg?v=1747368389&width=580"
-              alt="Hand trowel with crocodile-shaped comfort grip"
-              class="itemSet-image"
-            />
-          </div>
-           <!-- add link to hand trowel_product page -->
-          <p class="plantSet-title">
-            <a
-              href="product-pages/handtrowel_productpage.html"
-              style="text-decoration: none; color: inherit"
-              >Comfort grip hand trowel</a></p>
-          <p class="itemSet-price">$9.68</p>
-          <p class="itemSet-detail">One size</p>
-          <p class="itemSet-brand">Corona</p>
-        </div>
-
-        <div class="itemSet">
-          <div class="itemImageBackground">
-            <img
-              src="images/products/rootingpowder.jpg"
-              alt="Bottle of rooting powder"
-              class="itemSet-image"
-            />
-          </div>
-          <!-- add link to Rooting powder_product page -->
-          <p class="plantSet-title">
-            <a
-              href="product-pages/Rootingpowder_productpage.html"
-              style="text-decoration: none; color: inherit"
-              >Rooting powder</a></p>
-          <p class="itemSet-price">$6.99</p>
-          <p class="itemSet-detail">1 1/4oz</p>
-          <p class="itemSet-brand">Bontone II</p>
-        </div>
-
-        <div class="itemSet">
-          <div class="itemImageBackground">
-            <img
-              src="images/products/osmocote.jpg"
-              alt="Container of osmocote fertilizer"
-              class="itemSet-image"
-            />
-          </div>
-          <p class="itemSet-title"> 
-            <!-- add link to Osmocote_product page -->
-          <p class="plantSet-title">
-            <a
-              href="product-pages/Osmocote_productpage.html"
-              style="text-decoration: none; color: inherit"
-              >Osmocote slow release fertilizer</a></p>
-          <p class="itemSet-price">$8.99</p>
-          <p class="itemSet-detail">1lb</p>
-          <p class="itemSet-brand">Osmocote</p>
-        </div>
-      </div>
+    <section class="itemSection" id="potterySection" data-category="pottery">
+      <h1 class="itemSection-header">Pottery</h1>
+      <p><strong>Sun-Kissed Terracotta:</strong> Each Sun-Kissed Terracotta pot is a one-of-a-kind piece handcrafted by skilled Kenyan artisans using traditional clay-molding techniques passed down for generations. The warm, sunbaked finish and natural variations celebrate the beauty of imperfection and heritage. More than just a planter, this is a story you bring home, rooted in resilience, artistry, and sunshine. Ethically sourced and fair-trade certified.</p>
+      <p><strong>Maasai Beaded Gourd:</strong> Meticulously hand-beaded by Maasai women in Kenya, this gourd-shaped ceramic planter is where culture meets craftsmanship. The intricate beadwork wraps around a smooth ceramic base, honoring East African tradition while offering a functional work of art for your home. Every purchase supports women-led artisan communities and helps preserve generations of cultural heritage. This is more than a pot, it is a symbol of connection, craft, and empowerment.</p>
+      <p><strong>Bloom Vine Planter:</strong> Each Bloom Vine Planter is lovingly hand-painted by skilled Mexican artisans using traditional brushwork inspired by native flora. The delicate vine patterns are unique to each piece, making every planter a one-of-a-kind treasure. Though petite in size, its cultural richness and craftsmanship make it a bold statement in any space. Ethically made, culturally rooted, and ready to cradle your favorite plant with elegance.</p>
+      <p><strong>Heritage Clay Vessel:</strong> Crafted using centuries-old ceramic techniques from rural Mexico, the Heritage Clay Vessel is a collector’s piece designed to honor the passage of time. Each vessel undergoes a natural aging process, creating the patina and texture of a well-worn heirloom. No two are alike. Perfect for styling dried arrangements or as a standalone work of earthy sophistication. This is not just pottery, it is preservation of ancestral artistry.</p>
+      <p><strong>Harvest Hug Planter:</strong> The Harvest Hug Planter is a timeless staple with a comforting, rounded silhouette and sturdy built-in handles for easy carrying and rearranging. Its soft matte glaze subtly shifts over time, developing natural tonal changes with age, light exposure, and watering, making every planter more personal as the seasons pass. Designed to feel lived-in, loved, and ready to grow with you.</p>
+      <p><strong>Earthen Ember Planter:</strong> Every gardener has one, the go-to pot that always works, always fits, and never goes out of style. The Earthen Ember Planter is that essential. With a deep, ember-toned clay body and a clean silhouette, it is designed to let your plant be the star. Durable, breathable, and perfectly sized for countless plant types, this piece is a staple in both beginner and seasoned collections. If you only buy one pot, make it this one.</p>
     </section>
 
-    <section>
-      <h1 id="plantSectionHeader">Houseplants</h1>
+    <section class="itemSection" id="houseplantSection" data-category="houseplants">
+      <h1 class="itemSection-header">Houseplants</h1>
+      <p><strong>Monstera deliciosa:</strong> The Monstera Deliciosa is an eye-catching and easy-to-care-for plant. One of the most noticeable characteristics of the Monstera is its glossy heart-shaped leaves which split from the leaf edge to the center as the plant matures. The Monstera needs medium to bright light and it can adapt well under lower light conditions. Water your Philodendron Monstera well until the water drains from the bottom of the drip holes and allow the top of the soil to dry before watering again. Indoor house plants are proven to be excellent air purifiers that help decrease stress and anxiety while stimulating creativity and productivity. Great for yourself or as a gift.</p>
+      <p><strong>Hoya lacunosa:</strong> Hoya lacunosa is named after its prominent characteristic of having "lacunose" leaves/surfaces (sunken between the veins). It is commonly referred to as the Cinnamon Hoya, for the light and spicy fragrance of cinnamon from its blooms. Hoya lacunosa is perfect for indoor cultivation year round, will grow in a variety of lighting conditions and flower readily even in lower levels of light. However, in bright conditions, with direct light for a couple of hours in the morning or late afternoon, the foliage can develop heavy silver mottling. It has a pendant growth habit that looks best in a hanging basket but can be trained to climb.</p>
+      <p><strong>Philodendron brandiatum:</strong> The Philodendron Brandtianum, also known as the Silver Leaf Philodendron, has deep olive green heart-shaped leaves with prominent silver or iridescent gray patches. Another common name for this variety is Brandi Philodendron. As an epiphyte, a hemiepiphyte, and a terrestrial plant, Brandi can grow in most households. But growth rate and leaf color will vary greatly depending on soil type, sunlight, and temperature.</p>
+      <p><strong>Aloe vera:</strong> There may be no live succulent plant as storied as aloe vera, revered through the ages for its health, beauty, medicinal and skin care uses. With its thick, fleshy, lance-shaped leaves, Aloe vera is a striking, tropical-style, drought-tolerant houseplant or garden plant that adds life to your home and garden décor. This succulent arrives fully rooted in a 2.50-QT container. When the weather warms up, you can place this versatile succulent on your patio or porch. If you dwell in a place where frost is not a concern, Aloe vera can live and thrive outside year-round. Thanks to its ability to store water, aloe vera can go longer between waterings than many other plants, especially traditional houseplants. Along with tolerating drought, this architecturally compelling succulent thrives with little care.</p>
+      <p><strong>Rosemary:</strong> Rosemary is ever-green and is available fresh all year round. If you buy it in a pot, it will keep on a sunny windowsill (or outside in a sunny spot) for weeks, with regular watering. You could also plant bushes in your garden, alongside or instead of lavender, for a ready, fragrant supply of leaves. Rosemary's intense, fragrant aroma has traditionally been paired with lamb, chicken, and game, but it's also suited to fish and bean dishes.</p>
+    </section>
 
-      <div id="houseplantSection">
-        <div class="plantSet">
-          <div class="plantImageBackground">
-            <img
-              src="https://images.unsplash.com/photo-1637967885705-a60e3fea266d?q=80&w=1964&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-              alt="Hands holding up a large potted monstera deliciosa"
-              class="plantSet-image"
-            />
-          </div>
-          <!-- add link to Monstera_product page -->
-          <p class="plantSet-title">
-            <a
-              href="product-pages/Monstera_productpage.html"
-              style="text-decoration: none; color: inherit"
-              >Monstera deliciosa</a
-            >
-          </p>
-          <p class="plantSet-price">$24.99</p>
-          <p class="plantSet-detail">8" pot</p>
-          <!-- <p class="plantSet-brand">planthaus</p> -->
-        </div>
+    <section class="itemSection" id="repottingSupplies" data-category="supplies">
+      <h1 class="itemSection-header">Repotting Supplies</h1>
+      <p><strong>Potting tarp:</strong> Seedlings, potted plants, pruned plants, watering, and transplanting can be carried out on the lawn and terrace. You can also clean up your vases, artwork, etc. on the table, and the waterproof multi-function potting mat can effectively protect your table.</p>
+      <p><strong>Comfort grip hand trowel:</strong> The Corona Clipper comfort trowel features a lightweight one-piece aluminum alloy structure that won't bend, break, or rust. Its larger-diameter contoured and cushioned grips are comfortable to handle, and the polished aluminum construction is easy to wipe clean after use.</p>
+    </section>
 
-        <div class="plantSet">
-          <div class="plantImageBackground">
-            <img
-              src="https://images.unsplash.com/photo-1744143495309-60dc0483c879?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-              alt="Small Hoya lacunosa on a tabletop"
-              class="plantSet-image"
-            />
-          </div>
-
-          <!-- add link to Hoya lacunosa_product page -->
-          <p class="plantSet-title">
-            <a
-              href="product-pages/Hoyalacunosa_productpage.html"
-              style="text-decoration: none; color: inherit"
-              >Hoya lacunosa</a
-            >
-          </p>
-          <p class="plantSet-price">$12.99</p>
-          <p class="plantSet-detail">3" pot</p>
-          <!-- <p class="plantSet-brand">planthaus</p> -->
-        </div>
-
-        <div class="plantSet">
-          <div class="plantImageBackground">
-            <img
-              src="https://images.unsplash.com/photo-1694285617850-fad6e23756fb?q=80&w=1965&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-              alt="Aloe vera plant a tabletop"
-              class="plantSet-image"
-            />
-          </div>
-
-          <!-- add link to Aloe vera_product page -->
-          <p class="plantSet-title">
-            <a
-              href="product-pages/Aloevera_productpage.html"
-              style="text-decoration: none; color: inherit"
-              >Aloe vera</a
-            >
-          </p>
-          <p class="plantSet-price">$10.99</p>
-          <p class="plantSet-detail">6" pot</p>
-          <!-- <p class="plantSet-brand">planthaus</p> -->
-        </div>
-
-        <div class="plantSet">
-          <div class="plantImageBackground">
-            <img
-              src="https://t3.ftcdn.net/jpg/12/44/60/04/360_F_1244600427_0pIbPafMvKCdaSi6XO3CFWqoVConrvjy.jpg"
-              alt="Rosemary plant"
-              class="plantSet-image"
-            />
-          </div>
-
-          <!-- add link to Rosemary_product page -->
-          <p class="plantSet-title">
-            <a
-              href="product-pages/Rosemary_productpage.html"
-              style="text-decoration: none; color: inherit"
-              >Rosemary</a
-            >
-          </p>
-          <p class="plantSet-price">$6.99</p>
-          <p class="plantSet-detail">4" pot</p>
-          <!-- <p class="plantSet-brand">planthaus</p> -->
-        </div>
-
-        <div class="plantSet">
-          <div class="plantImageBackground">
-            <img
-              src="https://images.unsplash.com/photo-1733916291695-069ae5ae4310?q=80&w=1964&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-              alt="Philodendron brandiatum in a white pot"
-              class="plantSet-image"
-            />
-          </div>
-          <!-- add link to Philodendron brandiatum_product page -->
-          <p class="plantSet-title">
-            <a
-              href="product-pages/Philodendron_productpage.html"
-              style="text-decoration: none; color: inherit"
-              >Philodendron brandiatum</a
-            >
-          </p>
-          <p class="plantSet-price">$42.99</p>
-          <p class="plantSet-detail">8" pot</p>
-          <!-- <p class="plantSet-brand">planthaus</p> -->
-        </div>
-      </div>
+    <section class="itemSection" id="plantCareSection" data-category="plantcare">
+      <h1 class="itemSection-header">Plant Care</h1>
+      <p><strong>Ocean Forest potting soil:</strong> ALL-IN-ONE POTTING SOIL SOLUTION: FoxFarm ocean forest potting soil is a blend designed to give your plants everything they need to thrive. Ideal for container plants, this planting soil provides optimal nutrient and soil aeration. CONVENIENT SOIL READY TO USE: This houseplant potting soil is ready to use out of the bag, no additional ingredients are needed. Use for planting or top-dressing, with the optional pairing of FoxFarm liquid fertilizers for enhanced growth all season.</p>
+      <p><strong>Rooting powder:</strong> Bontone rooting powder from Bonide promotes quick root development from cuttings once applied; to apply, simply dip the end of a clipping into the powder and then place it in moist soil to help the rooting process of cuttings. Not exclusive to cuttings, use this on seeds or bulbs by placing them in a bag with some powder and shaking the bag gently to coat the seeds or bulbs. Plant growth hormone stimulates root production in hardwood and softwood cuttings; apply to ornamentals, vegetables, fruit trees, and berries. Ready-to-use rooting powder is ideal for use when transplanting seeds, bulbs, corms and roots of listed plants.</p>
+      <p><strong>Osmocote slow release fertilizer:</strong> Osmocote Smart-Release Plant Food Plus Outdoor & Indoor granular plant food contains 11 essential nutrients and feeds live plants up to 6 full months. This fertilizer works with virtually all plant varieties and growing conditions. Each granule is coated with a unique resin that controls nutritional release so plants get what they need when they need it.</p>
     </section>
 
     <footer>
-      <!-- Navigation links to other pages -->
       <nav id="footerNav" aria-label="Footer Navigation">
         <a href="index.html">Home</a>
         <a href="changes.html">Change Log</a>
@@ -404,28 +83,35 @@
       </nav>
     </footer>
 
-    <!-- About section -->
     <section id="aboutProject">
       <h2>About the Project</h2>
-      <p>
-        Planthaus has a sleek, modern, boutique feel — a trendy, minimalist, and
-        creative approach.
-      </p>
-
+      <p>Planthaus has a sleek, modern, boutique feel — a trendy, minimalist, and creative approach.</p>
       <h3>Purpose</h3>
-      <p>
-        The website will offer mock products, purchases, a front page carousel,
-        plant care page, profile, cart, and more.
-      </p>
-
+      <p>The website will offer mock products, purchases, a front page carousel, plant care page, profile, cart, and more.</p>
       <h3>How it works</h3>
-      <p>
-        We will start with barebones features, adding more with JS and other
-        functions. Example: Product pages + cart (no add/remove yet).
-      </p>
+      <p>We will start with barebones features, adding more with JS and other functions. Example: Product pages + cart (no add/remove yet).</p>
     </section>
 
-    <!-- Link to JavaScript file -->
     <script src="js/inputHandler.js"></script>
+    <script>
+      const categoryButtons = document.querySelectorAll('.category-button');
+      const sections = document.querySelectorAll('.itemSection');
+
+      categoryButtons.forEach(button => {
+        button.addEventListener('click', (e) => {
+          e.preventDefault();
+          const category = button.getAttribute('data-category');
+
+          sections.forEach(section => {
+            const sectionCategory = section.getAttribute('data-category');
+            if (category === 'all' || sectionCategory === category) {
+              section.style.display = 'block';
+            } else {
+              section.style.display = 'none';
+            }
+          });
+        });
+      });
+    </script>
   </body>
 </html>
