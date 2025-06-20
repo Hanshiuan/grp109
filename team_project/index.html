@@ -19,6 +19,19 @@
       rel="stylesheet"
       href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined"
     />
+    <script>
+      function filterProducts(category) {
+        const products = document.querySelectorAll(".product");
+        products.forEach((product) => {
+          const type = product.getAttribute("data-category");
+          if (category === "all" || type === category) {
+            product.style.display = "block";
+          } else {
+            product.style.display = "none";
+          }
+        });
+      }
+    </script>
   </head>
   <body>
     <div id="announcement" role="banner">
@@ -57,64 +70,69 @@
       <p id="output"></p>
     </div>
 
-    <h1 style="text-align: center; padding-top: 30px;">All Products</h1>
+    <div style="text-align: center; margin-top: 30px;">
+      <button onclick="filterProducts('all')">All</button>
+      <button onclick="filterProducts('supplies')">Supplies</button>
+      <button onclick="filterProducts('houseplants')">Houseplants</button>
+    </div>
+
+    <h1 style="text-align: center; padding-top: 20px;">All Products</h1>
     <div class="product-gallery">
-      <!-- Products listed directly -->
-      <div class="product">
+      <div class="product" data-category="supplies">
         <img src="images/products/foxfarmsoil.jpg" alt="Ocean Forest potting soil">
         <h3>Ocean Forest potting soil</h3>
         <p>Rich, ready-to-use potting mix. Ideal for indoor & outdoor containers.</p>
         <p><strong>$16.99</strong></p>
       </div>
-      <div class="product">
+      <div class="product" data-category="supplies">
         <img src="https://rt1home.com/cdn/shop/products/potting-tarp-856633_2048x2048.png?v=1637244629" alt="Potting tarp">
         <h3>Potting tarp</h3>
         <p>Keep your space clean while repotting. Reusable, waterproof mat.</p>
         <p><strong>$22.00</strong></p>
       </div>
-      <div class="product">
+      <div class="product" data-category="supplies">
         <img src="https://coronatools.com/cdn/shop/files/8e721ee1526d72cd934b772161de1d99d18fb1a6.jpg?v=1747368389&width=580" alt="Hand trowel">
         <h3>Comfort grip hand trowel</h3>
         <p>Ergonomic, rust-resistant tool for comfortable digging.</p>
         <p><strong>$9.68</strong></p>
       </div>
-      <div class="product">
+      <div class="product" data-category="supplies">
         <img src="images/products/rootingpowder.jpg" alt="Rooting powder">
         <h3>Rooting powder</h3>
         <p>Stimulates root growth for plant cuttings. Great for propagation.</p>
         <p><strong>$6.99</strong></p>
       </div>
-      <div class="product">
+      <div class="product" data-category="supplies">
         <img src="images/products/osmocote.jpg" alt="Osmocote fertilizer">
         <h3>Osmocote slow release fertilizer</h3>
         <p>Feeds plants continuously for 6 months. Balanced nutrients.</p>
         <p><strong>$8.99</strong></p>
       </div>
-      <div class="product">
+      <div class="product" data-category="houseplants">
         <img src="https://images.unsplash.com/photo-1637967885705-a60e3fea266d?q=80" alt="Monstera deliciosa">
         <h3>Monstera deliciosa</h3>
         <p>Iconic houseplant with fenestrated leaves. Adds lush jungle vibes.</p>
         <p><strong>$24.99</strong></p>
       </div>
-      <div class="product">
+      <div class="product" data-category="houseplants">
         <img src="https://images.unsplash.com/photo-1744143495309-60dc0483c879?q=80" alt="Hoya lacunosa">
         <h3>Hoya lacunosa</h3>
         <p>Trailing beauty with fragrant blooms. Low-maintenance and hardy.</p>
         <p><strong>$12.99</strong></p>
       </div>
-      <div class="product">
+      <div class="product" data-category="houseplants">
         <img src="https://images.unsplash.com/photo-1694285617850-fad6e23756fb?q=80" alt="Aloe vera">
         <h3>Aloe vera</h3>
         <p>Soothing succulent with healing gel. Drought-tolerant and easy-care.</p>
         <p><strong>$10.99</strong></p>
       </div>
-      <div class="product">
+      <div class="product" data-category="houseplants">
         <img src="https://t3.ftcdn.net/jpg/12/44/60/04/360_F_1244600427_0pIbPafMvKCdaSi6XO3CFWqoVConrvjy.jpg" alt="Rosemary">
         <h3>Rosemary</h3>
         <p>Fragrant herb for cooking and air-purifying. Loves sunny windowsills.</p>
         <p><strong>$6.99</strong></p>
       </div>
-      <div class="product">
+      <div class="product" data-category="houseplants">
         <img src="https://images.unsplash.com/photo-1733916291695-069ae5ae4310?q=80" alt="Philodendron brandiatum">
         <h3>Philodendron brandiatum</h3>
         <p>Rare tropical with velvety foliage. Thrives in bright, indirect light.</p>
