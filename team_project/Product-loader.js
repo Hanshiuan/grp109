@@ -1,7 +1,7 @@
 // js/Product-loader.js
 
 document.addEventListener("DOMContentLoaded", () => {
-  const products = [
+  window.products = [
     {
       name: "Ocean Forest potting soil",
       category: "plantcare",
