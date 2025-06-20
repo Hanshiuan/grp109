@@ -117,3 +117,65 @@ window.addEventListener("DOMContentLoaded", () => {
   // Initial render
   displayProducts(products);
 });
+document.addEventListener("DOMContentLoaded", () => {
+  const productGallery = document.getElementById("productGallery");
+  const categoryButtons = document.querySelectorAll(".category-button");
+  const cartCount = document.getElementById("cart-count");
+  const cartItemsContainer = document.getElementById("cart-items");
+  const cartTotal = document.getElementById("cart-total");
+
+  let cart = [];
+
+  categoryButtons.forEach(button => {
+    button.addEventListener("click", () => {
+      const category = button.dataset.category;
+      const allCards = document.querySelectorAll(".product-card");
+      allCards.forEach(card => {
+        const match = category === "all" || card.dataset.category === category;
+        card.style.display = match ? "block" : "none";
+      });
+    });
+  });
+
+  window.addToCart = (productName, price) => {
+    cart.push({ productName, price });
+    updateCart();
+  };
+
+  function updateCart() {
+    cartCount.textContent = cart.length;
+    cartItemsContainer.innerHTML = "";
+    let total = 0;
+
+    cart.forEach((item, index) => {
+      const div = document.createElement("div");
+      div.innerHTML = `
+        ${item.productName} - $${item.price.toFixed(2)}
+        <span style="float:right; cursor:pointer;" onclick="removeFromCart(${index})">🗑️</span>
+      `;
+      cartItemsContainer.appendChild(div);
+      total += item.price;
+    });
+
+    cartTotal.textContent = total.toFixed(2);
+  }
+
+  window.removeFromCart = index => {
+    cart.splice(index, 1);
+    updateCart();
+  };
+
+  window.viewCart = () => {
+    alert("🛍️ View Cart:\n" + cart.map(item => `${item.productName} - $${item.price}`).join("\n"));
+  };
+
+  window.checkout = () => {
+    if (cart.length === 0) {
+      alert("Your cart is empty!");
+    } else {
+      alert("✅ Checkout complete!\nTotal: $" + cart.reduce((sum, item) => sum + item.price, 0).toFixed(2));
+      cart = [];
+      updateCart();
+    }
+  };
+});
