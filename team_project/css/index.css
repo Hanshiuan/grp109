@@ -354,3 +354,67 @@ h2 {
 .cart-dropdown button:hover {
   background-color: #317031;
 }
+/* CART DROPDOWN STYLES */
+.cart {
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
+}
+
+.cart-dropdown {
+  display: none;
+  position: absolute;
+  right: 0;
+  background-color: white;
+  min-width: 240px;
+  border: 1px solid #ccc;
+  padding: 1em;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
+}
+
+.cart:hover .cart-dropdown {
+  display: block;
+}
+
+#cart-items {
+  max-height: 150px;
+  overflow-y: auto;
+  margin-bottom: 1em;
+}
+
+/* PRODUCT GALLERY GRID */
+.product-gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+  gap: 2em;
+  padding: 2em;
+}
+
+.product-card {
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  padding: 1em;
+  text-align: center;
+  background-color: #f9f9f9;
+}
+
+.product-card img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
+
+.product-card button {
+  background-color: #2e7d32;
+  color: white;
+  border: none;
+  padding: 0.5em 1em;
+  margin-top: 1em;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.product-card button:hover {
+  background-color: #1b5e20;
+}
