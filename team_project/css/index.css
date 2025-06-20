@@ -175,6 +175,61 @@ footer a {
   min-height: 44px;
 }
 
+/* ||||| Carousel Styling ||||| */
+
+.carcenter {
+  display: flex;
+  justify-content: center;
+}
+.carousel {
+  position: relative;
+  width: 80vw;
+  overflow: hidden;
+}
+
+.carousel-track-container {
+  overflow: hidden;
+}
+
+.carousel-track {
+  display: flex;
+  transition: transform 0.5s ease-in;
+}
+
+.carousel-slide {
+  min-width: 100%;
+  transition: opacity 0.5s ease-in-out;
+}
+
+.carousel-slide img {
+  width: 100%;
+  max-height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.carousel-button {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(0, 0, 0, 0.5);
+  border: none;
+  color: white;
+  font-size: 2rem;
+  padding: 0 10px;
+  cursor: pointer;
+  z-index: 10;
+}
+
+.carousel-button.left {
+  left: 10px;
+}
+
+.carousel-button.right {
+  right: 10px;
+}
+
 /* ||||||| itemSet & plantSet styling ||||||| */
 
 /* Headers/section style */
@@ -363,6 +418,7 @@ h2 {
   font-size: 2.5em;
   padding-top: 0.9em;
 }
+
 #planthausHeader {
   color: rgb(3, 99, 3);
   font-family: "Urbanist", sans-serif;
