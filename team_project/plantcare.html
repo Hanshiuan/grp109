@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=w, initial-scale=1.0">
+    <title>planthaus - Home</title>
+    <link
+      rel="icon"
+      href="images/houseplant-flowerpot-plant-pot-home-border-leaf-green-nature-garden-natural-line-logo-design-vector.jpg"
+    >
+    <link rel="stylesheet" href="css/index.css">
+    <!-- Link for Urbanist font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" >
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Urbanist:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    >
+    <!-- Link for google icon, shopping bag -->
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=shopping_bag"
+    >
+  </head>
+
+  <body>
+    <div id="announcement" role="banner">
+      <span
+        >Celebrate Spring with us! Free shipping on all orders over $50</span
+      >
+      <span id="closeButton" aria-hidden="true">&times;</span>
+    </div>
+
+    <!-- Doesn't do anything yet. Feel free to change to something else! -->
+    <div class="cart">
+      <p>Cart</p>
+      <span class="material-symbols-outlined"> shopping_bag </span>
+    </div>
+
+    <header id="planthausHeader">planthaus</header>
+
+    <nav aria-label="Main Navigation">
+      <ul>
+        <li><a href="pottery.html">Pottery</a></li>
+        <li><a href="houseplants.html">Houseplants</a></li>
+        <li><a href="supplies.html">Supplies</a></li>
+        <li><a href="plantcare.html">Plant care</a></li>
+        <li class="dropdown">
+          <div>About us ▼</div>
+          <div class="dropdown-content">
+            <a href="memberHanshiuan.html">HanShiuan</a>
+            <a href="memberHarley.html">Harley</a>
+            <a href="memberMumtaas.html">Mumtaas</a>
+          </div>
+        </li>
+      </ul>
+    </nav>
+
+    <!-- User input section -->
+    <div id="jsinput">
+      <p>What’s your favorite plant?</p>
+      <input type="text" id="userInput" placeholder="Type a plant name..." />
+      <button onclick="processInput()">Submit</button>
+      <p id="output"></p>
+    </div>
+
+    <section>
+      <h1 id="plantSectionHeader">Plant Care   Coming soon...</h1>
+
+      
+
+    <footer>
+      <!-- Navigation links to other pages -->
+      <nav id="footerNav" aria-label="Footer Navigation">
+        <a href="index.html">Home</a>
+        <a href="changes.html">Change Log</a>
+        <a href="validation.html">Validation Tracker</a>
+      </nav>
+    </footer>
+
+    <!-- About section -->
+    <section id="aboutProject">
+      <h2>About the Project</h2>
+      <p>
+        Planthaus has a sleek, modern, boutique feel — a trendy, minimalist, and
+        creative approach.
+      </p>
+
+      <h3>Purpose</h3>
+      <p>
+        The website will offer mock products, purchases, a front page carousel,
+        plant care page, profile, cart, and more.
+      </p>
+
+      <h3>How it works</h3>
+      <p>
+        We will start with barebones features, adding more with JS and other
+        functions. Example: Product pages + cart (no add/remove yet).
+      </p>
+    </section>
+
+    <!-- Link to JavaScript file -->
+    <script src="js/inputHandler.js"></script>
+  </body>
+</html>
