@@ -24,7 +24,7 @@
   </head>
 
   <body>
-    <div id="announcement" role="banner">
+    <div id="announcement" role="banner" aria-label="Promotional Message">
       <span
         >Celebrate Spring with us! Free shipping on all orders over $50</span
       >
@@ -32,7 +32,7 @@
     </div>
 
     <!-- Doesn't do anything yet. Feel free to change to something else! -->
-    <div class="cart">
+    <div class="cart" role="complementary" aria-label="Shopping cart access">
       <p aria-labelledby="cart">Cart</p>
       <span class="material-symbols-outlined" aria-hidden="true">
         shopping_bag
@@ -43,51 +43,48 @@
 
     <nav aria-label="Main Navigation">
       <ul>
-        <li><a href="pottery.html">Pottery</a></li>
-        <li><a href="">Houseplants</a></li>
-        <li><a href="">Supplies</a></li>
-        <li><a href="">Plant care</a></li>
-        <li class="dropdown">
-          <div>About us ▼</div>
-          <div class="dropdown-content">
-            <a href="memberHanshiuan.html">HanShiuan</a>
-            <a href="memberHarley.html">Harley</a>
-            <a href="memberMumtaas.html">Mumtaas</a>
+        <li role="none"><a role="menuitem" href="pottery.html">Pottery</a></li>
+        <li role="none"><a role="menuitem" href="">Houseplants</a></li>
+        <li role="none"><a role="menuitem" href="">Supplies</a></li>
+        <li role="none"><a role="menuitem" href="">Plant care</a></li>
+        <li class="dropdown" role="none">
+          <div role="menuitem" aria-haspopup="true" aria-expanded="false">
+            About us ▼
+          </div>
+          <div class="dropdown-content" role="menu">
+            <a role="menuitem" href="memberHanshiuan.html">HanShiuan</a>
+            <a role="menuitem" href="memberHarley.html">Harley</a>
+            <a role="menuitem" href="memberMumtaas.html">Mumtaas</a>
           </div>
         </li>
       </ul>
     </nav>
 
     <!-- User input section -->
-    <div id="jsinput">
+    <div id="jsinput" role="form" aria-labelledby="userInputLabel">
       <p>What’s your favorite plant?</p>
-      <input
-        type="text"
-        id="userInput"
-        aria-label="Enter your favorite plant name"
-        placeholder="Type a plant name..."
-      />
+      <input type="text" id="userInput" placeholder="Type a plant name..." />
       <button onclick="processInput()" input type="submit">Submit</button>
       <p id="output"></p>
     </div>
 
     <div class="carcenter">
-      <div class="carousel">
+      <div class="carousel" aria-label="Featured Images Carousel">
         <div class="carousel-track-container">
-          <ul class="carousel-track">
-            <li class="carousel-slide current-slide">
+          <ul class="carousel-track" role="list">
+            <li class="carousel-slide current-slide" role="listitem">
               <img
                 src="images/carousel/repotting.png"
                 alt="Two women working together to repot a houseplant"
               />
             </li>
-            <li class="carousel-slide">
+            <li class="carousel-slide" role="listitem">
               <img
                 src="images/carousel/thaiconc.png"
                 alt="Large thai constellation"
               />
             </li>
-            <li class="carousel-slide">
+            <li class="carousel-slide" role="listitem">
               <img
                 src="images/carousel/clinic.png"
                 alt="Man surrounded by plants and holding one up to a laptop in front of him"
@@ -95,12 +92,10 @@
             </li>
           </ul>
         </div>
-        <button class="carousel-button left" aria-label="Carousel cycle left">
+        <button class="carousel-button left" aria-label="Previous slide">
           ←
         </button>
-        <button class="carousel-button right" aria-label="Carousel cycle right">
-          →
-        </button>
+        <button class="carousel-button right" aria-label="Next slide">→</button>
       </div>
     </div>
 
