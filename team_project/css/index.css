@@ -239,7 +239,8 @@ footer a {
 /* Headers/section style */
 
 #repottingSupplies,
-#houseplantSection {
+#houseplantSection,
+#Pottery {
   display: flex;
   align-items: center;
   justify-content: space-evenly;

@@ -34,9 +34,7 @@
     <!-- Doesn't do anything yet. Feel free to change to something else! -->
     <div class="cart">
       <p>Cart</p>
-      <span class="material-symbols-outlined" aria-hidden="true">
-        shopping_bag
-      </span>
+      <span class="material-symbols-outlined"> shopping_bag </span>
     </div>
 
     <header id="planthausHeader">planthaus</header>
@@ -44,8 +42,8 @@
     <nav aria-label="Main Navigation">
       <ul>
         <li><a href="pottery.html">Pottery</a></li>
-        <li><a href="">Houseplants</a></li>
-        <li><a href="">Supplies</a></li>
+        <li><a href="Houseplants.html">Houseplants</a></li>
+        <li><a href="Supplies.html">Supplies</a></li>
         <li><a href="">Plant care</a></li>
         <li class="dropdown">
           <div>About us ▼</div>
@@ -61,13 +59,8 @@
     <!-- User input section -->
     <div id="jsinput">
       <p>What’s your favorite plant?</p>
-      <input
-        type="text"
-        id="userInput"
-        aria-label="Enter your favorite plant name"
-        placeholder="Type a plant name..."
-      />
-      <button onclick="processInput()" input type="submit">Submit</button>
+      <input type="text" id="userInput" placeholder="Type a plant name..." />
+      <button onclick="processInput()">Submit</button>
       <p id="output"></p>
     </div>
 
@@ -95,140 +88,14 @@
             </li>
           </ul>
         </div>
-        <button class="carousel-button left" aria-label="Carousel cycle left">
-          ←
-        </button>
-        <button class="carousel-button right" aria-label="Carousel cycle right">
-          →
-        </button>
+        <button class="carousel-button left">←</button>
+        <button class="carousel-button right">→</button>
       </div>
     </div>
+    
+    <section>
+      <h1 id="plantSectionHeader">Houseplants</h1>
 
-    <h1 class="itemSection-header">Repotting supplies</h1>
-
-    <section aria-labelledby="itemSection-header">
-      <div id="repottingSupplies">
-        <div role="group" aria-label="product">
-          <div class="itemSet">
-            <div class="itemImageBackground">
-              <img
-                src="images/products/foxfarmsoil.jpg"
-                alt="Bag of Gardener's friend potting soil"
-                class="itemSet-image"
-              />
-            </div>
-
-            <!-- add link to Ocean Forest potting soil_product page -->
-            <p class="plantSet-title">
-              <a
-                href="product-pages/foxfarmsoil_productpage.html"
-                style="text-decoration: none; color: inherit"
-                >Ocean Forest potting soil</a
-              >
-            </p>
-            <p class="itemSet-price">$16.99</p>
-            <p class="itemSet-detail">12 quart bag</p>
-            <p class="itemSet-brand">Foxfarm</p>
-          </div>
-        </div>
-
-        <div role="group" aria-label="product">
-          <div class="itemSet">
-            <div class="itemImageBackground">
-              <img
-                src="https://rt1home.com/cdn/shop/products/potting-tarp-856633_2048x2048.png?v=1637244629"
-                alt="Potting tarp being used to repot"
-                class="itemSet-image"
-              />
-            </div>
-
-            <!-- add link to Potting tarp_product page -->
-            <p class="plantSet-title">
-              <a
-                href="product-pages/Pottingtarp_productpage.html"
-                style="text-decoration: none; color: inherit"
-                >Potting tarp</a
-              >
-            </p>
-            <p class="itemSet-price">$22.00</p>
-            <p class="itemSet-detail">19.5"L X 19.5"W</p>
-            <p class="itemSet-brand">RT1 Home</p>
-          </div>
-        </div>
-
-        <div role="group" aria-label="product">
-          <div class="itemSet">
-            <div class="itemImageBackground">
-              <img
-                src="https://coronatools.com/cdn/shop/files/8e721ee1526d72cd934b772161de1d99d18fb1a6.jpg?v=1747368389&width=580"
-                alt="Hand trowel with crocodile-shaped comfort grip"
-                class="itemSet-image"
-              />
-            </div>
-
-            <p class="itemSet-title">
-              <a
-                href="product-pages/handtrowel_productpage.html"
-                style="text-decoration: none; color: inherit"
-                >Comfort grip hand trowel</a
-              >
-            </p>
-            <p class="itemSet-price">$9.68</p>
-            <p class="itemSet-detail">One size</p>
-            <p class="itemSet-brand">Corona</p>
-          </div>
-        </div>
-
-        <div role="group" aria-label="product">
-          <div class="itemSet">
-            <div class="itemImageBackground">
-              <img
-                src="images/products/rootingpowder.jpg"
-                alt="Bottle of rooting powder"
-                class="itemSet-image"
-              />
-            </div>
-
-            <p class="itemSet-title">
-              <a href="product-pages/Rootingpowder_productpage.html"
-                >Rooting powder</a
-              >
-            </p>
-            <p class="itemSet-price">$6.99</p>
-            <p class="itemSet-detail">1 1/4oz</p>
-            <p class="itemSet-brand">Bontone II</p>
-          </div>
-        </div>
-
-        <div role="group" aria-label="product">
-          <div class="itemSet">
-            <div class="itemImageBackground">
-              <img
-                src="images/products/osmocote.jpg"
-                alt="Container of osmocote fertilizer"
-                class="itemSet-image"
-              />
-            </div>
-
-            <p class="itemSet-title">
-              <a
-                href="product-pages/Osmocote_productpage.html"
-                style="text-decoration: none; color: inherit"
-                >Osmocote slow release fertilizer</a
-              >
-            </p>
-            <p class="itemSet-price">$8.99</p>
-            <p class="itemSet-detail">1lb</p>
-            <p class="itemSet-brand">Osmocote</p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <br />
-    <h1 class="plantSectionHeader">Houseplants</h1>
-
-    <section aria-labelledby="itemSection-header">
       <div id="houseplantSection">
         <div class="plantSet">
           <div class="plantImageBackground">
