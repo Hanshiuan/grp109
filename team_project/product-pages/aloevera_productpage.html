@@ -1,62 +1,53 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Planthaus product page</title>
-    <link rel="stylesheet" href="../css/Productpage.css">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Planthaus Product Page</title>
+    <link rel="stylesheet" href="../css/Productpage.css" />
   </head>
   <body>
     <div class="banner">Celebrate Spring with us! Free shipping on all orders over $50</div>
-
     <header>
       <h1 class="logo">planthaus</h1>
-
       <nav>
-        <a href="">Pottery</a>
-        <a href="">Houseplants</a>
-        <a href="">Supplies</a>
-        <a href="">Plant care</a>
+        <a href="pottery.html">Pottery</a>
+        <a href="houseplants.html">Houseplants</a>
+        <a href="supplies.html">Supplies</a>
+        <a href="plantcare.html">Plant care</a>
         <div class="cart">Cart 🛒</div>
       </nav>
     </header>
-
+    
     <main>
-      <div class="product">
-        <img
+      <div class="product-gallery">
+        <!-- product -->
+        <div class="product" data-category="houseplant">
+          <img
           src="https://images.unsplash.com/photo-1694285617850-fad6e23756fb?q=80&w=1965&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
           alt="Aloe vera plant on a tabletop"
-          class="plantSet-image"
         >
-
-        <div class="product-info">
-          <h2>Aloe vera</h2>
-          <p class="price">$10.99</p>
-          <p class="size">6&quot; pot</p>
-
-          <div class="quantity">
-            <button id="decrease">-</button>
-            <span id="quantity">1</span>
-            <button id="increase">+</button>
-          </div>
-
-          <button class="add-to-cart">Add to cart</button>
-
-          <section class="description">
-            <h3>Description</h3>
-            <p><strong>About this product:</strong></p>
-            <p>
-              There may be no live succulent plant as storied as aloe vera, revered through the ages for its health, beauty, medicinal and skin care uses. With its thick, fleshy, 
+         
+          <div class="product-info">
+    <h3>Aloe vera</h3>
+    <p>$10.99</p>
+    <p>Size: 6&quot; pot</p>
+    
+    <button onclick="addToCart('Aloe vera', 10.99)">Add to Cart</button>
+            
+    <div class="product-description">
+      <h4>Description</h4>
+      <strong>About this product:</strong>
+      <p>There may be no live succulent plant as storied as aloe vera, revered through the ages for its health, beauty, medicinal and skin care uses. With its thick, fleshy, 
               lance-shaped leaves, Aloe vera is a striking, tropical-style, drought-tolerant houseplant or garden plant that adds life to your home and garden décor. This succulent arrives
               fully rooted in a 2.50-QT container. When the weather warms up, you can place this versatile succulent on your patio or porch. If you dwell in a place where frost is not a concern,
               Aloe vera can live and thrive outside year-round. Thanks to its ability to store water, aloe vera can go longer between waterings than many other plants, especially traditional houseplants. 
               Along with tolerating drought, this architecturally compelling succulent thrives with little care.
             </p>
-          </section>
         </div>
       </div>
+     </div>
     </main>
-
-    <script src="../js/Productpage.js"></script>
+    
   </body>
 </html>
