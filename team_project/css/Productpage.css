@@ -26,6 +26,7 @@ header {
 .logo {
   color: green;
   font-weight: bold;
+  font-size: 2rem;
 }
 
 nav {
@@ -36,7 +37,8 @@ nav {
   flex-wrap: wrap;
 }
 
-nav a, .cart {
+nav a,
+.cart {
   text-decoration: none;
   color: #1f3c1f;
   font-size: 1rem;
@@ -48,67 +50,62 @@ main {
   padding: 2rem;
 }
 
+.product-gallery {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+  max-width: 1000px;
+}
 
 .product {
   display: flex;
   gap: 2rem;
-  max-width: 900px;
+  align-items: flex-start;
 }
 
-.itemSet-image {
-  height:30rem;
-  padding: 0.33rem;
+.product img {
+  width: 400px;
+  height: auto;
+  object-fit: cover;
+  border-radius: 4px;
 }
 
-.plantSet-image {
-  height:30rem;
-  padding: 0.33rem;
-}
-.product-info h2 {
-  font-size: 1.5rem;
+.product-info {
+  max-width: 500px;
 }
 
-.price, .size {
-  margin-top: 0.5rem;
-  font-size: 1.2rem;
+.product h3 {
+  font-size: 1.8rem;
+  margin-bottom: 0.5rem;
 }
 
-.quantity {
-  margin: 1rem 0;
-  display: flex;
-  align-items: center;
+.product p {
+  font-size: 1.1rem;
+  margin-bottom: 0.5rem;
+  line-height: 1.4;
 }
 
-.quantity button {
-  width: 30px;
-  height: 30px;
-  font-size: 1.2rem;
+.product button {
   background: green;
   color: white;
-  border: none;
-  cursor: pointer;
-}
-
-.quantity span {
-  margin: 0 1rem;
-  font-size: 1.2rem;
-}
-
-.add-to-cart {
-  background: green;
-  color: white;
-  padding: 0.75rem 2rem;
+  padding: 0.6rem 1.5rem;
   border: none;
   font-size: 1rem;
   cursor: pointer;
   margin-top: 1rem;
 }
 
-.description {
-  margin-top: 2rem;
+.product-description {
+  margin-top: 1.5rem;
 }
 
-.description h3 {
-  font-weight: bold;
+.product-description h4 {
+  font-size: 1.2rem;
   margin-bottom: 0.5rem;
+  font-weight: bold;
+}
+
+.product-description strong {
+  display: block;
+  margin-bottom: 0.3rem;
 }
