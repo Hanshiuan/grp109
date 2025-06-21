@@ -64,7 +64,9 @@
     <div id="jsinput" role="form" aria-labelledby="userInputLabel">
       <p>What’s your favorite plant?</p>
       <input type="text" id="userInput" placeholder="Type a plant name..." />
-      <button onclick="processInput()" input type="submit">Submit</button>
+      <button onclick="processInput()" input type="submit" aria-pressed="false">
+        Submit
+      </button>
       <p id="output"></p>
     </div>
 
@@ -92,10 +94,20 @@
             </li>
           </ul>
         </div>
-        <button class="carousel-button left" aria-label="Previous slide">
+        <button
+          class="carousel-button left"
+          aria-pressed="false"
+          aria-label="Previous slide"
+        >
           ←
         </button>
-        <button class="carousel-button right" aria-label="Next slide">→</button>
+        <button
+          class="carousel-button right"
+          aria-pressed="false"
+          aria-label="Next slide"
+        >
+          →
+        </button>
       </div>
     </div>
 
