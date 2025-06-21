@@ -2,57 +2,50 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Planthaus product page</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Planthaus Product Page</title>
     <link rel="stylesheet" href="../css/Productpage.css" />
   </head>
   <body>
     <div class="banner">Celebrate Spring with us! Free shipping on all orders over $50</div>
-
     <header>
       <h1 class="logo">planthaus</h1>
       <nav>
-        <a href="">Pottery</a>
-        <a href="">Houseplants</a>
-        <a href="">Supplies</a>
-        <a href="">Plant care</a>
+        <a href="pottery.html">Pottery</a>
+        <a href="houseplants.html">Houseplants</a>
+        <a href="supplies.html">Supplies</a>
+        <a href="plantcare.html">Plant care</a>
         <div class="cart">Cart 🛒</div>
       </nav>
     </header>
-
+    
     <main>
-      <div class="product">
-        <img
-          src="https://coronatools.com/cdn/shop/files/8e721ee1526d72cd934b772161de1d99d18fb1a6.jpg?v=1747368389&width=580"
+      <div class="product-gallery">
+        <!-- product -->
+        <div class="product" data-category="supplie">
+          <img
+           src="https://coronatools.com/cdn/shop/files/8e721ee1526d72cd934b772161de1d99d18fb1a6.jpg?v=1747368389&width=580"
           alt="Hand trowel with crocodile-shaped comfort grip"
-          class="itemSet-image"
-        />
-        <div class="product-info">
-          <h2>Comfort grip hand trowel</h2>
-          <p class="price">$9.68</p>
-          <p class="itemSet-detail">One size</p>
-          <p class="itemSet-brand">Corona</p>
-
-          <div class="quantity">
-            <button id="decrease">-</button>
-            <span id="quantity">1</span>
-            <button id="increase">+</button>
-          </div>
-
-          <button class="add-to-cart">Add to cart</button>
-
-          <section class="description">
-            <h3>Description</h3>
-            <p><strong>About this product:</strong></p>
-            <p>
-              The Corona Clipper comfort trowel features a lightweight one-piece aluminum alloy structure that won't bend, break, or rust. Its larger-diameter contoured and cushioned grips are comfortable to handle, and the polished aluminum 
+        >
+         
+          <div class="product-info">
+    <h3>Comfort grip hand trowel</h3>
+    <p>$9.68</p>
+    <p>Size: One size</p>
+    <p>Brand: Corona </p>
+    
+    <button onclick="addToCart('Comfort grip hand trowel', 9.68)">Add to Cart</button>
+            
+    <div class="product-description">
+      <h4>Description</h4>
+      <strong>About this product:</strong>
+      <p>    The Corona Clipper comfort trowel features a lightweight one-piece aluminum alloy structure that won't bend, break, or rust. Its larger-diameter contoured and cushioned grips are comfortable to handle, and the polished aluminum 
               construction is easy to wipe clean after use.
             </p>
-          </section>
         </div>
       </div>
+     </div>
     </main>
-
-    <script src="../js/Productpage.js"></script>
+    
   </body>
 </html>
