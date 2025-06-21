@@ -1,53 +1,44 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Planthaus product page</title>
-    <link rel="stylesheet" href="../css/Productpage.css">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Planthaus Product Page</title>
+    <link rel="stylesheet" href="../css/Productpage.css" />
   </head>
   <body>
     <div class="banner">Celebrate Spring with us! Free shipping on all orders over $50</div>
-
     <header>
       <h1 class="logo">planthaus</h1>
-
       <nav>
-        <a href="">Pottery</a>
-        <a href="">Houseplants</a>
-        <a href="">Supplies</a>
-        <a href="">Plant care</a>
-
+        <a href="pottery.html">Pottery</a>
+        <a href="houseplants.html">Houseplants</a>
+        <a href="supplies.html">Supplies</a>
+        <a href="plantcare.html">Plant care</a>
         <div class="cart">Cart 🛒</div>
       </nav>
     </header>
-
+    
     <main>
-      <div class="product">
-        <img
+      <div class="product-gallery">
+        <!-- product -->
+        <div class="product" data-category="houseplant">
+          <img
           src="https://images.unsplash.com/photo-1637967885705-a60e3fea266d?q=80&w=1964&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
           alt="Hands holding up a large potted monstera deliciosa"
-          class="plantSet-image"
-        />
-
-        <div class="product-info">
-          <h2>Monstera deliciosa</h2>
-          <p class="price">$24.99</p>
-          <p class="size">8" pot</p>
-
-          <div class="quantity">
-            <button id="decrease">-</button>
-            <span id="quantity">1</span>
-            <button id="increase">+</button>
-          </div>
-
-          <button class="add-to-cart">Add to cart</button>
-
-          <section class="description">
-            <h3>Description</h3>
-            <p><strong>About this product:</strong></p>
-            <p>
-              The Monstera Deliciosa is an eye-catching and easy-to-care-for plant.
+        >
+         
+          <div class="product-info">
+    <h3>Monstera deliciosa</h3>
+    <p>$24.99</p>
+    <p>Size: 8" pot</p>
+    
+    <button onclick="addToCart('Monstera deliciosa', 24.99)">Add to Cart</button>
+            
+    <div class="product-description">
+      <h4>Description</h4>
+      <strong>About this product:</strong>
+      <p> The Monstera Deliciosa is an eye-catching and easy-to-care-for plant.
               One of the most noticeable characteristics of the Monstera is its glossy 
               heart-shaped leaves which split from the leaf edge to the center as the plant matures. 
               The Monstera needs medium to bright light and it can adapt well under lower light conditions. 
@@ -56,11 +47,10 @@
               excellent air purifiers that help decrease stress and anxiety while stimulating creativity and productivity.
               Great for yourself or as a gift.
             </p>
-          </section>
         </div>
       </div>
+     </div>
     </main>
-
-    <script src="../js/Productpage.js"></script>
+    
   </body>
 </html>
