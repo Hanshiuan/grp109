@@ -224,10 +224,14 @@ footer a {
 
 .carousel-button.left {
   left: 10px;
+  min-width: 44px;
+  min-height: 44px;
 }
 
 .carousel-button.right {
   right: 10px;
+  min-width: 44px;
+  min-height: 44px;
 }
 
 /* ||||||| itemSet & plantSet styling ||||||| */
