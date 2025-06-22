@@ -6,7 +6,7 @@
   max-width: 100%;
   height: 2em;
   color: white;
-  font-family: "Urbanist";
+  font-family: "Urbanist", sans-serif;
   font-weight: 500;
   font-size: 1.1rem;
   display: flex;
@@ -207,6 +207,82 @@ footer {
 
 .checkout-btn:hover,
 .checkout-btn:focus {
+  background-color: #317031;
+  outline: none;
+}
+
+/* --- Product cards and layout --- */
+
+#repottingSupplies,
+#houseplantSection,
+#potterySection {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1.5rem;
+}
+
+.itemSet,
+.plantSet {
+  border: 2px solid rgb(207, 207, 207);
+  box-shadow: 2px 2px 2px rgb(224, 224, 224);
+  border-radius: 5px;
+  padding: 1rem 1.5rem;
+  width: 220px;
+  text-align: center;
+  background-color: #fff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.itemSet-image,
+.plantSet-image {
+  height: 180px;
+  width: auto;
+  max-width: 100%;
+  margin-bottom: 1rem;
+  object-fit: contain;
+  border-radius: 8px;
+}
+
+.itemSet-title,
+.plantSet-title {
+  font-weight: 600;
+  font-size: 1.1rem;
+  margin: 0.3rem 0;
+}
+
+.itemSet-price,
+.plantSet-price {
+  font-weight: 600;
+  margin: 0.3rem 0;
+  color: #036300;
+}
+
+.itemSet-detail,
+.plantSet-detail,
+.itemSet-brand {
+  font-size: 0.9rem;
+  color: #555;
+  margin: 0.1rem 0;
+}
+
+.add-to-cart-btn {
+  margin-top: auto;
+  background-color: #3d8b3d;
+  color: white;
+  border: none;
+  padding: 0.5em 1em;
+  font-size: 1rem;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  width: 100%;
+}
+
+.add-to-cart-btn:hover,
+.add-to-cart-btn:focus {
   background-color: #317031;
   outline: none;
 }
