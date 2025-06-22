@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>planthaus - Supplies</title>
     <link
       rel="icon"
@@ -29,11 +29,11 @@
       <span id="closeButton" aria-hidden="true">&times;</span>
     </div>
 
-    <div class="cart">
-      <p>
-        Cart (<span id="cartCount">0</span>)
-      </p>
-      <span class="material-symbols-outlined">shopping_bag</span>
+    <div class="cart" aria-label="Shopping cart">
+      <p>Cart (<span id="cartCount">0</span>)</p>
+      <span class="material-symbols-outlined" aria-hidden="true"
+        >shopping_bag</span
+      >
     </div>
 
     <header id="planthausHeader">planthaus</header>
@@ -55,35 +55,28 @@
       </ul>
     </nav>
 
-    <div id="jsinput">
-      <p>What’s your favorite plant?</p>
-      <input type="text" id="userInput" placeholder="Type a plant name..." />
-      <button onclick="processInput()">Submit</button>
-      <p id="output" role="status" aria-live="polite"></p>
-    </div>
-
     <section>
-      <h1 class="itemSection-header">repotting supplies</h1>
+      <h1 id="suppliesSectionHeader">Repotting supplies</h1>
       <div id="repottingSupplies">
         <div class="itemSet">
           <div class="itemImageBackground">
             <img
               src="images/products/foxfarmsoil.jpg"
-              alt="bag of ocean forest potting soil"
+              alt="Bag of Ocean Forest potting soil"
               class="itemSet-image"
             />
           </div>
-          <p class="itemSet-title">ocean forest potting soil</p>
+          <p class="itemSet-title">Ocean Forest potting soil</p>
           <p class="itemSet-price">$16.99</p>
           <p class="itemSet-detail">12 quart bag</p>
-          <p class="itemSet-brand">foxfarm</p>
+          <p class="itemSet-brand">Foxfarm</p>
           <button
             class="add-to-cart-btn"
             data-id="supply-foxfarm"
-            data-name="ocean forest potting soil"
+            data-name="Ocean Forest potting soil"
             data-price="16.99"
           >
-            add to cart
+            Add to Cart
           </button>
         </div>
 
@@ -91,21 +84,21 @@
           <div class="itemImageBackground">
             <img
               src="https://rt1home.com/cdn/shop/products/potting-tarp-856633_2048x2048.png?v=1637244629"
-              alt="potting tarp being used to repot"
+              alt="Potting tarp being used to repot"
               class="itemSet-image"
             />
           </div>
-          <p class="itemSet-title">potting tarp</p>
+          <p class="itemSet-title">Potting tarp</p>
           <p class="itemSet-price">$22.00</p>
-          <p class="itemSet-detail">19.5&quot; l × 19.5&quot; w</p>
-          <p class="itemSet-brand">rt1 home</p>
+          <p class="itemSet-detail">19.5&quot;L × 19.5&quot;W</p>
+          <p class="itemSet-brand">RT1 Home</p>
           <button
             class="add-to-cart-btn"
             data-id="supply-tarp"
-            data-name="potting tarp"
+            data-name="Potting tarp"
             data-price="22.00"
           >
-            add to cart
+            Add to Cart
           </button>
         </div>
 
@@ -113,21 +106,21 @@
           <div class="itemImageBackground">
             <img
               src="https://coronatools.com/cdn/shop/files/8e721ee1526d72cd934b772161de1d99d18fb1a6.jpg?v=1747368389&width=580"
-              alt="hand trowel with crocodile-shaped comfort grip"
+              alt="Hand trowel with crocodile-shaped comfort grip"
               class="itemSet-image"
             />
           </div>
-          <p class="itemSet-title">comfort grip hand trowel</p>
+          <p class="itemSet-title">Comfort grip hand trowel</p>
           <p class="itemSet-price">$9.68</p>
-          <p class="itemSet-detail">one size</p>
-          <p class="itemSet-brand">corona</p>
+          <p class="itemSet-detail">One size</p>
+          <p class="itemSet-brand">Corona</p>
           <button
             class="add-to-cart-btn"
             data-id="supply-trowel"
-            data-name="comfort grip hand trowel"
+            data-name="Comfort grip hand trowel"
             data-price="9.68"
           >
-            add to cart
+            Add to Cart
           </button>
         </div>
 
@@ -135,21 +128,21 @@
           <div class="itemImageBackground">
             <img
               src="images/products/rootingpowder.jpg"
-              alt="bottle of rooting powder"
+              alt="Bottle of rooting powder"
               class="itemSet-image"
             />
           </div>
-          <p class="itemSet-title">rooting powder</p>
+          <p class="itemSet-title">Rooting powder</p>
           <p class="itemSet-price">$6.99</p>
           <p class="itemSet-detail">1 1/4oz</p>
-          <p class="itemSet-brand">bontone ii</p>
+          <p class="itemSet-brand">Bontone II</p>
           <button
             class="add-to-cart-btn"
             data-id="supply-rooting"
-            data-name="rooting powder"
+            data-name="Rooting powder"
             data-price="6.99"
           >
-            add to cart
+            Add to Cart
           </button>
         </div>
 
@@ -157,21 +150,21 @@
           <div class="itemImageBackground">
             <img
               src="images/products/osmocote.jpg"
-              alt="container of osmocote fertilizer"
+              alt="Container of osmocote fertilizer"
               class="itemSet-image"
             />
           </div>
-          <p class="itemSet-title">osmocote slow release fertilizer</p>
+          <p class="itemSet-title">Osmocote slow release fertilizer</p>
           <p class="itemSet-price">$8.99</p>
           <p class="itemSet-detail">1lb</p>
-          <p class="itemSet-brand">osmocote</p>
+          <p class="itemSet-brand">Osmocote</p>
           <button
             class="add-to-cart-btn"
             data-id="supply-osmocote"
-            data-name="osmocote slow release fertilizer"
+            data-name="Osmocote slow release fertilizer"
             data-price="8.99"
           >
-            add to cart
+            Add to Cart
           </button>
         </div>
       </div>
@@ -205,24 +198,23 @@
       </p>
     </section>
 
-    <!-- JavaScript -->
+    <!-- Scripts -->
     <script src="js/cart.js"></script>
     <script src="js/inputHandler.js"></script>
     <script>
       document.addEventListener("DOMContentLoaded", function () {
         const buttons = document.querySelectorAll(".add-to-cart-btn");
-        buttons.forEach(button => {
+        buttons.forEach((button) => {
           button.addEventListener("click", function () {
             const product = {
               id: button.getAttribute("data-id"),
               name: button.getAttribute("data-name"),
-              price: parseFloat(button.getAttribute("data-price"))
+              price: parseFloat(button.getAttribute("data-price")),
             };
             addToCart(product);
             updateCartCount();
           });
         });
-
         updateCartCount();
       });
     </script>
