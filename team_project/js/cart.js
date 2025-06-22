@@ -26,7 +26,7 @@ function removeFromCart(productId) {
 }
 
 function getCartCount() {
-  return cart.reduce((sum, item) => sum + item.quantity, 0);
+  return cart.reduce((total, item) => total + item.quantity, 0);
 }
 
 function updateCartCount() {
@@ -36,79 +36,52 @@ function updateCartCount() {
   }
 }
 
+// Render cart items inside dropdown
 function renderCartItems() {
-  const cartItemsContainer = document.getElementById("cart-items");
-  if (!cartItemsContainer) return;
+  const container = document.getElementById("cart-items");
+  if (!container) return;
 
   if (cart.length === 0) {
-    cartItemsContainer.innerHTML = "<p>Your cart is empty.</p>";
+    container.innerHTML = "<p>Your cart is empty.</p>";
     return;
   }
 
-  cartItemsContainer.innerHTML = ""; // Clear current items
+  container.innerHTML = ""; // Clear previous
 
   cart.forEach(item => {
-    const div = document.createElement("div");
-    div.className = "cart-item";
+    const itemDiv = document.createElement("div");
+    itemDiv.classList.add("cart-item");
 
-    div.innerHTML = `
+    itemDiv.innerHTML = `
       <span>${item.name} x ${item.quantity}</span>
       <span>$${(item.price * item.quantity).toFixed(2)}</span>
-      <button aria-label="Remove ${item.name}" data-id="${item.id}">&times;</button>
+      <button class="remove-btn" aria-label="Remove ${item.name} from cart" data-id="${item.id}">&times;</button>
     `;
 
-    const btn = div.querySelector("button");
-    btn.addEventListener("click", () => {
-      removeFromCart(item.id);
+    container.appendChild(itemDiv);
+  });
+
+  // Add event listeners for remove buttons
+  container.querySelectorAll(".remove-btn").forEach(button => {
+    button.addEventListener("click", () => {
+      const id = button.getAttribute("data-id");
+      removeFromCart(id);
     });
-
-    cartItemsContainer.appendChild(div);
   });
 }
 
-function setupCartToggle() {
-  const cartButton = document.querySelector(".cart");
-  const cartDropdown = document.querySelector(".cart-dropdown");
-
-  if (!cartButton || !cartDropdown) return;
-
-  // Toggle dropdown on click
-  cartButton.addEventListener("click", () => {
-    const visible = cartDropdown.style.display === "flex";
-    cartDropdown.style.display = visible ? "none" : "flex";
-  });
-
-  // Close dropdown when clicking outside
-  document.addEventListener("click", (e) => {
-    if (!cartButton.contains(e.target) && !cartDropdown.contains(e.target)) {
-      cartDropdown.style.display = "none";
-    }
-  });
-}
-
-// Initialize everything on DOM load
+// Initialize cart UI on page load
 document.addEventListener("DOMContentLoaded", () => {
   renderCartItems();
   updateCartCount();
-  setupCartToggle();
 
-  // Add to Cart button handlers
-  document.querySelectorAll(".add-to-cart-btn").forEach(button => {
-    button.addEventListener("click", () => {
-      const product = {
-        id: button.getAttribute("data-id"),
-        name: button.getAttribute("data-name"),
-        price: parseFloat(button.getAttribute("data-price")),
-      };
-      addToCart(product);
-    });
+  // Optional: Toggle cart dropdown on cart hover or click
+  const cartEl = document.querySelector(".cart");
+  const dropdown = cartEl.querySelector(".cart-dropdown");
+  cartEl.addEventListener("mouseenter", () => {
+    dropdown.style.display = "block";
   });
-
-  // View Cart and Checkout button placeholders
-  document.getElementById("viewCartBtn")?.addEventListener("click", () => {
-    alert("View Cart clicked. Implement navigation.");
-  });
-  document.getElementById("checkoutBtn")?.addEventListener("click", () => {
-    alert("Checkout clicked. Implement navigation.");
+  cartEl.addEventListener("mouseleave", () => {
+    dropdown.style.display = "none";
   });
 });
