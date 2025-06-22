@@ -7,7 +7,7 @@ function saveCart() {
 }
 
 function addToCart(product) {
-  const existing = cart.find((item) => item.id === product.id);
+  const existing = cart.find(item => item.id === product.id);
   if (existing) {
     existing.quantity += 1;
   } else {
@@ -19,7 +19,7 @@ function addToCart(product) {
 }
 
 function removeFromCart(productId) {
-  cart = cart.filter((item) => item.id !== productId);
+  cart = cart.filter(item => item.id !== productId);
   saveCart();
   updateCartCount();
   renderCartItems();
@@ -47,7 +47,7 @@ function renderCartItems() {
     return;
   }
 
-  cart.forEach((item) => {
+  cart.forEach(item => {
     const li = document.createElement("li");
     li.textContent = `${item.name} — $${item.price.toFixed(2)} × ${item.quantity}`;
 
