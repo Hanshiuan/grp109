@@ -23,21 +23,21 @@
   padding-right: 1em;
 }
 
-/* || Cart || */
+/* || Cart Styling Added || */
 
 .cart {
+  position: relative;
   display: flex;
   align-items: center;
   justify-content: right;
   padding-right: 1.5em;
   cursor: pointer;
+  font-family: "Urbanist";
 }
 
 .cart p {
   padding-right: 0.5em;
 }
-
-/* Cart dropdown styling */
 
 .cart-dropdown {
   display: none;
@@ -48,7 +48,7 @@
   border: 1px solid #ccc;
   border-radius: 10px;
   padding: 1em;
-  min-width: 240px;
+  min-width: 260px;
   box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
   z-index: 1000;
 }
@@ -56,8 +56,6 @@
 .cart:hover .cart-dropdown {
   display: block;
 }
-
-/* CART DROPDOWN STYLES */
 
 .cart-dropdown button {
   background-color: #3d8b3d;
@@ -74,10 +72,7 @@
   background-color: #317031;
 }
 
-.cart:hover .cart-dropdown {
-  display: block;
-}
-
+/* Scroll inside cart items container if many items */
 #cart-items {
   max-height: 150px;
   overflow-y: auto;
@@ -294,6 +289,8 @@ h1 {
   border: 2px solid darkgreen;
   box-shadow: 4px 4px 4px rgb(224, 224, 224);
   border-radius: 5px;
+  transform: scale(1.03);
+  transition: 0.2s ease-in-out;
 }
 
 .itemSet-title,
@@ -424,17 +421,6 @@ h2 {
   padding-top: 0.9em;
 }
 
-#planthausHeader {
-  color: rgb(3, 99, 3);
-  font-family: "Urbanist", sans-serif;
-  font-weight: 700;
-  font-style: normal;
-  display: flex;
-  justify-content: center;
-  font-size: 2.5em;
-  padding-top: 0.9em;
-}
-
 /* PRODUCT GALLERY GRID */
 
 .product-gallery {
@@ -470,4 +456,11 @@ h2 {
 
 .product-card button:hover {
   background-color: #1b5e20;
+}
+
+/* Add hover effect to product cards */
+.product-card:hover {
+  transform: scale(1.03);
+  transition: 0.2s ease-in-out;
+  border: 2px solid #2e7d32;
 }
