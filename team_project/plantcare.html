@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>planthaus - Plant Care</title>
+  <link rel="icon" href="images/houseplant-flowerpot-plant-pot-home-border-leaf-green-nature-garden-natural-line-logo-design-vector.jpg" />
+  <link rel="stylesheet" href="css/index.css" />
+  <!-- Urbanist font -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Urbanist:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet" />
+  <!-- Google shopping bag icon -->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=shopping_bag" />
+</head>
+<body>
+  <div id="announcement" role="banner">
+    <span>Celebrate Spring with us! Free shipping on all orders over $50</span>
+    <span id="closeButton" aria-hidden="true">&times;</span>
+  </div>
+
+  <div class="cart">
+    <p>Cart (<span id="cartCount">0</span>)</p>
+    <span class="material-symbols-outlined">shopping_bag</span>
+    <div class="cart-dropdown" aria-label="Shopping cart dropdown">
+      <!-- Cart items will be dynamically inserted here by JS -->
+      <div id="cart-items"></div>
+      <button id="viewCartBtn">view cart</button>
+      <button id="checkoutBtn">checkout</button>
+    </div>
+  </div>
+
+  <header id="planthausHeader">planthaus</header>
+
+  <nav aria-label="Main Navigation">
+    <ul>
+      <li><a href="pottery.html">Pottery</a></li>
+      <li><a href="houseplants.html">Houseplants</a></li>
+      <li><a href="supplies.html">Supplies</a></li>
+      <li><a href="plantcare.html">Plant care</a></li>
+      <li class="dropdown">
+        <div>About us ▼</div>
+        <div class="dropdown-content">
+          <a href="memberHanshiuan.html">HanShiuan</a>
+          <a href="memberHarley.html">Harley</a>
+          <a href="memberMumtaas.html">Mumtaas</a>
+        </div>
+      </li>
+    </ul>
+  </nav>
+
+  <main>
+    <section>
+      <h1 id="plantSectionHeader">Plant Care</h1>
+      <p>Coming soon...</p>
+    </section>
+  </main>
+
+  <footer>
+    <nav id="footerNav" aria-label="Footer Navigation">
+      <a href="index.html">Home</a>
+      <a href="changes.html">Change Log</a>
+      <a href="validation.html">Validation Tracker</a>
+    </nav>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="js/cart.js"></script>
+  <script src="js/inputHandler.js"></script>
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      updateCartCount();
+
+      // Optionally add event handlers for view cart & checkout buttons
+      document.getElementById('viewCartBtn').addEventListener('click', () => {
+        alert("View Cart clicked - add your implementation!");
+      });
+      document.getElementById('checkoutBtn').addEventListener('click', () => {
+        alert("Checkout clicked - add your implementation!");
+      });
+    });
+  </script>
+</body>
+</html>

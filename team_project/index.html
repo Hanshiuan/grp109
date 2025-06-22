@@ -1,397 +1,251 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=w, initial-scale=1.0" />
-    <title>planthaus - Home</title>
-    <link
-      rel="icon"
-      href="images/houseplant-flowerpot-plant-pot-home-border-leaf-green-nature-garden-natural-line-logo-design-vector.jpg"
-    />
-    <link rel="stylesheet" href="css/index.css" />
-    <!-- Link for Urbanist font -->
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Urbanist:ital,wght@0,100..900;1,100..900&display=swap"
-      rel="stylesheet"
-    />
-    <!-- Link for google icon, shopping bag -->
-    <link
-      rel="stylesheet"
-      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=shopping_bag"
-    />
-  </head>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>planthaus - Shop</title>
+  <link rel="icon" href="images/houseplant-flowerpot-plant-pot-home-border-leaf-green-nature-garden-natural-line-logo-design-vector.jpg" />
+  <link rel="stylesheet" href="css/index.css" />
+  <!-- Urbanist font -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Urbanist:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet" />
+  <!-- Shopping bag icon -->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=shopping_bag" />
+</head>
 
-  <body>
-    <div id="announcement" role="banner">
-      <span
-        >Celebrate Spring with us! Free shipping on all orders over $50</span
-      >
-      <span id="closeButton" aria-hidden="true">&times;</span>
+<body>
+  <div id="announcement" role="banner">
+    <span>Celebrate Spring with us! Free shipping on all orders over $50</span>
+    <span id="closeButton" aria-hidden="true">&times;</span>
+  </div>
+
+  <div class="cart" aria-label="Shopping cart" role="region" tabindex="0">
+    <p>Cart (<span id="cartCount">0</span>)</p>
+    <span class="cart-icon" aria-hidden="true">&#128722;</span>
+    <div class="cart-dropdown" aria-live="polite" aria-atomic="true">
+      <ul id="cart-items"></ul>
+      <button class="checkout-btn" onclick="alert('View Cart clicked!')">View Cart</button>
+      <button class="checkout-btn" onclick="alert('Checkout clicked!')">Checkout</button>
     </div>
-    <a href="#main">Skip to main</a>
+  </div>
 
-    <!-- Doesn't do anything yet. Feel free to change to something else! -->
-    <div class="cart" role="complementary">
-      <p>Cart</p>
-      <span class="material-symbols-outlined" aria-hidden="true">
-        shopping_bag
-      </span>
-    </div>
+  <header id="planthausHeader">planthaus</header>
 
-    <header id="planthausHeader">planthaus</header>
+  <nav aria-label="Main Navigation">
+    <ul>
+      <li><a href="pottery.html">Pottery</a></li>
+      <li><a href="houseplants.html">Houseplants</a></li>
+      <li><a href="supplies.html">Supplies</a></li>
+      <li><a href="plantcare.html">Plant care</a></li>
+      <li class="dropdown">
+        <div>About us ▼</div>
+        <div class="dropdown-content">
+          <a href="memberHanshiuan.html">HanShiuan</a>
+          <a href="memberHarley.html">Harley</a>
+          <a href="memberMumtaas.html">Mumtaas</a>
+        </div>
+      </li>
+    </ul>
+  </nav>
 
-    <div id="main">
-      <nav aria-label="Main Navigation">
-        <ul role="menubar">
-          <li role="none">
-            <a role="menuitem" href="pottery.html">Pottery</a>
-          </li>
-          <li role="none">
-            <a role="menuitem" href="houseplants.html">Houseplants</a>
-          </li>
-          <li role="none">
-            <a role="menuitem" href="supplies.html">Supplies</a>
-          </li>
-          <li role="none"><a role="menuitem" href="plantcare.html">Plant care</a></li>
-          <li class="dropdown" role="none">
-            <div role="menuitem" aria-haspopup="true" aria-expanded="false">
-              About us ▼
-            </div>
-            <div class="dropdown-content" role="menu">
-              <a role="menuitem" href="memberHanshiuan.html">HanShiuan</a>
-              <a role="menuitem" href="memberHarley.html">Harley</a>
-              <a role="menuitem" href="memberMumtaas.html">Mumtaas</a>
-            </div>
-          </li>
-        </ul>
-      </nav>
-
-      <!-- User input section -->
-      <div id="jsinput" role="form">
-        <p>What’s your favorite plant?</p>
-        <input type="text" id="userInput" placeholder="Type a plant name..." />
-        <button
-          onclick="processInput()"
-          input
-          type="submit"
-          aria-pressed="false"
-        >
-          Submit
-        </button>
-        <p id="output"></p>
+  <!-- Pottery Section -->
+  <section id="potterySection">
+    <h1>pottery</h1>
+    <div class="itemSet">
+      <div class="itemImageBackground">
+        <img src="images/products/bloomvineplanter.png" alt="Charming ceramic planter with delicate vine illustrations" class="itemSet-image" />
       </div>
-
-      <div class="carcenter">
-        <div class="carousel">
-          <div class="carousel-track-container">
-            <ul class="carousel-track" role="list">
-              <li class="carousel-slide current-slide" role="listitem">
-                <img
-                  src="images/carousel/repotting.png"
-                  alt="Two women working together to repot a houseplant"
-                />
-              </li>
-              <li class="carousel-slide" role="listitem">
-                <img
-                  src="images/carousel/thaiconc.png"
-                  alt="Large thai constellation"
-                />
-              </li>
-              <li class="carousel-slide" role="listitem">
-                <img
-                  src="images/carousel/clinic.png"
-                  alt="Man surrounded by plants and holding one up to a laptop in front of him"
-                />
-              </li>
-            </ul>
-          </div>
-          <button
-            class="carousel-button left"
-            aria-pressed="false"
-            aria-label="Previous slide"
-          >
-            ←
-          </button>
-          <button
-            class="carousel-button right"
-            aria-pressed="false"
-            aria-label="Next slide"
-          >
-            →
-          </button>
-        </div>
-      </div>
-
-      <h1 class="itemSection-header">Repotting supplies</h1>
-      <section aria-labelledby="itemSection-header">
-        <div id="repottingSupplies">
-          <div role="group">
-            <div class="itemSet">
-              <div class="itemImageBackground">
-                <img
-                  src="images/products/foxfarmsoil.jpg"
-                  alt="Bag of Gardener's friend potting soil"
-                  class="itemSet-image"
-                />
-              </div>
-
-              <!-- add link to Ocean Forest potting soil_product page -->
-              <p class="itemSet-title">
-                <a
-                  href="product-pages/foxfarmsoil_productpage.html"
-                  style="text-decoration: none; color: inherit"
-                  >Ocean Forest potting soil</a
-                >
-              </p>
-              <p class="itemSet-price">$16.99</p>
-              <p class="itemSet-detail">12 quart bag</p>
-              <p class="itemSet-brand">Foxfarm</p>
-            </div>
-          </div>
-
-          <div role="group">
-            <div class="itemSet">
-              <div class="itemImageBackground">
-                <img
-                  src="https://rt1home.com/cdn/shop/products/potting-tarp-856633_2048x2048.png?v=1637244629"
-                  alt="Potting tarp being used to repot"
-                  class="itemSet-image"
-                />
-              </div>
-
-              <!-- add link to Potting tarp_product page -->
-              <p class="plantSet-title">
-                <a
-                  href="product-pages/pottingtarp_productpage.html"
-                  style="text-decoration: none; color: inherit"
-                  >Potting tarp</a
-                >
-              </p>
-              <p class="itemSet-price">$22.00</p>
-              <p class="itemSet-detail">19.5"L X 19.5"W</p>
-              <p class="itemSet-brand">RT1 Home</p>
-            </div>
-          </div>
-
-          <div role="group" aria-label="product">
-            <div class="itemSet">
-              <div class="itemImageBackground">
-                <img
-                  src="https://coronatools.com/cdn/shop/files/8e721ee1526d72cd934b772161de1d99d18fb1a6.jpg?v=1747368389&width=580"
-                  alt="Hand trowel with crocodile-shaped comfort grip"
-                  class="itemSet-image"
-                />
-              </div>
-
-              <p class="itemSet-title">
-                <a
-                  href="product-pages/handtrowel_productpage.html"
-                  style="text-decoration: none; color: inherit"
-                  >Comfort grip hand trowel</a
-                >
-              </p>
-              <p class="itemSet-price">$9.68</p>
-              <p class="itemSet-detail">One size</p>
-              <p class="itemSet-brand">Corona</p>
-            </div>
-          </div>
-
-          <div role="group" aria-label="product">
-            <div class="itemSet">
-              <div class="itemImageBackground">
-                <img
-                  src="images/products/rootingpowder.jpg"
-                  alt="Bottle of rooting powder"
-                  class="itemSet-image"
-                />
-              </div>
-
-              <p class="itemSet-title">
-                <a href="product-pages/rootingpowder_productpage.html"
-                  >Rooting powder</a
-                >
-              </p>
-              <p class="itemSet-price">$6.99</p>
-              <p class="itemSet-detail">1 1/4oz</p>
-              <p class="itemSet-brand">Bontone II</p>
-            </div>
-          </div>
-
-          <div role="group" aria-label="product">
-            <div class="itemSet">
-              <div class="itemImageBackground">
-                <img
-                  src="images/products/osmocote.jpg"
-                  alt="Container of osmocote fertilizer"
-                  class="itemSet-image"
-                />
-              </div>
-
-              <p class="itemSet-title">
-                <a
-                  href="product-pages/osmocote_productpage.html"
-                  style="text-decoration: none; color: inherit"
-                  >Osmocote slow release fertilizer</a
-                >
-              </p>
-              <p class="itemSet-price">$8.99</p>
-              <p class="itemSet-detail">1lb</p>
-              <p class="itemSet-brand">Osmocote</p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <br />
-      <h1 class="plantSectionHeader">Houseplants</h1>
-
-      <section aria-labelledby="itemSection-header">
-        <div id="houseplantSection">
-          <div class="plantSet">
-            <div class="plantImageBackground">
-              <img
-                src="https://images.unsplash.com/photo-1637967885705-a60e3fea266d?q=80&w=1964&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-                alt="Hands holding up a large potted monstera deliciosa"
-                class="plantSet-image"
-              />
-            </div>
-            <!-- add link to Monstera_product page -->
-            <p class="plantSet-title">
-              <a
-                href="product-pages/monstera_productpage.html"
-                style="text-decoration: none; color: inherit"
-                >Monstera deliciosa</a
-              >
-            </p>
-            <p class="plantSet-price">$24.99</p>
-            <p class="plantSet-detail">8" pot</p>
-            <!-- <p class="plantSet-brand">planthaus</p> -->
-          </div>
-
-          <div class="plantSet">
-            <div class="plantImageBackground">
-              <img
-                src="https://images.unsplash.com/photo-1744143495309-60dc0483c879?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-                alt="Small Hoya lacunosa on a tabletop"
-                class="plantSet-image"
-              />
-            </div>
-
-            <!-- add link to Hoya lacunosa_product page -->
-            <p class="plantSet-title">
-              <a
-                href="product-pages/hoyalacunosa_productpage.html"
-                style="text-decoration: none; color: inherit"
-                >Hoya lacunosa</a
-              >
-            </p>
-            <p class="plantSet-price">$12.99</p>
-            <p class="plantSet-detail">3" pot</p>
-            <!-- <p class="plantSet-brand">planthaus</p> -->
-          </div>
-
-          <div class="plantSet">
-            <div class="plantImageBackground">
-              <img
-                src="https://images.unsplash.com/photo-1694285617850-fad6e23756fb?q=80&w=1965&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-                alt="Aloe vera plant a tabletop"
-                class="plantSet-image"
-              />
-            </div>
-
-            <!-- add link to Aloe vera_product page -->
-            <p class="plantSet-title">
-              <a
-                href="product-pages/aloevera_productpage.html"
-                style="text-decoration: none; color: inherit"
-                >Aloe vera</a
-              >
-            </p>
-            <p class="plantSet-price">$10.99</p>
-            <p class="plantSet-detail">6" pot</p>
-            <!-- <p class="plantSet-brand">planthaus</p> -->
-          </div>
-
-          <div class="plantSet">
-            <div class="plantImageBackground">
-              <img
-                src="https://t3.ftcdn.net/jpg/12/44/60/04/360_F_1244600427_0pIbPafMvKCdaSi6XO3CFWqoVConrvjy.jpg"
-                alt="Rosemary plant"
-                class="plantSet-image"
-              />
-            </div>
-
-            <!-- add link to Rosemary_product page -->
-            <p class="plantSet-title">
-              <a
-                href="product-pages/rosemary_productpage.html"
-                style="text-decoration: none; color: inherit"
-                >Rosemary</a
-              >
-            </p>
-            <p class="plantSet-price">$6.99</p>
-            <p class="plantSet-detail">4" pot</p>
-            <!-- <p class="plantSet-brand">planthaus</p> -->
-          </div>
-
-          <div class="plantSet">
-            <div class="plantImageBackground">
-              <img
-                src="https://images.unsplash.com/photo-1733916291695-069ae5ae4310?q=80&w=1964&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-                alt="Philodendron brandiatum in a white pot"
-                class="plantSet-image"
-              />
-            </div>
-            <!-- add link to Philodendron brandiatum_product page -->
-            <p class="plantSet-title">
-              <a
-                href="product-pages/philodendron_productpage.html"
-                style="text-decoration: none; color: inherit"
-                >Philodendron brandiatum</a
-              >
-            </p>
-            <p class="plantSet-price">$42.99</p>
-            <p class="plantSet-detail">8" pot</p>
-            <!-- <p class="plantSet-brand">planthaus</p> -->
-          </div>
-        </div>
-      </section>
+      <p class="itemSet-title">bloom vine planter</p>
+      <p class="itemSet-price">$30.00</p>
+      <p class="itemSet-detail">5" h × 4" w</p>
+      <p class="itemSet-brand">cultural influence: mexican</p>
+      <button class="add-to-cart-btn" data-id="pot-bloomvine" data-name="bloom vine planter" data-price="30.00">add to cart</button>
     </div>
 
-    <footer>
-      <!-- Navigation links to other pages -->
-      <nav id="footerNav" aria-label="Footer Navigation">
-        <a href="index.html">Home</a>
-        <a href="changes.html">Change Log</a>
-        <a href="validation.html">Validation Tracker</a>
-      </nav>
-    </footer>
+    <div class="itemSet">
+      <div class="itemImageBackground">
+        <img src="images/products/earthenemberplanter.png" alt="rustic clay pot" class="itemSet-image" />
+      </div>
+      <p class="itemSet-title">earthen ember planter</p>
+      <p class="itemSet-price">$30.00</p>
+      <p class="itemSet-detail">6" h × 4" w</p>
+      <p class="itemSet-brand">cultural influence: global rustic / earthenware</p>
+      <button class="add-to-cart-btn" data-id="pot-earthenember" data-name="earthen ember planter" data-price="30.00">add to cart</button>
+    </div>
 
-    <!-- About section -->
-    <section id="aboutProject">
-      <h2>About the Project</h2>
-      <p>
-        Planthaus has a sleek, modern, boutique feel — a trendy, minimalist, and
-        creative approach.
-      </p>
+    <div class="itemSet">
+      <div class="itemImageBackground">
+        <img src="images/products/harvesthugplanter.png" alt="tall clay pot" class="itemSet-image" />
+      </div>
+      <p class="itemSet-title">harvest hug planter</p>
+      <p class="itemSet-price">$35.00</p>
+      <p class="itemSet-detail">9" h × 8" w</p>
+      <p class="itemSet-brand">cultural influence: mediterranean</p>
+      <button class="add-to-cart-btn" data-id="pot-harvesthug" data-name="harvest hug planter" data-price="35.00">add to cart</button>
+    </div>
 
-      <h3>Purpose</h3>
-      <p>
-        The website will offer mock products, purchases, a front page carousel,
-        plant care page, profile, cart, and more.
-      </p>
+    <div class="itemSet">
+      <div class="itemImageBackground">
+        <img src="images/products/sunkissedterracotta.png" alt="sun-themed painted terracotta" class="itemSet-image" />
+      </div>
+      <p class="itemSet-title">sun-kissed terracotta</p>
+      <p class="itemSet-price">$90.00</p>
+      <p class="itemSet-detail">10" h × 9" w</p>
+      <p class="itemSet-brand">cultural influence: mexican</p>
+      <button class="add-to-cart-btn" data-id="pot-sunkissed" data-name="sun-kissed terracotta" data-price="90.00">add to cart</button>
+    </div>
+  </section>
 
-      <h3>How it works</h3>
-      <p>
-        We will start with barebones features, adding more with JS and other
-        functions. Example: Product pages + cart (no add/remove yet).
-      </p>
-    </section>
+  <!-- Houseplants Section -->
+  <section id="houseplantSection">
+    <h1>houseplants</h1>
+    <div class="plantSet">
+      <div class="plantImageBackground">
+        <img src="https://images.unsplash.com/photo-1637967885705-a60e3fea266d?q=80&w=1964&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="hands holding up a large potted monstera deliciosa" class="plantSet-image" />
+      </div>
+      <p class="plantSet-title">monstera deliciosa</p>
+      <p class="plantSet-price">$24.99</p>
+      <p class="plantSet-detail">8" pot</p>
+      <button class="add-to-cart-btn" data-id="plant-monstera" data-name="monstera deliciosa" data-price="24.99">add to cart</button>
+    </div>
 
-    <!-- Link to JavaScript file -->
-    <script src="js/inputHandler.js"></script>
-    <script src="js/carousel.js"></script>
-  </body>
+    <div class="plantSet">
+      <div class="plantImageBackground">
+        <img src="https://images.unsplash.com/photo-1744143495309-60dc0483c879?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="small hoya lacunosa on a tabletop" class="plantSet-image" />
+      </div>
+      <p class="plantSet-title">hoya lacunosa</p>
+      <p class="plantSet-price">$12.99</p>
+      <p class="plantSet-detail">3" pot</p>
+      <button class="add-to-cart-btn" data-id="plant-hoya" data-name="hoya lacunosa" data-price="12.99">add to cart</button>
+    </div>
+
+    <div class="plantSet">
+      <div class="plantImageBackground">
+        <img src="https://images.unsplash.com/photo-1694285617850-fad6e23756fb?q=80&w=1965&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="aloe vera plant on a tabletop" class="plantSet-image" />
+      </div>
+      <p class="plantSet-title">aloe vera</p>
+      <p class="plantSet-price">$10.99</p>
+      <p class="plantSet-detail">6" pot</p>
+      <button class="add-to-cart-btn" data-id="plant-aloe-vera" data-name="aloe vera" data-price="10.99">add to cart</button>
+    </div>
+
+    <div class="plantSet">
+      <div class="plantImageBackground">
+        <img src="https://t3.ftcdn.net/jpg/12/44/60/04/360_F_1244600427_0pIbPafMvKCdaSi6XO3CFWqoVConrvjy.jpg" alt="rosemary plant" class="plantSet-image" />
+      </div>
+      <p class="plantSet-title">rosemary</p>
+      <p class="plantSet-price">$6.99</p>
+      <p class="plantSet-detail">4" pot</p>
+      <button class="add-to-cart-btn" data-id="plant-rosemary" data-name="rosemary" data-price="6.99">add to cart</button>
+    </div>
+
+    <div class="plantSet">
+      <div class="plantImageBackground">
+        <img src="https://images.unsplash.com/photo-1733916291695-069ae5ae4310?q=80&w=1964&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="philodendron brandiatum in a white pot" class="plantSet-image" />
+      </div>
+      <p class="plantSet-title">philodendron brandiatum</p>
+      <p class="plantSet-price">$42.99</p>
+      <p class="plantSet-detail">8" pot</p>
+      <button class="add-to-cart-btn" data-id="plant-philo" data-name="philodendron brandiatum" data-price="42.99">add to cart</button>
+    </div>
+  </section>
+
+  <!-- Supplies Section -->
+  <section id="suppliesSection">
+    <h1>supplies</h1>
+    <div class="itemSet">
+      <div class="itemImageBackground">
+        <img src="images/products/foxfarmsoil.jpg" alt="bag of ocean forest potting soil" class="itemSet-image" />
+      </div>
+      <p class="itemSet-title">ocean forest potting soil</p>
+      <p class="itemSet-price">$16.99</p>
+      <p class="itemSet-detail">12 quart bag</p>
+      <p class="itemSet-brand">foxfarm</p>
+      <button class="add-to-cart-btn" data-id="supply-foxfarm" data-name="ocean forest potting soil" data-price="16.99">add to cart</button>
+    </div>
+
+    <div class="itemSet">
+      <div class="itemImageBackground">
+        <img src="https://rt1home.com/cdn/shop/products/potting-tarp-856633_2048x2048.png?v=1637244629" alt="potting tarp being used to repot" class="itemSet-image" />
+      </div>
+      <p class="itemSet-title">potting tarp</p>
+      <p class="itemSet-price">$22.00</p>
+      <p class="itemSet-detail">19.5"l × 19.5"w</p>
+      <p class="itemSet-brand">rt1 home</p>
+      <button class="add-to-cart-btn" data-id="supply-tarp" data-name="potting tarp" data-price="22.00">add to cart</button>
+    </div>
+
+    <div class="itemSet">
+      <div class="itemImageBackground">
+        <img src="https://coronatools.com/cdn/shop/files/8e721ee1526d72cd934b772161de1d99d18fb1a6.jpg?v=1747368389&width=580" alt="hand trowel with crocodile-shaped comfort grip" class="itemSet-image" />
+      </div>
+      <p class="itemSet-title">comfort grip hand trowel</p>
+      <p class="itemSet-price">$9.68</p>
+      <p class="itemSet-detail">one size</p>
+      <p class="itemSet-brand">corona</p>
+      <button class="add-to-cart-btn" data-id="supply-trowel" data-name="comfort grip hand trowel" data-price="9.68">add to cart</button>
+    </div>
+
+    <div class="itemSet">
+      <div class="itemImageBackground">
+        <img src="images/products/rootingpowder.jpg" alt="bottle of rooting powder" class="itemSet-image" />
+      </div>
+      <p class="itemSet-title">rooting powder</p>
+      <p class="itemSet-price">$6.99</p>
+      <p class="itemSet-detail">1 1/4oz</p>
+      <p class="itemSet-brand">bontone ii</p>
+      <button class="add-to-cart-btn" data-id="supply-rooting" data-name="rooting powder" data-price="6.99">add to cart</button>
+    </div>
+
+    <div class="itemSet">
+      <div class="itemImageBackground">
+        <img src="images/products/osmocote.jpg" alt="container of osmocote fertilizer" class="itemSet-image" />
+      </div>
+      <p class="itemSet-title">osmocote slow release fertilizer</p>
+      <p class="itemSet-price">$8.99</p>
+      <p class="itemSet-detail">1lb</p>
+      <p class="itemSet-brand">osmocote</p>
+      <button class="add-to-cart-btn" data-id="supply-osmocote" data-name="osmocote slow release fertilizer" data-price="8.99">add to cart</button>
+    </div>
+  </section>
+
+  <!-- Plant Care Section -->
+  <section id="plantCareSection">
+    <h1>plant care</h1>
+    <p>
+      exciting things are sprouting here! our plant care tips and tricks are coming soon to help your green friends thrive. stay tuned — your plants will thank you!
+    </p>
+  </section>
+
+  <footer>
+    <nav id="footerNav" aria-label="Footer Navigation">
+      <a href="index.html">home</a>
+      <a href="changes.html">change log</a>
+      <a href="validation.html">validation tracker</a>
+    </nav>
+  </footer>
+
+  <!-- JS Files -->
+  <script src="js/cart.js"></script>
+  <script src="js/inputHandler.js"></script>
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      const buttons = document.querySelectorAll(".add-to-cart-btn");
+      buttons.forEach(button => {
+        button.addEventListener("click", function () {
+          const product = {
+            id: button.getAttribute("data-id"),
+            name: button.getAttribute("data-name"),
+            price: parseFloat(button.getAttribute("data-price"))
+          };
+          addToCart(product);
+          updateCartCount();
+        });
+      });
+
+      updateCartCount();
+    });
+  </script>
+</body>
 </html>
