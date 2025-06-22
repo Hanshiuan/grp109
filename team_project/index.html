@@ -1,112 +1,276 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>planthaus - Home</title>
-    <link rel="icon" href="images/houseplant-flowerpot-plant-pot-home-border-leaf-green-nature-garden-natural-line-logo-design-vector.jpg" />
-    <link rel="stylesheet" href="css/index.css" />
-    <!-- Urbanist font -->
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Urbanist:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet" />
-    <!-- Google icon (shopping bag) -->
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" />
-  </head>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>planthaus - Full Cart Example</title>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Urbanist:ital,wght@0,100..900;1,100..900&display=swap"
+    rel="stylesheet"
+  />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined"
+    rel="stylesheet"
+  />
+  <style>
+    body {
+      font-family: 'Urbanist', sans-serif;
+      margin: 20px;
+    }
+    #announcement {
+      background-color: #0e4d00;
+      color: white;
+      font-weight: 500;
+      font-size: 1.1rem;
+      padding: 10px;
+      text-align: center;
+      position: relative;
+    }
+    #closeButton {
+      position: absolute;
+      right: 10px;
+      top: 8px;
+      cursor: pointer;
+      font-size: 1.5rem;
+    }
+    .cart {
+      position: relative;
+      float: right;
+      cursor: pointer;
+      margin-bottom: 30px;
+    }
+    .cart p {
+      display: inline-block;
+      margin: 0;
+      font-weight: 700;
+      font-size: 1.2rem;
+      vertical-align: middle;
+      padding-right: 5px;
+    }
+    .material-symbols-outlined {
+      font-variation-settings: 'FILL' 1, 'wght' 700, 'GRAD' 0, 'opsz' 48;
+      vertical-align: middle;
+      font-size: 2rem;
+    }
+    .cart-dropdown {
+      display: none;
+      position: absolute;
+      right: 0;
+      top: 120%;
+      background: white;
+      border: 1px solid #ccc;
+      border-radius: 10px;
+      padding: 1em;
+      width: 280px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+      z-index: 1000;
+    }
+    .cart:hover .cart-dropdown {
+      display: block;
+    }
+    #cart-items > div {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 8px;
+    }
+    #cart-items button {
+      background: none;
+      border: none;
+      color: red;
+      font-weight: bold;
+      cursor: pointer;
+      font-size: 1.1rem;
+    }
+    .add-to-cart-btn {
+      margin-top: 10px;
+      padding: 8px 15px;
+      font-size: 1rem;
+      cursor: pointer;
+      border: 2px solid #3d8b3d;
+      background-color: white;
+      color: #3d8b3d;
+      border-radius: 5px;
+      transition: background-color 0.3s, color 0.3s;
+    }
+    .add-to-cart-btn:hover {
+      background-color: #3d8b3d;
+      color: white;
+    }
+    .product-list {
+      display: grid;
+      grid-template-columns: repeat(auto-fill,minmax(220px,1fr));
+      gap: 20px;
+    }
+    .product-card {
+      border: 1px solid #ccc;
+      padding: 15px;
+      border-radius: 8px;
+      text-align: center;
+      box-shadow: 2px 2px 6px rgba(0,0,0,0.1);
+    }
+    .product-card img {
+      max-width: 100%;
+      height: 150px;
+      object-fit: contain;
+      margin-bottom: 10px;
+    }
+    .product-title {
+      font-weight: 700;
+      margin-bottom: 5px;
+      text-transform: lowercase;
+    }
+    .product-price {
+      font-weight: 600;
+      color: #3d8b3d;
+      margin-bottom: 5px;
+    }
+    .product-detail {
+      font-size: 0.9rem;
+      margin-bottom: 5px;
+      color: #555;
+      font-style: italic;
+    }
+  </style>
+</head>
+<body>
 
-  <body>
-    <div id="announcement" role="banner">
-      <span>Celebrate Spring with us! Free shipping on all orders over $50</span>
-      <span id="closeButton" aria-hidden="true">&times;</span>
-    </div>
-
-    <a href="#main">Skip to main</a>
-
-    <div class="cart" role="complementary">
-  <span class="material-symbols-outlined" aria-hidden="true">shopping_bag</span>
-  <p><span id="cartCount">0</span></p>
-  <div class="cart-dropdown">
-    <div id="cart-items"></div>
-    <button onclick="window.location.href='cart.html'">View Cart</button>
-    <button onclick="alert('Checkout not implemented yet')">Checkout</button>
+  <div id="announcement" role="banner">
+    Celebrate Spring with us! Free shipping on all orders over $50
+    <span id="closeButton" aria-hidden="true">&times;</span>
   </div>
-</div>
 
-    <header id="planthausHeader">planthaus</header>
+  <div class="cart" role="complementary" aria-label="Shopping Cart">
+    <p>Cart (<span id="cartCount">0</span>)</p>
+    <span class="material-symbols-outlined" aria-hidden="true">shopping_bag</span>
 
-    <div id="main">
-      <nav aria-label="Main Navigation">
-        <ul role="menubar">
-          <li role="none"><a role="menuitem" href="pottery.html">Pottery</a></li>
-          <li role="none"><a role="menuitem" href="houseplants.html">Houseplants</a></li>
-          <li role="none"><a role="menuitem" href="supplies.html">Supplies</a></li>
-          <li role="none"><a role="menuitem" href="plantcare.html">Plant care</a></li>
-          <li class="dropdown" role="none">
-            <div role="menuitem" aria-haspopup="true" aria-expanded="false">About us ▼</div>
-            <div class="dropdown-content" role="menu">
-              <a role="menuitem" href="memberHanshiuan.html">HanShiuan</a>
-              <a role="menuitem" href="memberHarley.html">Harley</a>
-              <a role="menuitem" href="memberMumtaas.html">Mumtaas</a>
-            </div>
-          </li>
-        </ul>
-      </nav>
+    <div class="cart-dropdown" aria-live="polite" aria-relevant="additions removals" aria-atomic="true">
+      <div id="cart-items"><p>Your cart is empty.</p></div>
+      <button id="viewCartBtn">View Cart</button>
+      <button id="checkoutBtn">Checkout</button>
+    </div>
+  </div>
 
-      <!-- User input section -->
-      <div id="jsinput" role="form">
-        <p>What’s your favorite plant?</p>
-        <input type="text" id="userInput" placeholder="Type a plant name..." />
-        <button onclick="processInput()" input type="submit" aria-pressed="false">Submit</button>
-        <p id="output"></p>
-      </div>
-
-      <!-- Carousel -->
-      <div class="carcenter">
-        <div class="carousel">
-          <div class="carousel-track-container">
-            <ul class="carousel-track" role="list">
-              <li class="carousel-slide current-slide" role="listitem">
-                <img src="images/carousel/repotting.png" alt="Two women working together to repot a houseplant" />
-              </li>
-              <li class="carousel-slide" role="listitem">
-                <img src="images/carousel/thaiconc.png" alt="Large thai constellation" />
-              </li>
-              <li class="carousel-slide" role="listitem">
-                <img src="images/carousel/clinic.png" alt="Man surrounded by plants and holding one up to a laptop in front of him" />
-              </li>
-            </ul>
-          </div>
-          <button class="carousel-button left" aria-pressed="false" aria-label="Previous slide">&larr;</button>
-          <button class="carousel-button right" aria-pressed="false" aria-label="Next slide">&rarr;</button>
-        </div>
-      </div>
-
-      <!-- Add your products and plant sections below -->
-      <!-- Keep the same structure you already have! -->
-
-      <!-- Footer -->
-      <footer>
-        <nav id="footerNav" aria-label="Footer Navigation">
-          <a href="index.html">Home</a>
-          <a href="changes.html">Change Log</a>
-          <a href="validation.html">Validation Tracker</a>
-        </nav>
-      </footer>
-
-      <!-- About the Project -->
-      <section id="aboutProject">
-        <h2>About the Project</h2>
-        <p>Planthaus has a sleek, modern, boutique feel — a trendy, minimalist, and creative approach.</p>
-        <h3>Purpose</h3>
-        <p>The website will offer mock products, purchases, a front page carousel, plant care page, profile, cart, and more.</p>
-        <h3>How it works</h3>
-        <p>We will start with barebones features, adding more with JS and other functions. Example: Product pages + cart (no add/remove yet).</p>
-      </section>
+  <h1>products</h1>
+  <div class="product-list">
+    <div class="product-card">
+      <img src="https://images.unsplash.com/photo-1637967885705-a60e3fea266d?q=80&w=400" alt="Monstera deliciosa plant" />
+      <div class="product-title">monstera deliciosa</div>
+      <div class="product-price">$24.99</div>
+      <div class="product-detail">8" pot</div>
+      <button
+        class="add-to-cart-btn"
+        data-id="plant-monstera"
+        data-name="monstera deliciosa"
+        data-price="24.99"
+      >Add to Cart</button>
     </div>
 
-    <!-- JavaScript Files -->
-    <script src="js/inputHandler.js"></script>
-    <script src="js/carousel.js"></script>
-    <script src="js/cart.js"></script>
-  </body>
+    <div class="product-card">
+      <img src="https://images.unsplash.com/photo-1744143495309-60dc0483c879?q=80&w=400" alt="Hoya lacunosa plant" />
+      <div class="product-title">hoya lacunosa</div>
+      <div class="product-price">$12.99</div>
+      <div class="product-detail">3" pot</div>
+      <button
+        class="add-to-cart-btn"
+        data-id="plant-hoya"
+        data-name="hoya lacunosa"
+        data-price="12.99"
+      >Add to Cart</button>
+    </div>
+
+    <div class="product-card">
+      <img src="https://images.unsplash.com/photo-1694285617850-fad6e23756fb?q=80&w=400" alt="Aloe vera plant" />
+      <div class="product-title">aloe vera</div>
+      <div class="product-price">$10.99</div>
+      <div class="product-detail">6" pot</div>
+      <button
+        class="add-to-cart-btn"
+        data-id="plant-aloe-vera"
+        data-name="aloe vera"
+        data-price="10.99"
+      >Add to Cart</button>
+    </div>
+  </div>
+
+  <script>
+    let cart = JSON.parse(localStorage.getItem("cart")) || [];
+
+    function saveCart() {
+      localStorage.setItem("cart", JSON.stringify(cart));
+    }
+
+    function updateCartCount() {
+      const countEl = document.getElementById("cartCount");
+      if (countEl) {
+        countEl.textContent = cart.reduce((sum, item) => sum + item.quantity, 0);
+      }
+    }
+
+    function updateCartDropdown() {
+      const cartItemsEl = document.getElementById("cart-items");
+      if (!cartItemsEl) return;
+
+      if (cart.length === 0) {
+        cartItemsEl.innerHTML = "<p>Your cart is empty.</p>";
+        return;
+      }
+
+      cartItemsEl.innerHTML = cart.map(item => `
+        <div>
+          <span>${item.name} x${item.quantity}</span>
+          <button onclick="removeFromCart('${item.id}')">✕</button>
+        </div>
+      `).join('');
+    }
+
+    function addToCart(product) {
+      const existing = cart.find(item => item.id === product.id);
+      if (existing) {
+        existing.quantity += 1;
+      } else {
+        cart.push({...product, quantity: 1});
+      }
+      saveCart();
+      updateCartCount();
+      updateCartDropdown();
+    }
+
+    function removeFromCart(productId) {
+      cart = cart.filter(item => item.id !== productId);
+      saveCart();
+      updateCartCount();
+      updateCartDropdown();
+    }
+
+    document.addEventListener("DOMContentLoaded", () => {
+      updateCartCount();
+      updateCartDropdown();
+
+      const buttons = document.querySelectorAll(".add-to-cart-btn");
+      buttons.forEach(button => {
+        button.addEventListener("click", () => {
+          const product = {
+            id: button.getAttribute("data-id"),
+            name: button.getAttribute("data-name"),
+            price: parseFloat(button.getAttribute("data-price")),
+          };
+          addToCart(product);
+        });
+      });
+
+      document.getElementById("viewCartBtn").addEventListener("click", () => {
+        window.alert("Cart page coming soon!");
+      });
+
+      document.getElementById("checkoutBtn").addEventListener("click", () => {
+        window.alert("Checkout functionality coming soon!");
+      });
+
+      // Close announcement
+      document.getElementById("closeButton").addEventListener("click", () => {
+        document.getElementById("announcement").style.display = "none";
+      });
+    });
+  </script>
+</body>
 </html>
