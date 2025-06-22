@@ -1,3 +1,5 @@
+// cart.js
+
 let cart = JSON.parse(localStorage.getItem("cart")) || [];
 
 function saveCart() {
@@ -13,14 +15,14 @@ function addToCart(product) {
   }
   saveCart();
   updateCartCount();
-  renderCartDropdown();
+  updateCartDropdown();
 }
 
 function removeFromCart(productId) {
   cart = cart.filter((item) => item.id !== productId);
   saveCart();
   updateCartCount();
-  renderCartDropdown();
+  updateCartDropdown();
 }
 
 function getCartCount() {
@@ -34,40 +36,33 @@ function updateCartCount() {
   }
 }
 
-// Render items inside the mini dropdown
-function renderCartDropdown() {
-  const dropdown = document.querySelector(".cart-dropdown");
-  const container = document.getElementById("cart-items");
-  if (!container || !dropdown) return;
+function updateCartDropdown() {
+  const cartItemsContainer = document.getElementById("cart-items");
+  if (!cartItemsContainer) return;
 
-  container.innerHTML = "";
+  cartItemsContainer.innerHTML = "";
 
   if (cart.length === 0) {
-    container.innerHTML = "<p>Your cart is empty</p>";
+    cartItemsContainer.innerHTML = "<p>Your cart is empty.</p>";
     return;
   }
 
   cart.forEach((item) => {
     const div = document.createElement("div");
     div.classList.add("cart-item");
-    div.style.display = "flex";
-    div.style.alignItems = "center";
-    div.style.justifyContent = "space-between";
-    div.style.marginBottom = "0.5em";
-
     div.innerHTML = `
-      <div style="display:flex; align-items:center;">
-        <img src="${item.image}" alt="${item.title}" style="width: 40px; height: 40px; object-fit: cover; margin-right: 0.5em; border-radius: 4px;">
-        <div>
-          <p style="margin:0; font-weight:bold;">${item.title}</p>
-          <p style="margin:0;">$${item.price} x ${item.quantity}</p>
+      <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 10px;">
+        <img src="${item.image}" alt="${item.title}" style="width: 40px; height: 40px; border-radius: 5px; object-fit: cover;">
+        <div style="flex: 1; margin-left: 10px;">
+          <p style="margin: 0;"><strong>${item.title}</strong></p>
+          <p style="margin: 0;">$${item.price.toFixed(2)} x ${item.quantity}</p>
         </div>
+        <button onclick="removeFromCart('${item.id}')" style="background: none; border: none; color: red; font-size: 1.2em; cursor: pointer;">🗑️</button>
       </div>
-      <button onclick="removeFromCart('${item.id}')" aria-label="Remove item" style="border:none; background:none; cursor:pointer; font-size: 1.2em;">🗑️</button>
     `;
-    container.appendChild(div);
+    cartItemsContainer.appendChild(div);
   });
 }
 
 updateCartCount();
-renderCartDropdown();
+updateCartDropdown();
