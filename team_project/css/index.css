@@ -1,6 +1,6 @@
-/* |||||||||||  index.html and general styling  ||||||||||| */
+/* ========== index.css (Site styles) ========== */
 
-/* || Announcement header style || */
+/* Announcement header style */
 #announcement {
   background-color: #0e4d00;
   max-width: 100%;
@@ -14,101 +14,20 @@
   align-items: center;
 }
 
-/* Not functional yet! */
+/* Close button for announcement */
 #closeButton {
   position: absolute;
   right: 0;
   padding-right: 1em;
-}
-
-/* || Cart styling and dropdown || */
-
-.cart {
-  position: relative;
-  display: flex;
-  align-items: center;
-  justify-content: flex-end;
-  padding-right: 1.5em;
   cursor: pointer;
 }
 
-.cart p {
-  margin-right: 0.5em;
-  text-transform: lowercase;
-}
-
-/* Dropdown panel - hidden by default */
-.cart-dropdown {
-  display: none;
-  position: absolute;
-  right: 0;
-  top: 2.5em;
-  background: white;
-  border: 1px solid #ccc;
-  border-radius: 8px;
-  width: 280px;
-  padding: 1em;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-  z-index: 9999;
-}
-
-/* Show dropdown on hover */
-.cart:hover .cart-dropdown {
-  display: block;
-}
-
-/* Cart item styling */
-.cart-item {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin-bottom: 0.5em;
-  font-family: "Urbanist", sans-serif;
-  font-size: 0.9rem;
-}
-
-/* Remove button */
-.cart-item .remove-btn {
-  background: transparent;
-  border: none;
-  font-size: 1.2rem;
-  color: #c0392b;
-  cursor: pointer;
-  padding: 0 0.3em;
-  line-height: 1;
-  transition: color 0.3s ease;
-}
-
-.cart-item .remove-btn:hover {
-  color: #e74c3c;
-}
-
-/* Buttons inside dropdown */
-.cart-dropdown button {
-  width: 100%;
-  background-color: #2e7d32;
-  color: white;
-  border: none;
-  padding: 10px 0;
-  margin-top: 10px;
-  border-radius: 5px;
-  cursor: pointer;
-  font-family: "Urbanist", sans-serif;
-  font-size: 1rem;
-  text-transform: lowercase;
-  transition: background-color 0.3s ease;
-}
-
-.cart-dropdown button:hover {
-  background-color: #1b5e20;
-}
-
-/* || Utilities || */
+/* Body and nav */
 body {
   margin: 0;
+  font-family: "Urbanist", sans-serif;
 }
 
-/* || Top of page nav styling || */
 nav {
   display: flex;
   align-items: center;
@@ -116,7 +35,6 @@ nav {
   font-size: 1.2em;
 }
 
-/* Accessibility 44px  */
 nav a,
 nav div {
   display: flex;
@@ -128,36 +46,31 @@ nav div {
 li {
   padding: 1.5em;
   justify-items: center;
-  font-family: "Urbanist", sans-serif;
   font-weight: 500;
-  font-style: normal;
 }
 
 ul {
-  padding-left: 0; /* Removes padding from left of nav */
+  padding-left: 0;
   list-style: none;
   display: flex;
 }
 
-/* |||||| Dropdown containter styling |||||| */
-
-/* Dropdown container */
+/* Dropdown styling */
 .dropdown {
   position: relative;
   display: inline-block;
+  color: rgb(2, 59, 2);
 }
 
-/* Dropdown content */
 .dropdown-content {
   display: none;
   position: absolute;
   background-color: white;
-  box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 8px 16px rgba(0,0,0,0.2);
   z-index: 1;
   margin-top: 5px;
 }
 
-/* Links inside the dropdown */
 .dropdown-content a {
   color: rgb(2, 59, 2);
   padding: 12px 16px;
@@ -166,22 +79,14 @@ ul {
   white-space: nowrap;
 }
 
-/* About us style */
-.dropdown {
-  color: rgb(2, 59, 2);
-}
-
-/* Show the dropdown menu on hover */
 .dropdown:hover .dropdown-content {
   display: block;
 }
 
-/* Hover effect */
 .dropdown-content a:hover {
   background-color: #f1f1f1;
 }
 
-/* || Links style || */
 li a,
 li,
 footer a {
@@ -191,154 +96,7 @@ footer a {
   min-height: 44px;
 }
 
-/* ||||| Carousel Styling ||||| */
-.carcenter {
-  display: flex;
-  justify-content: center;
-}
-.carousel {
-  position: relative;
-  width: 80vw;
-  overflow: hidden;
-}
-
-.carousel-track-container {
-  overflow: hidden;
-}
-
-.carousel-track {
-  display: flex;
-  transition: transform 0.5s ease-in;
-}
-
-.carousel-slide {
-  min-width: 100%;
-  transition: opacity 0.5s ease-in-out;
-}
-
-.carousel-slide img {
-  width: 100%;
-  max-height: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.carousel-button {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  background: rgba(0, 0, 0, 0.5);
-  border: none;
-  color: white;
-  font-size: 2rem;
-  padding: 0 10px;
-  cursor: pointer;
-  z-index: 10;
-}
-
-.carousel-button.left {
-  left: 10px;
-  min-width: 44px;
-  min-height: 44px;
-}
-
-.carousel-button.right {
-  right: 10px;
-  min-width: 44px;
-  min-height: 44px;
-}
-
-/* ||||||| itemSet & plantSet styling ||||||| */
-
-/* Headers/section style */
-#repottingSupplies,
-#houseplantSection,
-#Pottery {
-  display: flex;
-  align-items: center;
-  justify-content: space-evenly;
-  flex-wrap: wrap; /* Important for wrapping multiple items */
-  gap: 1rem;
-}
-
-h1 {
-  font-family: "Urbanist";
-  font-weight: 600;
-  margin: 10px;
-}
-
-/* Image styling */
-.itemSet-image,
-.plantSet-image {
-  height: 15rem;
-  padding: 0.33rem;
-}
-
-.itemImageBackground,
-.plantImageBackground {
-  background-color: rgb(255, 255, 255);
-  height: 18rem;
-  width: 14rem;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.itemImageBackground img,
-.plantImageBackground img {
-  height: auto;
-  width: auto;
-  max-width: 95%;
-  max-height: 95%;
-}
-
-/* Card styling for item & plant set */
-.plantSet,
-.itemSet {
-  border: 2px solid rgb(207, 207, 207);
-  box-shadow: 2px 2px 2px rgb(224, 224, 224);
-  border-radius: 5px;
-  padding: 0 25px;
-  margin-bottom: 1rem;
-  flex: 1 1 200px; /* flexible width with minimum size */
-  max-width: 14rem;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: space-between;
-}
-
-.plantSet:hover,
-.itemSet:hover {
-  border: 2px solid darkgreen;
-  box-shadow: 4px 4px 4px rgb(224, 224, 224);
-  border-radius: 5px;
-}
-
-.itemSet-title,
-.plantSet-title {
-  justify-content: space-between;
-  font-weight: 600;
-  min-width: 44px;
-  min-height: 44px;
-  text-align: center;
-}
-
-p {
-  line-height: 1.5em;
-  font-family: "Urbanist";
-}
-
-/* Style for plant/item title links */
-.plantSet-title a,
-.itemSet-title a {
-  padding: 20px 0;
-  text-decoration: none;
-  color: inherit;
-}
-
-/* Footer styling */
+/* Footer */
 footer {
   display: flex;
   align-items: center;
@@ -351,95 +109,104 @@ footer {
   align-items: center;
   justify-content: center;
   padding: 0 1.2em;
-}
-
-/* Adds border to all but last link */
-#footerNav a:not(:last-child) {
   border-right: 2px solid black;
 }
 
-/* JS input */
-#jsinput {
-  text-align: center;
+#footerNav a:last-child {
+  border-right: none;
 }
 
-/* Style for input fields and buttons */
-input,
-button {
-  padding: 10px;
-  margin: 10px;
-  font-size: 16px;
-}
+/* --- Cart styles --- */
 
-/* Footer navigation link hover effect */
-footer nav a:hover {
-  text-decoration: underline;
-}
-
-/* Section container styling */
-#aboutProject {
-  background: #fff;
-  padding: 15px;
-  margin: 20px auto;
-  width: 60%;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-  border-radius: 8px;
-}
-
-/* Styles for subheadings */
-h2 {
-  color: #555;
-}
-
-/* |||||||||||  projectDetails.html Styling  ||||||||||| */
-
-.detailsContainer {
+.cart {
+  position: relative;
   display: flex;
-  justify-content: center;
-}
-
-.detailsContainer :nth-child(1) {
-  padding-right: 30px;
-}
-
-.detailsContainer :nth-child(3) {
-  padding-left: 30px;
-}
-
-.details {
-  max-width: 30%;
-}
-
-.projectMembers {
-  display: flex;
-  flex-direction: column;
   align-items: center;
-  justify-content: center;
+  cursor: pointer;
+  padding-right: 1.5em;
+  user-select: none;
 }
 
-#harley {
-  color: rgb(248, 161, 175);
+.cart p {
+  padding-right: 0.5em;
+  margin: 0;
+  font-weight: 600;
+  font-size: 1.1rem;
 }
 
-#erandy {
-  color: rgb(195, 24, 24);
+.cart-icon {
+  font-size: 1.7rem;
+  vertical-align: middle;
+  color: #036300;
 }
 
-#hanshiuan {
-  color: #c19a6b;
+.cart-dropdown {
+  display: none;
+  position: absolute;
+  right: 0;
+  top: 100%;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  padding: 1em;
+  min-width: 280px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  z-index: 1000;
 }
 
-#mumtaas {
-  color: #93a878;
+.cart:hover .cart-dropdown,
+.cart:focus-within .cart-dropdown {
+  display: block;
 }
 
-#planthausHeader {
-  color: rgb(3, 99, 3);
-  font-family: "Urbanist", sans-serif;
-  font-weight: 700;
-  font-style: normal;
+#cart-items {
+  max-height: 150px;
+  overflow-y: auto;
+  margin: 0 0 1em 0;
+  padding-left: 0;
+  list-style: none;
+  font-size: 0.95rem;
+}
+
+#cart-items li {
   display: flex;
-  justify-content: center;
-  font-size: 2.5em;
-  padding-top: 0.9em;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 0.5em;
+}
+
+.delete-btn {
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  font-size: 1.3rem;
+  color: #a00;
+  padding: 0 5px;
+  line-height: 1;
+}
+
+.delete-btn:hover,
+.delete-btn:focus {
+  color: #700;
+  outline: none;
+}
+
+.checkout-btn {
+  background-color: #3d8b3d;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  width: 100%;
+  padding: 8px 12px;
+  margin-top: 0.5em;
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 1rem;
+  transition: background-color 0.3s ease;
+}
+
+.checkout-btn:hover,
+.checkout-btn:focus {
+  background-color: #317031;
+  outline: none;
 }
