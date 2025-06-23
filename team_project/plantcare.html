@@ -2,15 +2,12 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>planthaus - Plant Care</title>
-  <link rel="icon" href="images/houseplant-flowerpot-plant-pot-home-border-leaf-green-nature-garden-natural-line-logo-design-vector.jpg" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>planthaus - Pottery</title>
   <link rel="stylesheet" href="css/index.css" />
-  <!-- Urbanist font -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Urbanist:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet" />
-  <!-- Google shopping bag icon -->
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=shopping_bag" />
 </head>
 <body>
@@ -19,14 +16,13 @@
     <span id="closeButton" aria-hidden="true">&times;</span>
   </div>
 
-  <div class="cart">
+  <div class="cart" role="complementary" aria-label="Shopping cart">
     <p>Cart (<span id="cartCount">0</span>)</p>
     <span class="material-symbols-outlined">shopping_bag</span>
-    <div class="cart-dropdown" aria-label="Shopping cart dropdown">
-      <!-- Cart items will be dynamically inserted here by JS -->
+    <div class="cart-dropdown" aria-live="polite" aria-relevant="additions removals" aria-atomic="true">
       <div id="cart-items"></div>
-      <button id="viewCartBtn">view cart</button>
-      <button id="checkoutBtn">checkout</button>
+      <button onclick="window.location.href='cart.html'">View Cart</button>
+      <button onclick="alert('Checkout coming soon!')">Checkout</button>
     </div>
   </div>
 
@@ -49,12 +45,60 @@
     </ul>
   </nav>
 
-  <main>
-    <section>
-      <h1 id="plantSectionHeader">Plant Care</h1>
-      <p>Coming soon...</p>
-    </section>
-  </main>
+  <section>
+    <h1>pottery</h1>
+    <div id="potterySection">
+      <div class="itemSet">
+        <div class="itemImageBackground">
+          <img src="images/products/bloomvineplanter.png" alt="Charming ceramic planter with delicate vine illustrations" class="itemSet-image" />
+        </div>
+        <p class="itemSet-title">bloom vine planter</p>
+        <p class="itemSet-price">$30.00</p>
+        <p class="itemSet-detail">5" h × 4" w</p>
+        <button class="add-to-cart-btn" data-id="pot-bloomvine" data-name="bloom vine planter" data-price="30.00">add to cart</button>
+      </div>
+
+      <div class="itemSet">
+        <div class="itemImageBackground">
+          <img src="images/products/earthenemberplanter.png" alt="rustic clay pot" class="itemSet-image" />
+        </div>
+        <p class="itemSet-title">earthen ember planter</p>
+        <p class="itemSet-price">$30.00</p>
+        <p class="itemSet-detail">6" h × 4" w</p>
+        <button class="add-to-cart-btn" data-id="pot-earthenember" data-name="earthen ember planter" data-price="30.00">add to cart</button>
+      </div>
+
+      <div class="itemSet">
+        <div class="itemImageBackground">
+          <img src="images/products/harvesthugplanter.png" alt="tall clay pot" class="itemSet-image" />
+        </div>
+        <p class="itemSet-title">harvest hug planter</p>
+        <p class="itemSet-price">$35.00</p>
+        <p class="itemSet-detail">9" h × 8" w</p>
+        <button class="add-to-cart-btn" data-id="pot-harvesthug" data-name="harvest hug planter" data-price="35.00">add to cart</button>
+      </div>
+
+      <div class="itemSet">
+        <div class="itemImageBackground">
+          <img src="images/products/sunkissedterracotta.png" alt="sun-themed painted terracotta" class="itemSet-image" />
+        </div>
+        <p class="itemSet-title">sun-kissed terracotta</p>
+        <p class="itemSet-price">$90.00</p>
+        <p class="itemSet-detail">10" h × 9" w</p>
+        <button class="add-to-cart-btn" data-id="pot-sunkissed" data-name="sun-kissed terracotta" data-price="90.00">add to cart</button>
+      </div>
+
+      <div class="itemSet">
+        <div class="itemImageBackground">
+          <img src="images/products/puebloceramicvase.png" alt="decorated ceramic vase" class="itemSet-image" />
+        </div>
+        <p class="itemSet-title">pueblo ceramic vase</p>
+        <p class="itemSet-price">$65.00</p>
+        <p class="itemSet-detail">10" h × 6" w</p>
+        <button class="add-to-cart-btn" data-id="pot-pueblo" data-name="pueblo ceramic vase" data-price="65.00">add to cart</button>
+      </div>
+    </div>
+  </section>
 
   <footer>
     <nav id="footerNav" aria-label="Footer Navigation">
@@ -64,21 +108,25 @@
     </nav>
   </footer>
 
-  <!-- Scripts -->
   <script src="js/cart.js"></script>
   <script src="js/inputHandler.js"></script>
   <script>
-    document.addEventListener("DOMContentLoaded", () => {
+    document.addEventListener("DOMContentLoaded", function () {
+      const buttons = document.querySelectorAll(".add-to-cart-btn");
+      buttons.forEach(button => {
+        button.addEventListener("click", function () {
+          const product = {
+            id: button.getAttribute("data-id"),
+            name: button.getAttribute("data-name"),
+            price: parseFloat(button.getAttribute("data-price"))
+          };
+          addToCart(product);
+          updateCartCount();
+        });
+      });
       updateCartCount();
-
-      // Optionally add event handlers for view cart & checkout buttons
-      document.getElementById('viewCartBtn').addEventListener('click', () => {
-        alert("View Cart clicked - add your implementation!");
-      });
-      document.getElementById('checkoutBtn').addEventListener('click', () => {
-        alert("Checkout clicked - add your implementation!");
-      });
     });
   </script>
 </body>
 </html>
+
