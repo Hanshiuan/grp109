@@ -211,32 +211,15 @@ footer {
   outline: none;
 }
 
-/* --- Product categories layout --- */
+/* --- Product cards and layout --- */
 
-.category-section {
-  margin: 2rem auto;
-  max-width: 1200px;
-  margin-bottom: 3rem;
-}
-
-.product-grid {
-  display: grid;
-  grid-template-columns: repeat(5, 1fr);
+#repottingSupplies,
+#houseplantSection,
+#potterySection {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
   gap: 1.5rem;
-  justify-items: center;
-}
-
-/* Responsive product grid */
-@media (max-width: 900px) {
-  .product-grid {
-    grid-template-columns: repeat(3, 1fr);
-  }
-}
-
-@media (max-width: 600px) {
-  .product-grid {
-    grid-template-columns: repeat(1, 1fr);
-  }
 }
 
 .itemSet,
@@ -245,7 +228,7 @@ footer {
   box-shadow: 2px 2px 2px rgb(224, 224, 224);
   border-radius: 5px;
   padding: 1rem 1.5rem;
-  width: 200px;
+  width: 220px;
   text-align: center;
   background-color: #fff;
   display: flex;
@@ -263,19 +246,11 @@ footer {
   border-radius: 8px;
 }
 
-/* Fix Supplies images being too big */
-.supplies-grid .itemSet-image {
-  max-height: 180px;
-  width: auto;
-  object-fit: contain;
-}
-
 .itemSet-title,
 .plantSet-title {
   font-weight: 600;
   font-size: 1.1rem;
   margin: 0.3rem 0;
-  text-transform: lowercase;
 }
 
 .itemSet-price,
@@ -286,7 +261,8 @@ footer {
 }
 
 .itemSet-detail,
-.plantSet-detail {
+.plantSet-detail,
+.itemSet-brand {
   font-size: 0.9rem;
   color: #555;
   margin: 0.1rem 0;
