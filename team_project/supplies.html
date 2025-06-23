@@ -1,47 +1,288 @@
-<section id="suppliesSection" class="product-gallery">
-  <h2>supplies</h2>
-  <div class="product-card">
-    <img src="images/products/foxfarmsoil.jpg" alt="bag of ocean forest potting soil" />
-    <h3>ocean forest potting soil</h3>
-    <p>bag of ocean forest potting soil</p>
-    <p>price: $16.99</p>
-    <p>size: 12 quart bag</p>
-    <button class="add-to-cart-btn" data-id="supply-foxfarm" data-name="ocean forest potting soil" data-price="16.99">Add to Cart</button>
-  </div>
+/* ========== index.css (Site styles) ========== */
 
-  <div class="product-card">
-    <img src="https://rt1home.com/cdn/shop/products/potting-tarp-856633_2048x2048.png?v=1637244629" alt="potting tarp being used to repot" />
-    <h3>potting tarp</h3>
-    <p>potting tarp being used to repot</p>
-    <p>price: $22.00</p>
-    <p>size: 19.5"l × 19.5"w</p>
-    <button class="add-to-cart-btn" data-id="supply-tarp" data-name="potting tarp" data-price="22.00">Add to Cart</button>
-  </div>
+/* Announcement header style */
+#announcement {
+  background-color: #0e4d00;
+  max-width: 100%;
+  height: 2em;
+  color: white;
+  font-family: "Urbanist", sans-serif;
+  font-weight: 500;
+  font-size: 1.1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 
-  <div class="product-card">
-    <img src="https://coronatools.com/cdn/shop/files/8e721ee1526d72cd934b772161de1d99d18fb1a6.jpg?v=1747368389&width=580" alt="hand trowel with crocodile-shaped comfort grip" />
-    <h3>comfort grip hand trowel</h3>
-    <p>hand trowel with crocodile-shaped comfort grip</p>
-    <p>price: $9.68</p>
-    <p>size: one size</p>
-    <button class="add-to-cart-btn" data-id="supply-trowel" data-name="comfort grip hand trowel" data-price="9.68">Add to Cart</button>
-  </div>
+/* Close button for announcement */
+#closeButton {
+  position: absolute;
+  right: 0;
+  padding-right: 1em;
+  cursor: pointer;
+}
 
-  <div class="product-card">
-    <img src="images/products/rootingpowder.jpg" alt="bottle of rooting powder" />
-    <h3>rooting powder</h3>
-    <p>bottle of rooting powder</p>
-    <p>price: $6.99</p>
-    <p>size: 1 1/4oz</p>
-    <button class="add-to-cart-btn" data-id="supply-rooting" data-name="rooting powder" data-price="6.99">Add to Cart</button>
-  </div>
+/* Body and nav */
+body {
+  margin: 0;
+  font-family: "Urbanist", sans-serif;
+}
 
-  <div class="product-card">
-    <img src="images/products/osmocote.jpg" alt="container of osmocote fertilizer" />
-    <h3>osmocote slow release fertilizer</h3>
-    <p>container of osmocote fertilizer</p>
-    <p>price: $8.99</p>
-    <p>size: 1lb</p>
-    <button class="add-to-cart-btn" data-id="supply-osmocote" data-name="osmocote slow release fertilizer" data-price="8.99">Add to Cart</button>
-  </div>
-</section>
+nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  font-size: 1.2em;
+}
+
+nav a,
+nav div {
+  display: flex;
+  font-size: 1.2em;
+  min-height: 44px;
+  min-width: 44px;
+}
+
+li {
+  padding: 1.5em;
+  justify-items: center;
+  font-weight: 500;
+}
+
+ul {
+  padding-left: 0;
+  list-style: none;
+  display: flex;
+}
+
+/* Dropdown styling */
+.dropdown {
+  position: relative;
+  display: inline-block;
+  color: rgb(2, 59, 2);
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: white;
+  box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+  z-index: 1;
+  margin-top: 5px;
+}
+
+.dropdown-content a {
+  color: rgb(2, 59, 2);
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  white-space: nowrap;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+.dropdown-content a:hover {
+  background-color: #f1f1f1;
+}
+
+li a,
+li,
+footer a {
+  text-decoration: none;
+  color: rgb(2, 59, 2);
+  min-width: 44px;
+  min-height: 44px;
+}
+
+/* Footer */
+footer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 4em 0;
+}
+
+#footerNav a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 1.2em;
+  border-right: 2px solid black;
+}
+
+#footerNav a:last-child {
+  border-right: none;
+}
+
+/* --- Cart styles --- */
+
+.cart {
+  position: relative;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  padding-right: 1.5em;
+  user-select: none;
+}
+
+.cart p {
+  padding-right: 0.5em;
+  margin: 0;
+  font-weight: 600;
+  font-size: 1.1rem;
+}
+
+.cart-icon {
+  font-size: 1.7rem;
+  vertical-align: middle;
+  color: #036300;
+}
+
+.cart-dropdown {
+  display: none;
+  position: absolute;
+  right: 0;
+  top: 100%;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  padding: 1em;
+  min-width: 280px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  z-index: 1000;
+}
+
+.cart:hover .cart-dropdown,
+.cart:focus-within .cart-dropdown {
+  display: block;
+}
+
+#cart-items {
+  max-height: 150px;
+  overflow-y: auto;
+  margin: 0 0 1em 0;
+  padding-left: 0;
+  list-style: none;
+  font-size: 0.95rem;
+}
+
+#cart-items li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 0.5em;
+}
+
+.delete-btn {
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  font-size: 1.3rem;
+  color: #a00;
+  padding: 0 5px;
+  line-height: 1;
+}
+
+.delete-btn:hover,
+.delete-btn:focus {
+  color: #700;
+  outline: none;
+}
+
+.checkout-btn {
+  background-color: #3d8b3d;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  width: 100%;
+  padding: 8px 12px;
+  margin-top: 0.5em;
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 1rem;
+  transition: background-color 0.3s ease;
+}
+
+.checkout-btn:hover,
+.checkout-btn:focus {
+  background-color: #317031;
+  outline: none;
+}
+
+/* --- Product cards and layout --- */
+
+#repottingSupplies,
+#houseplantSection,
+#potterySection {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1.5rem;
+}
+
+.itemSet,
+.plantSet {
+  border: 2px solid rgb(207, 207, 207);
+  box-shadow: 2px 2px 2px rgb(224, 224, 224);
+  border-radius: 5px;
+  padding: 1rem 1.5rem;
+  width: 220px;
+  text-align: center;
+  background-color: #fff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.itemSet-image,
+.plantSet-image {
+  height: 180px;
+  width: auto;
+  max-width: 100%;
+  margin-bottom: 1rem;
+  object-fit: contain;
+  border-radius: 8px;
+}
+
+.itemSet-title,
+.plantSet-title {
+  font-weight: 600;
+  font-size: 1.1rem;
+  margin: 0.3rem 0;
+}
+
+.itemSet-price,
+.plantSet-price {
+  font-weight: 600;
+  margin: 0.3rem 0;
+  color: #036300;
+}
+
+.itemSet-detail,
+.plantSet-detail,
+.itemSet-brand {
+  font-size: 0.9rem;
+  color: #555;
+  margin: 0.1rem 0;
+}
+
+.add-to-cart-btn {
+  margin-top: auto;
+  background-color: #3d8b3d;
+  color: white;
+  border: none;
+  padding: 0.5em 1em;
+  font-size: 1rem;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  width: 100%;
+}
+
+.add-to-cart-btn:hover,
+.add-to-cart-btn:focus {
+  background-color: #317031;
+  outline: none;
+}
