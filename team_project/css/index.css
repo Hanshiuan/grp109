@@ -217,9 +217,9 @@ footer {
 #houseplantSection,
 #potterySection,
 #suppliesSection {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  justify-items: center;
   gap: 1.5rem;
 }
 
