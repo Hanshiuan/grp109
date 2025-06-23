@@ -221,6 +221,18 @@ footer {
   grid-template-columns: repeat(5, 1fr);
   justify-items: center;
   gap: 1.5rem;
+  margin-bottom: 4rem;
+}
+
+#potterySection::before,
+#houseplantSection::before,
+#suppliesSection::before {
+  content: attr(data-title);
+  font-size: 1.5rem;
+  font-weight: bold;
+  text-align: left;
+  grid-column: 1 / -1;
+  margin-bottom: 0.5rem;
 }
 
 .itemSet,
