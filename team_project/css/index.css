@@ -213,15 +213,18 @@ footer {
 
 /* --- Product cards and layout --- */
 
-#repottingSupplies,
+/* Layout grid for pottery, houseplants, and supplies sections */
+#potterySection,
 #houseplantSection,
-#potterySection {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
+#suppliesSection {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
   gap: 1.5rem;
+  justify-items: center;
+  padding: 1rem;
 }
 
+/* Product card styling */
 .itemSet,
 .plantSet {
   border: 2px solid rgb(207, 207, 207);
@@ -236,6 +239,7 @@ footer {
   align-items: center;
 }
 
+/* Product images */
 .itemSet-image,
 .plantSet-image {
   height: 180px;
@@ -246,13 +250,16 @@ footer {
   border-radius: 8px;
 }
 
+/* Titles */
 .itemSet-title,
 .plantSet-title {
   font-weight: 600;
   font-size: 1.1rem;
   margin: 0.3rem 0;
+  text-transform: lowercase;
 }
 
+/* Price */
 .itemSet-price,
 .plantSet-price {
   font-weight: 600;
@@ -260,6 +267,7 @@ footer {
   color: #036300;
 }
 
+/* Details and brand */
 .itemSet-detail,
 .plantSet-detail,
 .itemSet-brand {
@@ -268,6 +276,7 @@ footer {
   margin: 0.1rem 0;
 }
 
+/* Add to cart button */
 .add-to-cart-btn {
   margin-top: auto;
   background-color: #3d8b3d;
