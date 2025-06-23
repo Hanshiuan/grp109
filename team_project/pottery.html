@@ -3,98 +3,52 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>planthaus - Pottery</title>
+  <title>Planthaus - Pottery</title>
   <link rel="stylesheet" href="css/index.css" />
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Urbanist:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=shopping_bag" />
 </head>
 <body>
-  <header id="planthausHeader">Planthaus</header>
-
-  <nav aria-label="Main Navigation">
-    <ul>
-      <li><a href="pottery.html">Pottery</a></li>
-      <li><a href="houseplants.html">Houseplants</a></li>
-      <li><a href="supplies.html">Supplies</a></li>
-      <li><a href="plantcare.html">Plant care</a></li>
-      <li class="dropdown">
-        <div>About us ▼</div>
-        <div class="dropdown-content">
-          <a href="memberHanshiuan.html">HanShiuan</a>
-          <a href="memberHarley.html">Harley</a>
-          <a href="memberMumtaas.html">Mumtaas</a>
-        </div>
-      </li>
-    </ul>
-  </nav>
-
-  <section id="potterySection">
-    <h1>pottery</h1>
-    <div class="products-grid">
-      <div class="product-card">
-        <img src="images/products/bloomvineplanter.png" alt="bloom vine planter" />
-        <p>bloom vine planter</p>
-        <p>$30.00</p>
-        <p>5" h × 4" w</p>
-        <button class="add-to-cart-btn" data-id="pot-bloomvine" data-name="bloom vine planter" data-price="30.00">add to cart</button>
-      </div>
-      <div class="product-card">
-        <img src="images/products/earthenemberplanter.png" alt="earthen ember planter" />
-        <p>earthen ember planter</p>
-        <p>$30.00</p>
-        <p>6" h × 4" w</p>
-        <button class="add-to-cart-btn" data-id="pot-earthenember" data-name="earthen ember planter" data-price="30.00">add to cart</button>
-      </div>
-      <div class="product-card">
-        <img src="images/products/harvesthugplanter.png" alt="harvest hug planter" />
-        <p>harvest hug planter</p>
-        <p>$35.00</p>
-        <p>9" h × 8" w</p>
-        <button class="add-to-cart-btn" data-id="pot-harvesthug" data-name="harvest hug planter" data-price="35.00">add to cart</button>
-      </div>
-      <div class="product-card">
-        <img src="images/products/sunkissedterracotta.png" alt="sun-kissed terracotta" />
-        <p>sun-kissed terracotta</p>
-        <p>$90.00</p>
-        <p>10" h × 9" w</p>
-        <button class="add-to-cart-btn" data-id="pot-sunkissed" data-name="sun-kissed terracotta" data-price="90.00">add to cart</button>
-      </div>
-      <div class="product-card">
-        <img src="images/products/harvesthugplanter.png" alt="harvest hug planter alternative" />
-        <p>harvest hug planter alternative</p>
-        <p>$40.00</p>
-        <p>10" h × 9" w</p>
-        <button class="add-to-cart-btn" data-id="pot-alt" data-name="harvest hug planter alternative" data-price="40.00">add to cart</button>
-      </div>
-    </div>
-  </section>
-
-  <footer>
-    <nav id="footerNav" aria-label="Footer Navigation">
-      <a href="index.html">home</a>
-      <a href="changes.html">change log</a>
-      <a href="validation.html">validation tracker</a>
+  <header>
+    <nav role="navigation" class="main-nav">
+      <div class="cart-icon" aria-label="Shopping cart" role="button" tabindex="0">🛒</div>
+      <h1 class="site-title">Planthaus</h1>
+      <ul class="category-nav" role="list">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="pottery.html" aria-current="page">Pottery</a></li>
+        <li><a href="houseplants.html">Houseplants</a></li>
+        <li><a href="supplies.html">Supplies</a></li>
+        <li><a href="plantcare.html">Plant care</a></li>
+      </ul>
     </nav>
-  </footer>
+  </header>
 
-  <script src="js/cart.js"></script>
-  <script>
-    document.addEventListener("DOMContentLoaded", () => {
-      const buttons = document.querySelectorAll(".add-to-cart-btn");
-      buttons.forEach(btn =>
-        btn.addEventListener("click", () => {
-          addToCart({
-            id: btn.dataset.id,
-            name: btn.dataset.name,
-            price: parseFloat(btn.dataset.price),
-          });
-          updateCartCount();
-        })
-      );
-      updateCartCount();
-    });
-  </script>
+  <main>
+    <section class="product-column" aria-label="Pottery products">
+      <article class="product-card">
+        <img src="images/bloomvineplanter.png" alt="Bloom Vine Planter" />
+        <h2>bloom vine planter</h2>
+        <p class="price">$30.00</p>
+      </article>
+      <article class="product-card">
+        <img src="images/earthenemberplanter.png" alt="Earthen Ember Planter" />
+        <h2>earthen ember planter</h2>
+        <p class="price">$30.00</p>
+      </article>
+      <article class="product-card">
+        <img src="images/harvesthugplanter.png" alt="Harvest Hug Planter" />
+        <h2>harvest hug planter</h2>
+        <p class="price">$35.00</p>
+      </article>
+      <article class="product-card">
+        <img src="images/sunkissedterracotta.png" alt="Sun-Kissed Terracotta" />
+        <h2>sun-kissed terracotta</h2>
+        <p class="price">$90.00</p>
+      </article>
+      <article class="product-card">
+        <img src="images/earthenvase.png" alt="Earthen Vase" />
+        <h2>earthen vase</h2>
+        <p class="price">$178.00</p>
+      </article>
+    </section>
+  </main>
 </body>
 </html>
