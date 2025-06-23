@@ -2,28 +2,38 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Planthaus - Home</title>
+  <link rel="icon" href="images/houseplant-flowerpot-plant-pot-home-border-leaf-green-nature-garden-natural-line-logo-design-vector.jpg" />
   <link rel="stylesheet" href="css/index.css" />
+  <!-- Urbanist font -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Urbanist:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet" />
+  <!-- Shopping bag icon -->
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=shopping_bag" />
 </head>
+
 <body>
   <div id="announcement" role="banner">
     <span>Celebrate Spring with us! Free shipping on all orders over $50</span>
     <span id="closeButton" aria-hidden="true">&times;</span>
   </div>
 
-  <div class="cart" role="complementary" aria-label="Shopping cart">
-    <span class="material-symbols-outlined" aria-label="Shopping cart">shopping_bag</span>
-    <p><span id="cartCount">0</span></p>
+  <div class="cart" aria-label="Shopping cart" role="region" tabindex="0">
+    <span class="cart-icon" aria-hidden="true">&#128722;</span>
+    <p><span id="cartCount">0</span></p> <!-- hidden by CSS but kept for screen readers -->
+    <div class="cart-dropdown" aria-live="polite" aria-atomic="true">
+      <ul id="cart-items"></ul>
+      <button class="checkout-btn" onclick="alert('View Cart clicked!')">View Cart</button>
+      <button class="checkout-btn" onclick="alert('Checkout clicked!')">Checkout</button>
+    </div>
   </div>
 
-  <!-- Website name above navigation -->
+  <!-- Website Name Above Nav -->
   <header id="planthausHeader">Planthaus</header>
 
+  <!-- Category Navigation -->
   <nav aria-label="Main Navigation">
     <ul>
       <li><a href="pottery.html">Pottery</a></li>
@@ -41,123 +51,57 @@
     </ul>
   </nav>
 
-  <main>
-    <!-- Pottery Section -->
-    <section id="potterySection">
-      <h2>Pottery</h2>
-      <div class="plantSet">
-        <img src="https://images.unsplash.com/photo-1663612218489-6011185db8a3?q=80&w=1964&auto=format&fit=crop" alt="bloom vine planter" />
-        <p>bloom vine planter</p>
-        <p>$30.00</p>
-        <p>5" h × 4" w</p>
+  <!-- Homepage Product Sections -->
+  <section id="homepagePottery">
+    <h2>Pottery</h2>
+    <!-- Add 15 pottery items here, for example 5 per row in CSS grid -->
+    <div class="itemSet">
+      <div class="itemImageBackground">
+        <img src="images/products/bloomvineplanter.png" alt="Charming ceramic planter with delicate vine illustrations" class="itemSet-image" />
       </div>
-      <div class="plantSet">
-        <img src="https://images.unsplash.com/photo-1663612218370-f987bb3e7f9d?q=80&w=1964&auto=format&fit=crop" alt="earthen ember planter" />
-        <p>earthen ember planter</p>
-        <p>$30.00</p>
-        <p>6" h × 4" w</p>
-      </div>
-      <div class="plantSet">
-        <img src="https://images.unsplash.com/photo-1663612218467-c5b54043f6f4?q=80&w=1964&auto=format&fit=crop" alt="harvest hug planter" />
-        <p>harvest hug planter</p>
-        <p>$35.00</p>
-        <p>9" h × 8" w</p>
-      </div>
-      <div class="plantSet">
-        <img src="https://images.unsplash.com/photo-1663612218386-e70fda2a944a?q=80&w=1964&auto=format&fit=crop" alt="sun-kissed terracotta" />
-        <p>sun-kissed terracotta</p>
-        <p>$90.00</p>
-        <p>10" h × 9" w</p>
-      </div>
-      <div class="plantSet">
-        <img src="https://images.unsplash.com/photo-1663612218403-3e8b6583f321?q=80&w=1964&auto=format&fit=crop" alt="pueblo ceramic vase" />
-        <p>pueblo ceramic vase</p>
-        <p>$65.00</p>
-        <p>10" h × 6" w</p>
-      </div>
-    </section>
+      <p class="itemSet-title">bloom vine planter</p>
+      <p class="itemSet-price">$30.00</p>
+      <button class="add-to-cart-btn" data-id="pot-bloomvine" data-name="bloom vine planter" data-price="30.00">add to cart</button>
+    </div>
+    <!-- Add 4 more pottery items to complete 5 items per row -->
+    <!-- ... -->
+  </section>
 
-    <!-- Houseplants Section -->
-    <section id="houseplantSection">
-      <h2>Houseplants</h2>
-      <div class="plantSet">
-        <img src="https://images.unsplash.com/photo-1637967885705-a60e3fea266d?q=80&w=1964&auto=format&fit=crop" alt="monstera deliciosa" />
-        <p>monstera deliciosa</p>
-        <p>$24.99</p>
-        <p>8" pot</p>
+  <section id="homepageHouseplants">
+    <h2>Houseplants</h2>
+    <!-- Add 15 houseplant items here -->
+    <div class="plantSet">
+      <div class="plantImageBackground">
+        <img src="https://images.unsplash.com/photo-1637967885705-a60e3fea266d?q=80&w=1964&auto=format&fit=crop" alt="hands holding up a large potted monstera deliciosa" class="plantSet-image" />
       </div>
-      <div class="plantSet">
-        <img src="https://images.unsplash.com/photo-1744143495309-60dc0483c879?q=80&w=1974&auto=format&fit=crop" alt="hoya lacunosa" />
-        <p>hoya lacunosa</p>
-        <p>$12.99</p>
-        <p>3" pot</p>
-      </div>
-      <div class="plantSet">
-        <img src="https://images.unsplash.com/photo-1694285617850-fad6e23756fb?q=80&w=1965&auto=format&fit=crop" alt="aloe vera" />
-        <p>aloe vera</p>
-        <p>$10.99</p>
-        <p>6" pot</p>
-      </div>
-      <div class="plantSet">
-        <img src="https://t3.ftcdn.net/jpg/12/44/60/04/360_F_1244600427_0pIbPafMvKCdaSi6XO3CFWqoVConrvjy.jpg" alt="rosemary" />
-        <p>rosemary</p>
-        <p>$6.99</p>
-        <p>4" pot</p>
-      </div>
-      <div class="plantSet">
-        <img src="https://images.unsplash.com/photo-1733916291695-069ae5ae4310?q=80&w=1964&auto=format&fit=crop" alt="philodendron brandiatum" />
-        <p>philodendron brandiatum</p>
-        <p>$42.99</p>
-        <p>8" pot</p>
-      </div>
-    </section>
+      <p class="plantSet-title">monstera deliciosa</p>
+      <p class="plantSet-price">$24.99</p>
+      <button class="add-to-cart-btn" data-id="plant-monstera" data-name="monstera deliciosa" data-price="24.99">add to cart</button>
+    </div>
+    <!-- Add 4 more houseplants to complete 5 items -->
+    <!-- ... -->
+  </section>
 
-    <!-- Supplies Section -->
-    <section id="suppliesSection">
-      <h2>Supplies</h2>
-      <div class="itemSet">
-        <img src="images/products/foxfarmsoil.jpg" alt="ocean forest potting soil" />
-        <p>ocean forest potting soil</p>
-        <p>$16.99</p>
-        <p>12 quart bag</p>
-        <p>foxfarm</p>
+  <section id="homepageSupplies">
+    <h2>Supplies</h2>
+    <!-- Add 15 supplies items here -->
+    <div class="itemSet">
+      <div class="itemImageBackground">
+        <img src="images/products/foxfarmsoil.jpg" alt="bag of ocean forest potting soil" class="itemSet-image" />
       </div>
-      <div class="itemSet">
-        <img src="images/products/pottingtarp.jpg" alt="potting tarp" />
-        <p>potting tarp</p>
-        <p>$22.00</p>
-        <p>19.5"l × 19.5"w</p>
-        <p>rt1 home</p>
-      </div>
-      <div class="itemSet">
-        <img src="images/products/handtrowel.jpg" alt="comfort grip hand trowel" />
-        <p>comfort grip hand trowel</p>
-        <p>$9.68</p>
-        <p>one size</p>
-        <p>corona</p>
-      </div>
-      <div class="itemSet">
-        <img src="images/products/rootingpowder.jpg" alt="rooting powder" />
-        <p>rooting powder</p>
-        <p>$6.99</p>
-        <p>1 1/4oz</p>
-        <p>bontone ii</p>
-      </div>
-      <div class="itemSet">
-        <img src="images/products/osmocote.jpg" alt="osmoctote slow release fertilizer" />
-        <p>osmocote slow release fertilizer</p>
-        <p>$8.99</p>
-        <p>1lb</p>
-        <p>osmocote</p>
-      </div>
-    </section>
-  </main>
+      <p class="itemSet-title">ocean forest potting soil</p>
+      <p class="itemSet-price">$16.99</p>
+      <button class="add-to-cart-btn" data-id="supply-foxfarm" data-name="ocean forest potting soil" data-price="16.99">add to cart</button>
+    </div>
+    <!-- Add 4 more supplies to complete 5 items -->
+    <!-- ... -->
+  </section>
 
   <footer>
     <nav id="footerNav" aria-label="Footer Navigation">
-      <a href="index.html">Home</a>
-      <a href="changes.html">Change Log</a>
-      <a href="validation.html">Validation Tracker</a>
+      <a href="index.html">home</a>
+      <a href="changes.html">change log</a>
+      <a href="validation.html">validation tracker</a>
     </nav>
   </footer>
 
