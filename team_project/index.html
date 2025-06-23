@@ -5,18 +5,22 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Planthaus - Home</title>
   <link rel="stylesheet" href="css/index.css" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Urbanist&display=swap"
+    rel="stylesheet"
+  />
 </head>
 <body>
   <header>
-    <div id="announcement" role="banner">
+    <div id="announcement">
       Celebrate Spring with us! Free shipping on all orders over $50
       <button id="closeButton" aria-label="Close announcement">&times;</button>
     </div>
-    <nav role="navigation" class="main-nav">
-      <div class="cart-icon" aria-label="Shopping cart" role="button" tabindex="0">🛒</div>
+    <nav class="main-nav">
+      <span class="cart-icon" aria-label="Cart">🛒</span>
       <h1 class="site-title">Planthaus</h1>
-      <ul class="category-nav" role="list">
-        <li><a href="pottery.html" aria-current="page">Pottery</a></li>
+      <ul class="category-nav">
+        <li><a href="pottery.html" class="active">Pottery</a></li>
         <li><a href="houseplants.html">Houseplants</a></li>
         <li><a href="supplies.html">Supplies</a></li>
         <li><a href="plantcare.html">Plant care</a></li>
@@ -26,96 +30,120 @@
   </header>
 
   <main>
-    <section class="product-grid" aria-label="All products - Pottery, Houseplants, Supplies">
-      <!-- Pottery -->
+    <section class="product-grid" aria-label="All products">
+      <!-- Pottery products -->
       <article class="product-card">
-        <img src="images/bloomvineplanter.png" alt="Bloom Vine Planter" />
+        <img src="images/bloom_vine_planter.jpg" alt="Bloom Vine Planter" />
         <h2>bloom vine planter</h2>
         <p class="price">$30.00</p>
+        <button class="add-to-cart">add to cart</button>
       </article>
       <article class="product-card">
-        <img src="images/earthenemberplanter.png" alt="Earthen Ember Planter" />
+        <img src="images/earthen_ember_planter.jpg" alt="Earthen Ember Planter" />
         <h2>earthen ember planter</h2>
         <p class="price">$30.00</p>
+        <button class="add-to-cart">add to cart</button>
       </article>
       <article class="product-card">
-        <img src="images/harvesthugplanter.png" alt="Harvest Hug Planter" />
+        <img src="images/harvest_hug_planter.jpg" alt="Harvest Hug Planter" />
         <h2>harvest hug planter</h2>
         <p class="price">$35.00</p>
+        <button class="add-to-cart">add to cart</button>
       </article>
       <article class="product-card">
-        <img src="images/sunkissedterracotta.png" alt="Sun-Kissed Terracotta" />
+        <img src="images/sun_kissed_terracotta.jpg" alt="Sun-Kissed Terracotta" />
         <h2>sun-kissed terracotta</h2>
         <p class="price">$90.00</p>
+        <button class="add-to-cart">add to cart</button>
       </article>
       <article class="product-card">
-        <img src="images/earthenvase.png" alt="Earthen Vase" />
+        <img src="images/earthen_vase.jpg" alt="Earthen Vase" />
         <h2>earthen vase</h2>
         <p class="price">$178.00</p>
+        <button class="add-to-cart">add to cart</button>
       </article>
 
-      <!-- Houseplants -->
+      <!-- Houseplants products -->
       <article class="product-card">
-        <img src="images/monstera-deliciosa.jpg" alt="Monstera Deliciosa" />
+        <img src="images/monstera_deliciosa.jpg" alt="Monstera Deliciosa" />
         <h2>monstera deliciosa</h2>
         <p class="price">$24.99</p>
+        <button class="add-to-cart">add to cart</button>
       </article>
       <article class="product-card">
-        <img src="images/hoya-lacunosa.jpg" alt="Hoya Lacunosa" />
+        <img src="images/hoya_lacunosa.jpg" alt="Hoya Lacunosa" />
         <h2>hoya lacunosa</h2>
         <p class="price">$12.99</p>
+        <button class="add-to-cart">add to cart</button>
       </article>
       <article class="product-card">
-        <img src="images/aloe-vera.jpg" alt="Aloe Vera" />
+        <img src="images/aloe_vera.jpg" alt="Aloe Vera" />
         <h2>aloe vera</h2>
         <p class="price">$10.99</p>
+        <button class="add-to-cart">add to cart</button>
       </article>
       <article class="product-card">
         <img src="images/rosemary.jpg" alt="Rosemary" />
         <h2>rosemary</h2>
         <p class="price">$6.99</p>
+        <button class="add-to-cart">add to cart</button>
       </article>
       <article class="product-card">
-        <img src="images/philodendron-brandiatum.jpg" alt="Philodendron Brandiatum" />
+        <img src="images/philodendron_brandiatum.jpg" alt="Philodendron Brandiatum" />
         <h2>philodendron brandiatum</h2>
         <p class="price">$42.99</p>
+        <button class="add-to-cart">add to cart</button>
       </article>
 
-      <!-- Supplies -->
+      <!-- Supplies products -->
       <article class="product-card">
-        <img src="images/foxfarmsoil.jpg" alt="Ocean Forest Potting Soil" />
+        <img src="images/ocean_forest_potting_soil.jpg" alt="Ocean Forest Potting Soil" />
         <h2>ocean forest potting soil</h2>
         <p class="price">$16.99</p>
+        <button class="add-to-cart">add to cart</button>
       </article>
       <article class="product-card">
-        <img src="images/pottingtarp.png" alt="Potting Tarp" />
+        <img src="images/potting_tarp.jpg" alt="Potting Tarp" />
         <h2>potting tarp</h2>
         <p class="price">$22.00</p>
+        <button class="add-to-cart">add to cart</button>
       </article>
       <article class="product-card">
-        <img src="images/comfortgriphandtrowel.jpg" alt="Comfort Grip Hand Trowel" />
+        <img src="images/comfort_grip_hand_trowel.jpg" alt="Comfort Grip Hand Trowel" />
         <h2>comfort grip hand trowel</h2>
         <p class="price">$9.68</p>
+        <button class="add-to-cart">add to cart</button>
       </article>
       <article class="product-card">
-        <img src="images/rootingpowder.jpg" alt="Rooting Powder" />
+        <img src="images/rooting_powder.jpg" alt="Rooting Powder" />
         <h2>rooting powder</h2>
         <p class="price">$6.99</p>
+        <button class="add-to-cart">add to cart</button>
       </article>
       <article class="product-card">
-        <img src="images/osmocote.jpg" alt="Osmocote Slow Release Fertilizer" />
+        <img src="images/osmocote_slow_release_fertilizer.jpg" alt="Osmocote Slow Release Fertilizer" />
         <h2>osmocote slow release fertilizer</h2>
         <p class="price">$8.99</p>
+        <button class="add-to-cart">add to cart</button>
       </article>
     </section>
   </main>
 
   <footer>
-    <nav role="navigation" aria-label="Footer navigation" class="footer-nav">
+    <nav class="footer-nav">
       <a href="index.html">Home</a> |
       <a href="changelog.html">Change Log</a> |
       <a href="validation.html">Validation Tracker</a>
     </nav>
   </footer>
+
+  <script>
+    // Close announcement
+    const announcement = document.getElementById('announcement');
+    const closeButton = document.getElementById('closeButton');
+    closeButton.addEventListener('click', () => {
+      announcement.style.display = 'none';
+    });
+  </script>
 </body>
 </html>
