@@ -132,6 +132,7 @@ footer {
   margin: 0;
   font-weight: 600;
   font-size: 1.1rem;
+  display: none; /* Hides the "Cart" text, only emoji shows */
 }
 
 .cart-icon {
@@ -140,6 +141,7 @@ footer {
   color: #036300;
 }
 
+/* Dropdown for cart */
 .cart-dropdown {
   display: none;
   position: absolute;
@@ -211,32 +213,55 @@ footer {
   outline: none;
 }
 
-/* --- Product categories layout --- */
+/* --- Website name styling --- */
 
-.category-section {
-  margin: 2rem auto;
-  max-width: 1200px;
+#planthausHeader {
+  font-family: "Urbanist", sans-serif;
+  font-weight: 700;
+  font-size: 3rem;
+  color: rgb(2, 59, 2);
+  text-align: center;
+  margin: 1rem 0 2rem 0;
+  text-transform: capitalize; /* Planthaus */
 }
 
-.product-grid {
+/* --- Product cards and layout --- */
+
+/* Homepage layout: 3 rows, 5 items each */
+#homepagePottery,
+#homepageHouseplants,
+#homepageSupplies {
   display: grid;
   grid-template-columns: repeat(5, 1fr);
   gap: 1.5rem;
-  justify-items: center;
+  justify-content: center;
+  margin-bottom: 3rem;
 }
 
+/* Individual category pages layout: vertical column with 5 items (1 row, 5 vertical stacked) */
+#potterySection,
+#houseplantSection,
+#suppliesSection {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  margin-bottom: 3rem;
+}
+
+/* Individual product cards (for all categories) */
 .itemSet,
 .plantSet {
   border: 2px solid rgb(207, 207, 207);
   box-shadow: 2px 2px 2px rgb(224, 224, 224);
   border-radius: 5px;
   padding: 1rem 1.5rem;
-  width: 200px;
+  width: 220px;
   text-align: center;
   background-color: #fff;
   display: flex;
   flex-direction: column;
   align-items: center;
+  margin: 0 auto; /* center horizontally in column */
 }
 
 .itemSet-image,
@@ -254,7 +279,7 @@ footer {
   font-weight: 600;
   font-size: 1.1rem;
   margin: 0.3rem 0;
-  text-transform: lowercase;
+  text-transform: lowercase; /* lowercase product names */
 }
 
 .itemSet-price,
@@ -265,7 +290,8 @@ footer {
 }
 
 .itemSet-detail,
-.plantSet-detail {
+.plantSet-detail,
+.itemSet-brand {
   font-size: 0.9rem;
   color: #555;
   margin: 0.1rem 0;
