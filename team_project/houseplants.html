@@ -1,107 +1,54 @@
 <!DOCTYPE html>
-<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>planthaus - Houseplants</title>
+  <title>Planthaus - Houseplants</title>
   <link rel="stylesheet" href="css/index.css" />
 </head>
 <body>
-
-  <header id="planthausHeader">planthaus</header>
-
-  <nav aria-label="Main Navigation">
-    <ul>
-      <li><a href="pottery.html">Pottery</a></li>
-      <li><a href="houseplants.html">Houseplants</a></li>
-      <li><a href="supplies.html">Supplies</a></li>
-      <li><a href="plantcare.html">Plant care</a></li>
-      <li class="dropdown">
-        <div>About us ▼</div>
-        <div class="dropdown-content">
-          <a href="memberHanshiuan.html">HanShiuan</a>
-          <a href="memberHarley.html">Harley</a>
-          <a href="memberMumtaas.html">Mumtaas</a>
-        </div>
-      </li>
-    </ul>
-  </nav>
-
-  <section id="houseplantSection">
-    <h1>houseplants</h1>
-
-    <div class="plantSet">
-      <div class="plantImageBackground">
-        <img src="https://images.unsplash.com/photo-1637967885705-a60e3fea266d?q=80&w=1964&auto=format&fit=crop&ixlib=rb-4.1.0" alt="hands holding up a large potted monstera deliciosa" class="plantSet-image" />
-      </div>
-      <p class="plantSet-title">monstera deliciosa</p>
-      <p class="plantSet-price">$24.99</p>
-      <p class="plantSet-detail">8" pot</p>
-      <button class="add-to-cart-btn" data-id="plant-monstera" data-name="monstera deliciosa" data-price="24.99">add to cart</button>
-    </div>
-
-    <div class="plantSet">
-      <div class="plantImageBackground">
-        <img src="https://images.unsplash.com/photo-1744143495309-60dc0483c879?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.1.0" alt="small hoya lacunosa on a tabletop" class="plantSet-image" />
-      </div>
-      <p class="plantSet-title">hoya lacunosa</p>
-      <p class="plantSet-price">$12.99</p>
-      <p class="plantSet-detail">3" pot</p>
-      <button class="add-to-cart-btn" data-id="plant-hoya" data-name="hoya lacunosa" data-price="12.99">add to cart</button>
-    </div>
-
-    <div class="plantSet">
-      <div class="plantImageBackground">
-        <img src="https://images.unsplash.com/photo-1694285617850-fad6e23756fb?q=80&w=1965&auto=format&fit=crop&ixlib=rb-4.1.0" alt="aloe vera plant on a tabletop" class="plantSet-image" />
-      </div>
-      <p class="plantSet-title">aloe vera</p>
-      <p class="plantSet-price">$10.99</p>
-      <p class="plantSet-detail">6" pot</p>
-      <button class="add-to-cart-btn" data-id="plant-aloe-vera" data-name="aloe vera" data-price="10.99">add to cart</button>
-    </div>
-
-    <div class="plantSet">
-      <div class="plantImageBackground">
-        <img src="https://t3.ftcdn.net/jpg/12/44/60/04/360_F_1244600427_0pIbPafMvKCdaSi6XO3CFWqoVConrvjy.jpg" alt="rosemary plant" class="plantSet-image" />
-      </div>
-      <p class="plantSet-title">rosemary</p>
-      <p class="plantSet-price">$6.99</p>
-      <p class="plantSet-detail">4" pot</p>
-      <button class="add-to-cart-btn" data-id="plant-rosemary" data-name="rosemary" data-price="6.99">add to cart</button>
-    </div>
-
-    <div class="plantSet">
-      <div class="plantImageBackground">
-        <img src="https://images.unsplash.com/photo-1733916291695-069ae5ae4310?q=80&w=1964&auto=format&fit=crop&ixlib=rb-4.1.0" alt="philodendron brandiatum in a white pot" class="plantSet-image" />
-      </div>
-      <p class="plantSet-title">philodendron brandiatum</p>
-      <p class="plantSet-price">$42.99</p>
-      <p class="plantSet-detail">8" pot</p>
-      <button class="add-to-cart-btn" data-id="plant-philo" data-name="philodendron brandiatum" data-price="42.99">add to cart</button>
-    </div>
-  </section>
-
-  <footer>
-    <nav id="footerNav" aria-label="Footer Navigation">
-      <a href="index.html">home</a>
-      <a href="changes.html">change log</a>
-      <a href="validation.html">validation tracker</a>
+  <header>
+    <nav role="navigation" class="main-nav">
+      <div class="cart-icon" aria-label="Shopping cart" role="button" tabindex="0">🛒</div>
+      <h1 class="site-title">Planthaus</h1>
+      <ul class="category-nav" role="list">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="pottery.html">Pottery</a></li>
+        <li><a href="houseplants.html" aria-current="page">Houseplants</a></li>
+        <li><a href="supplies.html">Supplies</a></li>
+        <li><a href="plantcare.html">Plant care</a></li>
+      </ul>
     </nav>
-  </footer>
+  </header>
 
-  <script src="js/cart.js"></script>
-  <script>
-    document.querySelectorAll(".add-to-cart-btn").forEach(button => {
-      button.addEventListener("click", () => {
-        const product = {
-          id: button.getAttribute("data-id"),
-          name: button.getAttribute("data-name"),
-          price: parseFloat(button.getAttribute("data-price"))
-        };
-        addToCart(product);
-      });
-    });
-  </script>
+  <main>
+    <section class="product-column" aria-label="Houseplants products">
+      <article class="product-card">
+        <img src="images/monstera-deliciosa.jpg" alt="Monstera Deliciosa" />
+        <h2>monstera deliciosa</h2>
+        <p class="price">$24.99</p>
+      </article>
+      <article class="product-card">
+        <img src="images/hoya-lacunosa.jpg" alt="Hoya Lacunosa" />
+        <h2>hoya lacunosa</h2>
+        <p class="price">$12.99</p>
+      </article>
+      <article class="product-card">
+        <img src="images/aloe-vera.jpg" alt="Aloe Vera" />
+        <h2>aloe vera</h2>
+        <p class="price">$10.99</p>
+      </article>
+      <article class="product-card">
+        <img src="images/rosemary.jpg" alt="Rosemary" />
+        <h2>rosemary</h2>
+        <p class="price">$6.99</p>
+      </article>
+      <article class="product-card">
+        <img src="images/philodendron-brandiatum.jpg" alt="Philodendron Brandiatum" />
+        <h2>philodendron brandiatum</h2>
+        <p class="price">$42.99</p>
+      </article>
+    </section>
+  </main>
 </body>
 </html>
