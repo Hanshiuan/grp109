@@ -14,7 +14,6 @@
   align-items: center;
 }
 
-/* Close button for announcement */
 #closeButton {
   position: absolute;
   right: 0;
@@ -22,7 +21,6 @@
   cursor: pointer;
 }
 
-/* Body and nav */
 body {
   margin: 0;
   font-family: "Urbanist", sans-serif;
@@ -55,7 +53,6 @@ ul {
   display: flex;
 }
 
-/* Dropdown styling */
 .dropdown {
   position: relative;
   display: inline-block;
@@ -66,7 +63,7 @@ ul {
   display: none;
   position: absolute;
   background-color: white;
-  box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
   z-index: 1;
   margin-top: 5px;
 }
@@ -96,7 +93,6 @@ footer a {
   min-height: 44px;
 }
 
-/* Footer */
 footer {
   display: flex;
   align-items: center;
@@ -115,8 +111,6 @@ footer {
 #footerNav a:last-child {
   border-right: none;
 }
-
-/* --- Cart styles --- */
 
 .cart {
   position: relative;
@@ -150,7 +144,7 @@ footer {
   border-radius: 10px;
   padding: 1em;
   min-width: 280px;
-  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   z-index: 1000;
 }
 
@@ -211,28 +205,26 @@ footer {
   outline: none;
 }
 
-/* --- Product cards and layout --- */
-
-#repottingSupplies,
-#houseplantSection,
+/* Category layout */
 #potterySection,
+#houseplantSection,
 #suppliesSection {
   display: grid;
   grid-template-columns: repeat(5, 1fr);
-  justify-items: center;
-  gap: 1.5rem;
-  margin-bottom: 4rem;
+  gap: 1.2rem;
+  justify-content: center;
+  padding: 2em;
 }
 
-#potterySection::before,
-#houseplantSection::before,
-#suppliesSection::before {
-  content: attr(data-title);
-  font-size: 1.5rem;
-  font-weight: bold;
-  text-align: left;
+#potterySection h1,
+#houseplantSection h1,
+#suppliesSection h1 {
   grid-column: 1 / -1;
-  margin-bottom: 0.5rem;
+  text-align: center;
+  font-size: 2rem;
+  color: #0e4d00;
+  margin-bottom: 1.5rem;
+  text-transform: uppercase;
 }
 
 .itemSet,
@@ -241,7 +233,6 @@ footer {
   box-shadow: 2px 2px 2px rgb(224, 224, 224);
   border-radius: 5px;
   padding: 1rem 1.5rem;
-  width: 220px;
   text-align: center;
   background-color: #fff;
   display: flex;
