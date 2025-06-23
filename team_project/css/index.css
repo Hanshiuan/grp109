@@ -12,7 +12,6 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  position: relative;
 }
 
 /* Close button for announcement */
@@ -133,9 +132,6 @@ footer {
   margin: 0;
   font-weight: 600;
   font-size: 1.1rem;
-  display: flex;
-  align-items: center;
-  gap: 0.25em;
 }
 
 .cart-icon {
@@ -215,43 +211,19 @@ footer {
   outline: none;
 }
 
-/* --- Homepage products container (3 columns for categories, 5 rows for products) --- */
+/* --- Product categories layout --- */
 
-#homepageProducts {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  grid-template-rows: repeat(5, auto);
-  gap: 1.5rem;
+.category-section {
+  margin: 2rem auto;
   max-width: 1200px;
-  margin: 2rem auto;
-  padding: 0 1rem;
 }
 
-/* Category title above each category column */
-.category-title {
-  grid-column: span 1;
-  font-weight: 700;
-  font-size: 1.5rem;
-  text-transform: capitalize;
-  color: #024d00;
-  text-align: center;
-  margin-bottom: 1rem;
-}
-
-/* Individual categories vertical stack (1 column, 5 rows) */
-
-#potterySection,
-#houseplantSection,
-#repottingSupplies {
+.product-grid {
   display: grid;
-  grid-template-columns: 1fr;
-  grid-auto-rows: auto;
+  grid-template-columns: repeat(5, 1fr);
   gap: 1.5rem;
-  max-width: 320px;
-  margin: 2rem auto;
+  justify-items: center;
 }
-
-/* --- Product card styles --- */
 
 .itemSet,
 .plantSet {
@@ -259,7 +231,7 @@ footer {
   box-shadow: 2px 2px 2px rgb(224, 224, 224);
   border-radius: 5px;
   padding: 1rem 1.5rem;
-  width: 100%;
+  width: 200px;
   text-align: center;
   background-color: #fff;
   display: flex;
@@ -293,12 +265,10 @@ footer {
 }
 
 .itemSet-detail,
-.plantSet-detail,
-.itemSet-brand {
+.plantSet-detail {
   font-size: 0.9rem;
   color: #555;
   margin: 0.1rem 0;
-  text-transform: lowercase;
 }
 
 .add-to-cart-btn {
@@ -312,51 +282,10 @@ footer {
   cursor: pointer;
   transition: background-color 0.3s ease;
   width: 100%;
-  text-transform: lowercase;
 }
 
 .add-to-cart-btn:hover,
 .add-to-cart-btn:focus {
   background-color: #317031;
-  outline: none;
-}
-
-/* --- Header - Planthaus centered on homepage --- */
-
-#planthausHeader {
-  text-align: center;
-  font-size: 2.8rem;
-  font-weight: 700;
-  color: #024d00;
-  margin-top: 2rem;
-  margin-bottom: 2rem;
-  text-transform: capitalize;
-}
-
-/* --- Navigation categories container on homepage --- */
-
-#categoryNav {
-  display: flex;
-  justify-content: center;
-  gap: 3rem;
-  margin-bottom: 3rem;
-}
-
-/* --- Category navigation links --- */
-
-#categoryNav a {
-  font-weight: 600;
-  font-size: 1.3rem;
-  color: #036300;
-  text-decoration: none;
-  text-transform: capitalize;
-  border-bottom: 2px solid transparent;
-  padding-bottom: 0.2rem;
-  transition: border-color 0.3s ease;
-}
-
-#categoryNav a:hover,
-#categoryNav a:focus {
-  border-color: #036300;
   outline: none;
 }
