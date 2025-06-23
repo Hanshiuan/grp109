@@ -216,6 +216,7 @@ footer {
 .category-section {
   margin: 2rem auto;
   max-width: 1200px;
+  margin-bottom: 3rem;
 }
 
 .product-grid {
@@ -223,6 +224,19 @@ footer {
   grid-template-columns: repeat(5, 1fr);
   gap: 1.5rem;
   justify-items: center;
+}
+
+/* Responsive product grid */
+@media (max-width: 900px) {
+  .product-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .product-grid {
+    grid-template-columns: repeat(1, 1fr);
+  }
 }
 
 .itemSet,
@@ -247,6 +261,13 @@ footer {
   margin-bottom: 1rem;
   object-fit: contain;
   border-radius: 8px;
+}
+
+/* Fix Supplies images being too big */
+.supplies-grid .itemSet-image {
+  max-height: 180px;
+  width: auto;
+  object-fit: contain;
 }
 
 .itemSet-title,
