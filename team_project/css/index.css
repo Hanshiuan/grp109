@@ -298,3 +298,30 @@ footer {
   justify-content: center;
   padding: 2em;
 }
+
+.carousel {
+  position: relative;
+  max-width: 100%;
+  margin: 1em auto 2em;
+  overflow: hidden;
+}
+
+.slides {
+  display: none;
+}
+
+.slides img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 10px;
+}
+
+.fade {
+  animation: fadeEffect 1.5s ease-in-out;
+}
+
+@keyframes fadeEffect {
+  from { opacity: 0.4; }
+  to { opacity: 1; }
+}
