@@ -19,13 +19,13 @@
     <span id="closeButton" aria-hidden="true">&times;</span>
   </div>
 
-  <div class="cart">
-  <span class="cart-icon">🛒 <span id="cartCount">0</span></span>
+  <div class="cart" role="complementary" aria-label="Shopping cart">
+  <span style="font-size: 28px;">🛒</span>
+  <span id="cartCount" style="font-size: 18px; font-weight: bold;">0</span>
   <div class="cart-dropdown" aria-label="Shopping cart dropdown">
-    <!-- Cart items will be dynamically inserted here by JS -->
     <div id="cart-items"></div>
-    <button id="viewCartBtn">view cart</button>
-    <button id="checkoutBtn">checkout</button>
+    <button onclick="window.location.href='cart.html'">View Cart</button>
+    <button onclick="alert('Checkout coming soon!')">Checkout</button>
   </div>
 </div>
 
