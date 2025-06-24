@@ -290,3 +290,11 @@ footer {
   background-color: #317031;
   outline: none;
 }
+
+#repottingSupplies {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 1.2rem;
+  justify-content: center;
+  padding: 2em;
+}
