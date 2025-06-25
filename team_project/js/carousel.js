@@ -1,18 +1,30 @@
-document.addEventListener("DOMContentLoaded", function () {
-  const slides = document.querySelectorAll(".slides");
-  let currentSlide = 0;
+let currentSlide = 0;
+let slideInterval;
 
-  function showSlide(index) {
-    slides.forEach((slide, i) => {
-      slide.style.display = i === index ? "block" : "none";
-    });
-  }
+function showSlide(index) {
+  slides.forEach((slide, i) => {
+    slide.style.display = i === index ? "block" : "none";
+  });
+}
 
-  function nextSlide() {
-    currentSlide = (currentSlide + 1) % slides.length;
-    showSlide(currentSlide);
-  }
-
+function nextSlide() {
+  currentSlide = (currentSlide + 1) % slides.length;
   showSlide(currentSlide);
-  setInterval(nextSlide, 3000); // Change slide every 7 seconds
+}
+
+function previousSlide() {
+  currentSlide = (currentSlide - 1 + slides.length) % slides.length;
+  showSlide(currentSlide);
+}
+
+function resetSlideInterval() {
+  clearInterval(slideInterval);
+  slideInterval = setInterval(nextSlide, 7000);
+}
+
+document.addEventListener("DOMContentLoaded", function () {
+  slides = document.querySelectorAll(".slides");
+  showSlide(currentSlide);
+  setInterval(nextSlide, 5000); // Change slide every 5 seconds
 });
+
