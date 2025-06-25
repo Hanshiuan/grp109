@@ -26,6 +26,8 @@ body {
   font-family: "Urbanist", sans-serif;
 }
 
+
+/* Navigation header  */
 /* Header/logo */
 
 #planthausHeader,
@@ -67,6 +69,8 @@ ul {
   display: flex;
 }
 
+/* About us dropdown */
+
 .dropdown {
   position: relative;
   display: inline-block;
@@ -78,7 +82,7 @@ ul {
   position: absolute;
   background-color: white;
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
-  z-index: 1;
+  z-index: 6666;
   margin-top: 5px;
 }
 
@@ -131,12 +135,15 @@ footer {
 /* Cart styling */
 
 .cart {
-  position: relative;
+  position: fixed;
+  right: 0;
   display: flex;
+  flex-direction: column;
   align-items: center;
   cursor: pointer;
   padding-right: 1.5em;
   user-select: none;
+  z-index: 9999;
 }
 
 .cart p {
@@ -164,6 +171,7 @@ footer {
   min-width: 280px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   z-index: 1000;
+
 }
 
 .add-to-cart-btn {
@@ -191,12 +199,14 @@ footer {
 }
 
 #cart-items {
-  max-height: 150px;
+  max-height: 500px;
   overflow-y: auto;
   margin: 0 0 1em 0;
-  padding-left: 0;
+  padding: 0;
   list-style: none;
   font-size: 0.95rem;
+  display: flex;
+  flex-direction: column;
 }
 
 #cart-items li {
@@ -241,6 +251,67 @@ footer {
   background-color: #317031;
   outline: none;
 }
+
+/* Carousel styling */
+
+.carousel-button {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(255, 0, 0, 0);
+  border: none;
+  color: rgba(255, 255, 255, 0);
+  font-size: 2rem;
+  padding: 10em 2.5em;
+  cursor: pointer;
+  z-index: 10;
+}
+
+.carousel-button.left {
+  left: 0px;
+}
+
+.carousel-button.right {
+  right: 0px;
+}
+
+.carousel {
+  position: relative;
+  max-width: 100%;
+  margin: 1em auto 2em;
+  overflow: hidden;
+  width: 70vw;
+  height: 70vh;
+}
+
+.slides {
+  display: none;
+}
+
+.slides img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 10px;
+}
+
+/* We can add this back if you want, it just feels like a flashbang -Harley */
+
+/* .fade {
+    animation: fadeEffect .5s ease-in-out;
+}
+
+@keyframes fadeEffect {
+    from {
+        opacity: 0.4;
+    }
+
+    to {
+        opacity: 1;
+    }
+} */
+
+/* ............. */
 
 /* Category layout */
 
@@ -295,18 +366,24 @@ footer {
   font-weight: 600;
   font-size: 1.1rem;
   margin: 0.3rem 0;
-  color: blue;
-  text-decoration: underline;
+  color: rgb(38, 158, 1);
+  text-decoration: none;
   cursor: pointer;
 }
 
-body.hide-cursor {
-  cursor: none;
+.itemSet-title:hover,
+.plantSet-title:hover {
+  color: #036300;
+}
+
+.itemSet-title:visited,
+.plantSet-title:visited {
+  color: #81be7f;
 }
 
 .itemSet-price,
 .plantSet-price {
-  font-weight: 600;
+  font-weight: 500;
   margin: 0.3rem 0;
   color: #036300;
 }
@@ -326,43 +403,4 @@ body.hide-cursor {
   gap: 1.2rem;
   justify-content: center;
   padding: 2em;
-}
-
-
-
-/* Carousel styling */
-
-.carousel {
-  position: relative;
-  max-width: 100%;
-  margin: 1em auto 2em;
-  overflow: hidden;
-  width: 70vw;
-  height: 70vh;
-}
-
-
-.slides {
-  display: none;
-}
-
-.slides img {
-  width: 100%;
-  height: auto;
-  display: block;
-  border-radius: 10px;
-}
-
-.fade {
-  animation: fadeEffect 1.5s ease-in-out;
-}
-
-@keyframes fadeEffect {
-  from {
-    opacity: 0.4;
-  }
-
-  to {
-    opacity: 1;
-  }
 }
