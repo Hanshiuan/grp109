@@ -26,6 +26,20 @@ body {
   font-family: "Urbanist", sans-serif;
 }
 
+/* Header/logo */
+
+#planthausHeader,
+#planthausHeader a {
+  color: rgb(3, 99, 3);
+  justify-items: center;
+  font-family: "Urbanist", sans-serif;
+  font-weight: 500;
+  font-style: normal;
+  font-size: xx-large;
+  text-decoration: none;
+}
+
+
 nav {
   display: flex;
   align-items: center;
@@ -84,6 +98,8 @@ ul {
   background-color: #f1f1f1;
 }
 
+/* Links styling */
+
 li a,
 li,
 footer a {
@@ -111,6 +127,8 @@ footer {
 #footerNav a:last-child {
   border-right: none;
 }
+
+/* Cart styling */
 
 .cart {
   position: relative;
@@ -146,6 +164,25 @@ footer {
   min-width: 280px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   z-index: 1000;
+}
+
+.add-to-cart-btn {
+  margin-top: auto;
+  background-color: #3d8b3d;
+  color: white;
+  border: none;
+  padding: 0.5em 1em;
+  font-size: 1rem;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  width: 100%;
+}
+
+.add-to-cart-btn:hover,
+.add-to-cart-btn:focus {
+  background-color: #317031;
+  outline: none;
 }
 
 .cart:hover .cart-dropdown,
@@ -206,6 +243,7 @@ footer {
 }
 
 /* Category layout */
+
 #potterySection,
 #houseplantSection,
 #suppliesSection {
@@ -226,6 +264,8 @@ footer {
   margin-bottom: 1.5rem;
   text-transform: uppercase;
 }
+
+/* Product cards styling */
 
 .itemSet,
 .plantSet {
@@ -255,6 +295,13 @@ footer {
   font-weight: 600;
   font-size: 1.1rem;
   margin: 0.3rem 0;
+  color: blue;
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+body.hide-cursor {
+  cursor: none;
 }
 
 .itemSet-price,
@@ -269,26 +316,8 @@ footer {
 .itemSet-brand {
   font-size: 0.9rem;
   color: #555;
-  margin: 0.1rem 0;
-}
+  margin: .5em;
 
-.add-to-cart-btn {
-  margin-top: auto;
-  background-color: #3d8b3d;
-  color: white;
-  border: none;
-  padding: 0.5em 1em;
-  font-size: 1rem;
-  border-radius: 4px;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
-  width: 100%;
-}
-
-.add-to-cart-btn:hover,
-.add-to-cart-btn:focus {
-  background-color: #317031;
-  outline: none;
 }
 
 #repottingSupplies {
@@ -299,12 +328,19 @@ footer {
   padding: 2em;
 }
 
+
+
+/* Carousel styling */
+
 .carousel {
   position: relative;
   max-width: 100%;
   margin: 1em auto 2em;
   overflow: hidden;
+  width: 70vw;
+  height: 70vh;
 }
+
 
 .slides {
   display: none;
@@ -322,6 +358,11 @@ footer {
 }
 
 @keyframes fadeEffect {
-  from { opacity: 0.4; }
-  to { opacity: 1; }
+  from {
+    opacity: 0.4;
+  }
+
+  to {
+    opacity: 1;
+  }
 }
