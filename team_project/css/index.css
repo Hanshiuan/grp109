@@ -461,3 +461,20 @@ a {
   text-decoration: none;
   color: #286500;
 }
+
+/* Powerpoint container, presentation page */
+
+.pptcontainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.pptcontainer div {
+  margin: 3em 0 3em 0;
+}
+
+.pptcontainer p {
+  font-size: x-large;
+}
