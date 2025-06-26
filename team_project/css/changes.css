@@ -8,12 +8,12 @@ body {
 
 /* Main heading on change log page */
 h1 {
-  color: #4682b4;
+  color: #214058;
 }
 
 h3 {
   font-size: x-large;
-  color: #4682b4;
+  color: #244863;
 }
 
 /* Section for each week’s changes */
@@ -36,7 +36,7 @@ h3 {
 nav a {
   margin: 0 10px;
   text-decoration: none;
-  color: #4682b4;
+  color: #26435a;
 }
 
 /* Navigation hover effect */
@@ -64,4 +64,11 @@ nav a:hover {
 .siteimprove img {
   width: 30%;
   height: 80%;
+}
+
+.siteimprove p {
+  font-size: xx-large;
+  font-weight: 600;
+  color: #214058;
+  line-height: 1.5;
 }
