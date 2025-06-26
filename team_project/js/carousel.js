@@ -1,5 +1,7 @@
 let currentSlide = 0;
-let slideInterval;
+let slides;
+let countdownInterval;
+let countdownSeconds = 3;
 
 function showSlide(index) {
   slides.forEach((slide, i) => {
@@ -7,27 +9,39 @@ function showSlide(index) {
   });
 }
 
-// HTML uses this to go to next slide when button is clicked
 function nextSlide() {
   currentSlide = (currentSlide + 1) % slides.length;
   showSlide(currentSlide);
+  startCountdown(); // Restart countdown with new slide
 }
 
-// HTML uses this to go to previous slide when button is clicked
 function previousSlide() {
   currentSlide = (currentSlide - 1 + slides.length) % slides.length;
   showSlide(currentSlide);
+  startCountdown(); // Restart countdown with new slide
 }
 
-// Resets the timer when the slides are manually changed to next/previous slides
-function resetSlideInterval() {
-  clearInterval(slideInterval);
-  slideInterval = setInterval(nextSlide, 3000);
+function startCountdown() {
+  clearInterval(countdownInterval); // Clear any previous countdown
+
+  let countdown = countdownSeconds;
+  const countdownElement = document.getElementById("carousel-countdown");
+  countdownElement.textContent = countdown;
+
+  countdownInterval = setInterval(() => {
+    countdown -= 1;
+
+    if (countdown > 0) {
+      countdownElement.textContent = countdown;
+    } else {
+      clearInterval(countdownInterval);
+      nextSlide(); // Slide change happens here
+    }
+  }, 1000);
 }
 
 document.addEventListener("DOMContentLoaded", function () {
   slides = document.querySelectorAll(".slides");
   showSlide(currentSlide);
-  setInterval(nextSlide, 3000); // Change slide every 3 seconds
+  startCountdown(); // Start initial countdown
 });
-

@@ -295,6 +295,19 @@ footer {
   border-radius: 10px;
 }
 
+#carousel-countdown {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  max-width: 3em;
+  border: #036300 solid;
+  border-radius: 60px;
+  margin: auto;
+}
+
+#countdown-container {}
+
+
 /* We can add this back if you want, it just feels like a flashbang -Harley */
 
 /* .fade {
