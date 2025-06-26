@@ -312,6 +312,36 @@ footer {
 
 /* ............. */
 
+/* Member carousel styling */
+
+.carousel1 {
+  margin: 1em auto 4em;
+  overflow: hidden;
+  width: 20vw;
+  height: 15vh;
+  border: 10px solid black;
+  background-color: #6e924e;
+  font-weight: 600;
+  color: #ffffff;
+}
+
+.carousel1 p {
+  display: flex;
+  justify-content: center;
+  font-size: x-large;
+}
+
+.slides1 {
+  display: none;
+}
+
+.slides1 img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 10px;
+}
+
 /* Category layout */
 
 #potterySection,
@@ -348,6 +378,13 @@ footer {
   display: flex;
   flex-direction: column;
   align-items: center;
+}
+
+.plantSet:hover,
+.itemSet:hover {
+  border: 2px solid darkgreen;
+  box-shadow: 4px 4px 4px rgb(224, 224, 224);
+  border-radius: 5px;
 }
 
 .itemSet-image,
@@ -407,4 +444,16 @@ footer {
   gap: 1.2rem;
   justify-content: center;
   padding: 2em;
+}
+
+
+/* Presentation page styling for Harley's link */
+
+.harleyPPT a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 5em 0 5em 0;
+  text-decoration: none;
+  color: #036300;
 }
