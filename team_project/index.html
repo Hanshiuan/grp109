@@ -53,6 +53,14 @@
     </ul>
   </nav>
 
+  <audio id="leftAudio">
+    <source src="audioL.mp3" type="audio/mp3">
+  </audio>
+
+  <audio src="audioR.mp3" id="rightAudio">
+    <source src="audioR.mp3" type="audio/mp3">
+  </audio>
+
   <div class="carousel">
     <div class="slides fade">
       <img src="images/carousel/clinic.png"
@@ -64,8 +72,9 @@
     <div class="slides fade">
       <img src="images/carousel/thaiconc.png" alt="Large thai constellation">
     </div>
-    <button class="carousel-button left" onclick="previousSlide();">←</button>
-    <button class="carousel-button right" onclick="nextSlide();">→</button>
+    <button class="carousel-button left" onclick="previousSlide(); playLeft();">←</button>
+
+    <button class="carousel-button right" onclick="nextSlide(); playRight();">→</button>
   </div>
 
 
@@ -299,6 +308,20 @@
 
       updateCartCount();
     });
+  </script>
+
+  <script>
+    var x = document.getElementById("leftAudio");
+
+    function playLeft() {
+      x.play();
+    }
+
+    var y = document.getElementById("rightAudio");
+
+    function playRight() {
+      y.play();
+    } 
   </script>
 </body>
 

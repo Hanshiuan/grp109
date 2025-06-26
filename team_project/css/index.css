@@ -135,10 +135,9 @@ footer {
 /* Cart styling */
 
 .cart {
-  position: fixed;
+  position: absolute;
   right: 0;
   display: flex;
-  flex-direction: column;
   align-items: center;
   cursor: pointer;
   padding-right: 1.5em;
@@ -373,7 +372,12 @@ footer {
 
 .itemSet-title:hover,
 .plantSet-title:hover {
-  color: #036300;
+  color: #0b4d08;
+}
+
+.itemSet-title:hover:visited,
+.plantSet-title:hover:visited {
+  color: #276e23;
 }
 
 .itemSet-title:visited,
