@@ -4,6 +4,7 @@ body {
     padding: 0 40px 20px;
     background-color: #f3f8f4;
     color: #12361e;
+    line-height: 1.5;
 }
 
 .container {
@@ -48,8 +49,6 @@ footer {
     border-right: 2px solid black;
     text-decoration: none;
     color: rgb(2, 59, 2);
-    min-width: 44px;
-    min-height: 44px;
     font-size: x-large;
 }
 

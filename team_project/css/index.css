@@ -24,6 +24,8 @@
 body {
   margin: 0;
   font-family: "Urbanist", sans-serif;
+  /* Line height needs to be at least 1.5 for accessibility -Harley */
+  line-height: 1.5;
 }
 
 
@@ -222,8 +224,6 @@ footer {
   font-size: 1.3rem;
   color: #a00;
   padding: 0 5px;
-  /* Line height needs to be at least 1.5 for accessibility -Harley */
-  line-height: 1.5;
 }
 
 .delete-btn:hover,
@@ -294,6 +294,19 @@ footer {
   display: block;
   border-radius: 10px;
 }
+
+#carousel-countdown {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  max-width: 3em;
+  border: #036300 solid;
+  border-radius: 60px;
+  margin: auto;
+}
+
+#countdown-container {}
+
 
 /* We can add this back if you want, it just feels like a flashbang -Harley */
 
