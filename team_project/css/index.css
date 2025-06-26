@@ -155,7 +155,7 @@ footer {
 .cart-icon {
   font-size: 1.7rem;
   vertical-align: middle;
-  color: #036300;
+  color: #116446;
 }
 
 .cart-dropdown {
@@ -222,7 +222,8 @@ footer {
   font-size: 1.3rem;
   color: #a00;
   padding: 0 5px;
-  line-height: 1;
+  /* Line height needs to be at least 1.5 for accessibility -Harley */
+  line-height: 1.5;
 }
 
 .delete-btn:hover,
@@ -398,22 +399,25 @@ footer {
 }
 
 .itemSet-title,
-.plantSet-title {
+.plantSet-title,
+a {
   font-weight: 600;
   font-size: 1.1rem;
   margin: 0.3rem 0;
-  color: rgb(38, 158, 1);
+  color: #116446;
   text-decoration: none;
   cursor: pointer;
 }
 
 .itemSet-title:hover,
-.plantSet-title:hover {
+.plantSet-title:hover,
+a {
   color: #0b4d08;
 }
 
 .itemSet-title:hover:visited,
-.plantSet-title:hover:visited {
+.plantSet-title:hover:visited,
+a {
   color: #276e23;
 }
 
